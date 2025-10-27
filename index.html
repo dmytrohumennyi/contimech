@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contimech — Control & Mechatronics R&D</title>
+  <meta name="description" content="Contimech — an engineering initiative by Dmytro Humennyi focused on control systems, mechatronics, embedded software, and robotics PoC development." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Contimech — Control & Mechatronics R&D" />
+  <meta property="og:description" content="Engineering, control, mechatronics, embedded, robotics PoC." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.contimech.org/" />
+  <!-- <link rel="icon" href="/favicon.ico" />  Add later when ready -->
+  <style>
+    :root {
+      --bg: #0b0f14;
+      --card: #121821;
+      --text: #e6edf3;
+      --muted: #9fb0c3;
+      --accent: #5ec2ff;
+      --accent-2: #6df0c2;
+      --border: #1c2430;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+    header { position: sticky; top: 0; backdrop-filter: blur(8px); background: color-mix(in srgb, var(--bg) 85%, transparent); border-bottom: 1px solid var(--border); z-index: 100; }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; }
+    .brand { display: flex; gap: 10px; align-items: center; font-weight: 700; letter-spacing: 0.2px; }
+    .brand-badge { width: 28px; height: 28px; border-radius: 8px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); display: grid; place-items: center; color: #001018; font-weight: 900; }
+    .nav a { color: var(--text); opacity: 0.9; margin-left: 16px; }
+    .nav a:hover { opacity: 1; }
+
+    .hero { padding: 72px 0 48px; text-align: left; }
+    .hero h1 { font-size: clamp(28px, 5vw, 48px); line-height: 1.05; margin: 0 0 12px; }
+    .hero p.lead { font-size: clamp(16px, 2.5vw, 20px); color: var(--muted); margin: 0 0 24px; }
+    .cta { display: inline-block; padding: 12px 18px; border-radius: 12px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #001018; font-weight: 700; border: none; }
+
+    .grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 18px; }
+    .card h3 { margin-top: 0; font-size: 18px; }
+    .muted { color: var(--muted); }
+
+    section { padding: 56px 0; }
+    section h2 { font-size: 24px; margin: 0 0 18px; }
+
+    .badge { display: inline-block; padding: 6px 10px; border-radius: 999px; border: 1px solid var(--border); color: var(--muted); font-size: 12px; }
+
+    .twocol { display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px; }
+    @media (max-width: 820px) { .twocol { grid-template-columns: 1fr; } }
+
+    footer { border-top: 1px solid var(--border); padding: 28px 0; font-size: 14px; color: var(--muted); }
+
+    .list { display: grid; gap: 8px; padding: 0; list-style: none; margin: 0; }
+    .list li { display: flex; gap: 10px; align-items: start; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); margin-top: 8px; }
+
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 13px; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="brand-badge">C</div>
+        <span>Contimech</span>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact" class="badge">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <p class="badge">Control • Mechatronics • Embedded • Robotics</p>
+      <h1>Engineering for <span style="background:linear-gradient(135deg,var(--accent),var(--accent-2)); -webkit-background-clip:text; background-clip:text; color:transparent;">reliable control systems</span> and mechatronic products.</h1>
+      <p class="lead">Contimech is an R&D initiative by <strong>Dmytro Humennyi</strong>. We design, prototype, and validate embedded software, control algorithms, and hardware-in-the-loop setups for automotive and robotics.</p>
+      <a class="cta" href="#contact">Get in touch</a>
+      <p class="mono" style="margin-top:10px;">Kyiv, Ukraine • Working worldwide</p>
+    </section>
+
+    <section id="about" class="container twocol">
+      <div class="card">
+        <h2>About</h2>
+        <p class="muted">We combine systems thinking with hands-on engineering. Typical scope includes requirements, architecture, model-based design, embedded C/C++, ROS2 integration, validation, and documentation ready for A-SPICE / ISO 26262 workflows.</p>
+        <ul class="list" style="margin-top:12px;">
+          <li><span class="dot"></span><span>Model-Based Design (MATLAB/Simulink/Stateflow), code generation, SIL/HIL.</span></li>
+          <li><span class="dot"></span><span>Embedded software (C/C++), control loops, diagnostics, protocol design (CAN/CAN-FD).</span></li>
+          <li><span class="dot"></span><span>Robotics PoC: ROS2 nodes, sensing, actuation, testbeds.</span></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Snapshot</h2>
+        <ul class="list">
+          <li><span class="dot"></span><span><strong>ECU Switching System</strong>: multi-ECU signal routing, automated HW testing.</span></li>
+          <li><span class="dot"></span><span><strong>Digital Twin & Shadow</strong> for robotic assembly and BMS diagnostics.</span></li>
+          <li><span class="dot"></span><span>Reliability & safety mindset • A-SPICE-ready docs.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="capabilities" class="container">
+      <h2>Capabilities</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Control & Algorithms</h3>
+          <p class="muted">PID/State-space, observers, estimators; signal conditioning; calibration pipelines; performance & stability validation.</p>
+        </div>
+        <div class="card">
+          <h3>Embedded & Protocols</h3>
+          <p class="muted">Bare-metal / RTOS C/C++, board bring-up, drivers, CAN/CAN-FD frames, error handling, logging.</p>
+        </div>
+        <div class="card">
+          <h3>Model-Based Development</h3>
+          <p class="muted">Simulink/Stateflow, code gen, HIL rigs (dSPACE/Speedgoat/CANoe), automated test scenarios.</p>
+        </div>
+        <div class="card">
+          <h3>Robotics PoC</h3>
+          <p class="muted">ROS2 nodes, motion control, sensor fusion, hardware testbeds, safety & failover strategies.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="container">
+      <h2>Selected Work</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>ECU Switching System</h3>
+          <p class="muted">Modular hardware + software to switch, measure, and validate signals across multiple ECUs with automated tests and logging.</p>
+        </div>
+        <div class="card">
+          <h3>Battery Assembly & Diagnostics</h3>
+          <p class="muted">Digital Twin/Shadow concepts for robotic assembly cells and BMS diagnostics with data-driven insights.</p>
+        </div>
+        <div class="card">
+          <h3>FlightGear PID Testbed</h3>
+          <p class="muted">C99 controllers evaluated via SIL/HIL-in-the-loop experiments and telemetry analytics.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="container">
+      <div class="card">
+        <h2>Contact</h2>
+        <p class="muted">Email is the fastest way to reach me. If you prefer, add a short project brief (scope, timeline, constraints).
+        </p>
+        <p><strong>Email:</strong> <a href="mailto:info@contimech.org">info@contimech.org</a> <span class="muted">(temporary: apollo.d.g@gmail.com)</span></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/dmytrohumennyi/" target="_blank" rel="noopener">Dmytro Humennyi</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap;">
+        <span>© 2025 Contimech — Sole Proprietor Dmytro Humennyi. All rights reserved.</span>
+        <span class="muted">•</span>
+        <span class="muted">Kyiv, UA</span>
+      </div>
+      <div class="mono" style="margin-top:10px;">This site does not collect cookies or personal data. No tracking. Static hosting.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll for in-page anchors
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const href = a.getAttribute('href');
+        const el = document.querySelector(href);
+        if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      });
+    });
+  </script>
+</body>
+</html>
