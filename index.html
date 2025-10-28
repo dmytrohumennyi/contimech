@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Supercritical Systems — Engineering control beyond critical regimes</title>
-  <meta name="description" content="Strict, minimal landing page for an engineering group focused on robotics, automotive systems, model-based development, and safety standards." />
+  <meta name="description" content="Compact landing page for Supercritical Systems — Studies, Academic work, and Blog." />
   <meta name="theme-color" content="#000000" />
   <meta property="og:title" content="Supercritical Systems" />
   <meta property="og:description" content="Engineering control beyond critical regimes." />
@@ -15,17 +15,15 @@
       --bg: #000;
       --fg: #e6e6e6;
       --muted: #a0a0a0;
-      --accent: #66bbff; /* cold neon */
-      --accent-2: #62ffd6; /* subtle secondary */
+      --accent: #66bbff;
+      --accent-2: #62ffd6;
       --card: #0b0b0b;
       --line: #101010;
       --maxw: 1120px;
       --radius: 16px;
     }
-
     html { scroll-behavior: smooth; }
     * { box-sizing: border-box; }
-
     body {
       margin: 0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
@@ -34,14 +32,12 @@
                   var(--bg);
       color: var(--fg);
       line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
-
     a { color: var(--fg); text-decoration: none; }
     a:focus-visible, button:focus-visible { outline: 2px dashed var(--accent); outline-offset: 2px; }
-
     .container { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
-
-    /* Header */
     header {
       position: sticky; top: 0; z-index: 50;
       backdrop-filter: blur(8px);
@@ -51,50 +47,26 @@
     .nav { display: flex; align-items: center; justify-content: space-between; height: 60px; }
     .brand { display: flex; align-items: center; gap: 12px; letter-spacing: .08em; font-weight: 600; }
     .dot { width: 10px; height: 10px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 0 16px rgba(102,187,255,.65); }
-    .menu { display: flex; gap: 20px; }
+    .menu { display: flex; gap: 18px; }
     .menu a { color: var(--muted); font-size: 14px; }
     .menu a:hover { color: var(--fg); }
-    .cta { display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, rgba(102,187,255,.12), rgba(98,255,214,.12)); border: 1px solid #0f1b24; padding: 10px 14px; border-radius: 999px; font-size: 14px; }
-    .cta:hover { border-color: var(--accent); box-shadow: 0 0 24px rgba(102,187,255,.15) inset; }
-
-    /* Hero */
-    .hero { padding: 96px 0 48px; position: relative; overflow: hidden; }
-    .hero h1 { font-size: clamp(28px, 5vw, 52px); letter-spacing: .06em; line-height: 1.1; margin: 0 0 12px; }
-    .hero p { color: var(--muted); max-width: 760px; margin: 0 0 24px; }
-    .actions { display: flex; gap: 12px; flex-wrap: wrap; }
-    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 18px; border-radius: 12px; border: 1px solid var(--line); background: #060606; font-weight: 600; }
-    .btn:hover { border-color: var(--accent); box-shadow: 0 0 0 1px rgba(102,187,255,.35); }
-    .btn.primary { background: linear-gradient(180deg, rgba(102,187,255,.18), rgba(102,187,255,.06)); border-color: #163044; }
-
-    /* Section scaffolding */
-    section { padding: 72px 0; border-top: 1px solid var(--line); }
+    .hero { padding: 84px 0 36px; position: relative; overflow: hidden; }
+    .hero h1 { font-size: clamp(28px, 5vw, 48px); letter-spacing: .06em; line-height: 1.1; margin: 0 0 12px; }
+    .hero p { color: var(--muted); max-width: 760px; margin: 0; }
+    section { padding: 48px 0; border-top: 1px solid var(--line); }
     .label { font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
     h2 { font-size: clamp(22px, 3.5vw, 34px); margin: 10px 0 12px; letter-spacing: .05em; }
-    .lead { color: var(--muted); max-width: 780px; }
-
-    /* Grids */
     .grid { display: grid; gap: 18px; }
     .grid.cols-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
-    .grid.cols-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
     @media (max-width: 900px){ .grid.cols-3 { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 680px){ .grid.cols-3, .grid.cols-2 { grid-template-columns: 1fr; } }
-
-    /* Cards */
-    .card { background: linear-gradient(180deg, #060606, #030303); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; }
+    @media (max-width: 680px){ .grid.cols-3 { grid-template-columns: 1fr; } }
+    .card { background: linear-gradient(180deg, #060606, #030303); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; display:block }
+    .card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 0 0 1px rgba(102,187,255,.25); }
     .card h3 { margin: 8px 0 6px; font-size: 16px; letter-spacing: .06em; }
     .card p { margin: 0; color: var(--muted); font-size: 14px; }
-
-    /* Mono line */
+    footer { padding: 28px 0 64px; color: var(--muted); font-size: 14px; }
+    .divider { width: 100%; height: 1px; background: linear-gradient(90deg, transparent, rgba(102,187,255,.45), rgba(98,255,214,.35), transparent); margin: 18px 0; }
     .mono { font-family: ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; letter-spacing: .04em; }
-
-    /* Accent divider */
-    .divider { width: 100%; height: 1px; background: linear-gradient(90deg, transparent, rgba(102,187,255,.45), rgba(98,255,214,.35), transparent); margin: 24px 0; }
-
-    /* Footer */
-    footer { padding: 32px 0 80px; color: var(--muted); font-size: 14px; }
-    .fine { color: #7a7a7a; font-size: 12px; }
-
-    /* Tiny aesthetics */
     .spark { position: absolute; inset: -150px -150px auto auto; width: 300px; height: 300px; filter: blur(40px); opacity: .35; background: radial-gradient(closest-side, rgba(102,187,255,.25), transparent); pointer-events: none; }
   </style>
 </head>
@@ -106,145 +78,50 @@
         <span class="mono">SUPERCRITICAL SYSTEMS</span>
       </a>
       <nav class="menu" aria-label="Primary">
-        <a href="#core">Core</a>
-        <a href="#domains">Domains</a>
-        <a href="#standards">Standards</a>
-        <a href="#solutions">Solutions</a>
-        <a href="#research">Research</a>
-        <a href="#contact" class="cta">Contact</a>
+        <a href="/about/">About</a>
       </nav>
     </div>
   </header>
-
   <main id="top">
-    <!-- HERO -->
     <section class="hero" aria-label="Hero">
       <div class="spark" aria-hidden="true"></div>
       <div class="container">
         <div class="label mono">STRICT · LACONIC · TECHNICAL</div>
         <h1 class="mono">SUPERCRITICAL SYSTEMS<br><span class="mono" style="font-weight:400; color:var(--muted);">Engineering control beyond critical regimes.</span></h1>
-        <p>Systems designed to operate under instability. Predictive. Deterministic. Self‑correcting. From robotics to automotive control.</p>
-        <div class="actions">
-          <a class="btn primary" href="#core">Explore Systems</a>
-          <a class="btn" href="#solutions">View Cases</a>
-        </div>
+        <p>We design, build, and validate complex embedded and robotic systems — from automotive control to digital twins. Our superpower lies in mastering supercritical and safety‑critical architectures, model‑based solutions, motion and energy control, and reliable system engineering for business‑ready innovation.</p>
       </div>
     </section>
-
-    <!-- CORE -->
-    <section id="core" aria-labelledby="core-title">
+    <section id="categories" aria-labelledby="categories-title">
       <div class="container">
-        <div class="label mono">Core</div>
-        <h2 id="core-title" class="mono">Model. Simulate. Validate.</h2>
-        <p class="lead">We model, simulate, and validate cyber‑physical systems. Model‑based architecture. Real‑time control. Functional safety. Cybersecurity. Diagnostics.</p>
-        <div class="divider" role="presentation"></div>
-        <div class="grid cols-3">
-          <div class="card">
-            <h3 class="mono">Model‑Based Development</h3>
-            <p>Simulink, System Composer, AUTOSAR, ROS2. Executable models → tested code.</p>
-          </div>
-          <div class="card">
-            <h3 class="mono">Control & RT Firmware</h3>
-            <p>C/C++, real‑time loops, hybrid architectures, deterministic latency paths.</p>
-          </div>
-          <div class="card">
-            <h3 class="mono">Validation & Twins</h3>
-            <p>HIL/SIL, digital twin & shadow, automated diagnostics and fault injection.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- DOMAINS -->
-    <section id="domains" aria-labelledby="domains-title">
-      <div class="container">
-        <div class="label mono">Domains</div>
-        <h2 id="domains-title" class="mono">Automotive · Robotics · MBD</h2>
-        <div class="grid cols-3">
-          <div class="card">
-            <h3 class="mono">Automotive Systems</h3>
-            <p>ECU switching. Energy management. ISO 26262 compliance.</p>
-          </div>
-          <div class="card">
-            <h3 class="mono">Robotics</h3>
-            <p>ROS2 control. Sensor fusion. Digital twin validation.</p>
-          </div>
-          <div class="card">
-            <h3 class="mono">Model‑Based Dev</h3>
-            <p>Traceable specs, interface models, code generation and verification.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- STANDARDS -->
-    <section id="standards" aria-labelledby="standards-title">
-      <div class="container">
-        <div class="label mono">Standards & Processes</div>
-        <h2 id="standards-title" class="mono">Order within complexity.</h2>
-        <p class="lead">ISO 26262 · ISO 21434 · A‑SPICE · MBSE. Every system is built for traceability, repeatability, and proof of safety.</p>
-        <div class="grid cols-2" style="margin-top: 18px;">
-          <div class="card"><h3 class="mono">Functional Safety</h3><p>Hazard analysis, safety goals, ASIL decomposition, verification plans.</p></div>
-          <div class="card"><h3 class="mono">Cybersecurity</h3><p>Threat analysis, secure interfaces, monitoring, incident response logic.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SOLUTIONS -->
-    <section id="solutions" aria-labelledby="solutions-title">
-      <div class="container">
-        <div class="label mono">Solutions</div>
-        <h2 id="solutions-title" class="mono">From concept to verified system.</h2>
-        <div class="grid cols-2">
-          <article class="card" aria-labelledby="sol1"><h3 id="sol1" class="mono">ECU Switching Platform</h3><p>Automated validation hardware for signal routing, error injection, and real‑time analysis.</p></article>
-          <article class="card" aria-labelledby="sol2"><h3 id="sol2" class="mono">AutoQA Core</h3><p>AI‑assisted test orchestration for HIL/SIL, coverage tracking, and regression control.</p></article>
-          <article class="card" aria-labelledby="sol3"><h3 id="sol3" class="mono">Digital Twin Framework</h3><p>Predictive simulation for energy and motion control; twin/shadow alignment.</p></article>
-          <article class="card" aria-labelledby="sol4"><h3 id="sol4" class="mono">ROS2 Control Node</h3><p>Real‑time manipulator control with feedback diagnostics and safety hooks.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <!-- RESEARCH -->
-    <section id="research" aria-labelledby="research-title">
-      <div class="container">
-        <div class="label mono">Research & Events</div>
-        <h2 id="research-title" class="mono">Conferences · Publications · Blog</h2>
-        <p class="lead">MATLAB EXPO · Embedded World · KNUBA. Topics: Functional Safety, Supercritical Control, Energy Prediction.</p>
-        <div class="actions" style="margin-top: 12px;">
-          <a class="btn" href="#" aria-label="Publications">Publications</a>
-          <a class="btn" href="#" aria-label="Conferences">Conferences</a>
-          <a class="btn" href="#" aria-label="Blog">Blog</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" aria-labelledby="contact-title">
-      <div class="container">
-        <div class="label mono">Contact</div>
-        <h2 id="contact-title" class="mono">Let’s talk system to system.</h2>
-        <p class="lead">Looking to build or validate a system that must not fail? Align your architecture with supercritical precision.</p>
-        <div class="grid cols-2" style="margin-top: 18px;">
-          <div class="card"><h3 class="mono">Email</h3><p><a href="mailto:Apollo.D.G@gmail.com">contact@system-engineers.ai</a></p></div>
-          <div class="card"><h3 class="mono">Location</h3><p>Kyiv</p></div>
+        <div class="label mono">Level 2</div>
+        <h2 id="categories-title" class="mono">Choose a stream</h2>
+        <div class="grid cols-3" role="list">
+          <a class="card" href="/studies/" role="listitem" aria-labelledby="studies-title">
+            <h3 id="studies-title" class="mono">Studies</h3>
+            <p>Practical case studies in robotics and automotive — focused on innovation, process adaptation, and applied system engineering.</p>
+          </a>
+          <a class="card" href="/academic/" role="listitem" aria-labelledby="academic-title">
+            <h3 id="academic-title" class="mono">Academic</h3>
+            <p>Research that strengthens our engineering practice — from control theory to functional safety and standards alignment.</p>
+          </a>
+          <a class="card" href="/blog/" role="listitem" aria-labelledby="blog-title">
+            <h3 id="blog-title" class="mono">Blog</h3>
+            <p>Insights from real projects, emerging tools, and perspectives on modern engineering workflows.</p>
+          </a>
         </div>
       </div>
     </section>
   </main>
-
   <footer aria-label="Site footer">
     <div class="container">
       <div class="divider" role="presentation"></div>
       <div style="display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:space-between;">
         <div class="mono" style="letter-spacing:.08em;">SUPERCRITICAL SYSTEMS</div>
-        <div class="fine">© <span id="year"></span> Supercritical Systems. All rights reserved.</div>
+        <div class="mono"><a href="mailto:apollo.d.g@gmail.com">apollo.d.g@gmail.com</a></div>
+        <div class="mono">Kyiv</div>
+        <div class="mono">© 2025 Dmytro Humennyi</div>
       </div>
     </div>
   </footer>
-
-  <script>
-    // runtime niceties
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
