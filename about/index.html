@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — ContiMech</title>
+  <meta name="description" content="ContiMech — interdisciplinary engineering team from Kyiv. Academic roots, commercial experience, and focus on reliable robotics and automotive systems." />
+  <meta name="theme-color" content="#111111" />
+  <link rel="stylesheet" href="/assets/main.css" />
+  <style>
+    body { background: #111; color: #e8e8e8; }
+    header, footer { background: #151515; }
+    .intro { font-size: 18px; line-height: 1.6; color: #c8c8c8; }
+    .highlight { color: #00d9a3; }
+    h1, h2, h3 { color: #fafafa; }
+    .team-block, .eco-block { background: #1b1b1b; border-radius: 12px; padding: 18px; border: 1px solid #2a2a2a; margin-top: 18px; }
+    .team-list { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 10px; margin-top: 12px; }
+    .team-item { background: #222; border-radius: 8px; padding: 10px 14px; color: #dcdcdc; text-align: center; }
+    .team-cta { margin-top: 18px; text-align: center; }
+    .cta-button { background: #00d9a3; color: #111; border-radius: 6px; padding: 10px 20px; text-decoration: none; font-weight: bold; }
+    .cta-button:hover { background: #00b88a; }
+    .eco-tree { font-family: monospace; white-space: pre; color: #a8a8a8; line-height: 1.4; font-size: 14px; }
+    .eco-branch { color: #00d9a3; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <header aria-label="Site header">
+    <div class="container nav">
+      <a href="/" class="brand" aria-label="Homepage">
+        <span class="dot" aria-hidden="true"></span>
+        <span class="mono">CONTIMECH</span>
+      </a>
+      <nav class="menu" aria-label="Primary">
+        <a href="/about/" class="active">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container">
+        <div class="label mono">STRICT · LACONIC · TECHNICAL</div>
+        <h1 class="mono">About ContiMech</h1>
+        <p class="intro">ContiMech (Continuous Mechatronics) is an <span class="highlight">interdisciplinary engineering startup</span> founded in 2024 in Kyiv. We unite specialists with strong academic and industrial backgrounds in robotics, automotive, and embedded systems.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="mono">Who We Are</h2>
+        <p>We are a team of engineers formed through collaboration in multiple commercial projects. Our foundation combines <strong>academic roots</strong> with <strong>industrial precision</strong>. We emphasize structured engineering, documentation, and model-based development as integral parts of every process.</p>
+        <p>Our collective expertise covers <strong>automotive systems, robotics, and embedded control</strong>. We design, model, and validate systems where reliability, adaptability, and transparency are essential. The academic component remains our constant — we teach, research, and transfer this knowledge into practice.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="mono">Our Team</h2>
+        <div class="team-block">
+          <p>We are seven engineers united by shared methodology and commitment to precision. Each specialization supports a full system cycle — from system architecture and hardware co‑design to verification and documentation.</p>
+          <div class="team-list">
+            <div class="team-item">Engineering Management</div>
+            <div class="team-item">Functional Safety & Process Management</div>
+            <div class="team-item">Mechanical Engineering (Hardware Integration)</div>
+            <div class="team-item">Hardware Engineering</div>
+            <div class="team-item">C/C++ Firmware Engineering</div>
+            <div class="team-item">Python / MATLAB Algorithm Design</div>
+            <div class="team-item">QA Engineering</div>
+            <div class="team-item">Technical Writing & Documentation</div>
+          </div>
+          <p style="margin-top:12px; color:#bfbfbf;">Our documentation covers specifications, requirements, communication protocols, functional behavior, test plans, and traceable reports — everything that defines a complete engineering process.</p>
+          <div class="team-cta">
+            <p>Interested in working with us or scheduling a focused technical meeting?</p>
+            <a href="mailto:apollo.d.g@gmail.com?subject=Project%20Discussion%20with%20ContiMech&body=Hello%20ContiMech%20team,%0A%0APlease%20reply%20to%20proceed%20with%20communication.%20I%27d%20like%20to%20schedule%20a%20technical%20meeting.%0A%0ASnapshot:%0A-%20Domain:%20Robotics%20/%20Automotive%0A-%20Scope:%20[brief]%0A-%20Constraints:%20[safety,%20real-time,%20platform]%0A-%20Timeline:%20[dates]%0A%0AMy%20availability:%0A-%20[slots]%0A%0ABest%20regards,%0A[Your%20name],%20[Company],%20[Role]%0A[Phone]" class="cta-button">Schedule a Meeting</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="mono">Ecosystem & Toolchain</h2>
+        <p>Our ecosystem branches into two main domains. Several tools are shared between them, reflecting our unified design and testing philosophy.</p>
+        <div class="eco-block">
+<pre class="eco-tree">
+<span class="eco-branch">ContiMech Ecosystem</span>
+│
+├─ <span class="eco-branch">Robotics</span>
+│  ├─ Control: ROS2 / rclcpp / DDS / C / C++
+│  ├─ Modeling: Simulink / OpenModelica
+│  ├─ Algorithms: Python / MATLAB
+│  ├─ Simulation: Gazebo / RViz / CarMaker
+│  └─ Edge: Jetson / Raspberry Pi / HIL rigs
+│
+└─ <span class="eco-branch">Automotive</span>
+   ├─ Firmware: C / C++ / AUTOSAR Classic
+   ├─ Modeling: Simulink / CarMaker / OpenModelica
+   ├─ Scenarios: Carla / Vector CANoe / RViz
+   ├─ HIL: Vector Tools / Raspberry Pi rigs
+   └─ Compliance: ISO 26262 / ISO 21434 / ASPICE
+</pre>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="mono">Principles</h2>
+        <ul>
+          <li><strong>System thinking.</strong> Every element is part of a controlled, measurable, and goal‑oriented system.</li>
+          <li><strong>Process integrity.</strong> We design processes as deliberately as systems — measurable, repeatable, and auditable.</li>
+          <li><strong>Abstraction before implementation.</strong> Architecture, modeling, and verification precede construction or code.</li>
+          <li><strong>Controlled adaptability.</strong> Designed for evolution — scalable, reconfigurable, and failure‑tolerant.</li>
+          <li><strong>Verification by design.</strong> Validation begins with requirements and persists through release.</li>
+          <li><strong>Transparent communication.</strong> Every interface — human or technical — is explicit, documented, and traceable.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="mono">Contact</h2>
+        <p>For collaboration or partnership inquiries:</p>
+        <p><a href="mailto:apollo.d.g@gmail.com" class="mono">apollo.d.g@gmail.com</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer aria-label="Site footer">
+    <div class="container">
+      <div class="divider" role="presentation"></div>
+      <div class="footer-wrap">
+        <div class="mono" style="letter-spacing:.08em;">CONTIMECH</div>
+        <div class="mono">Kyiv</div>
+        <div class="mono">© 2024 Dmytro Humennyi</div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
