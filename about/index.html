@@ -4,55 +4,56 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About — ContiMech</title>
-  <meta name="description" content="ContiMech — interdisciplinary engineering team from Kyiv. Academic roots, commercial experience, and focus on reliable robotics and automotive systems." />
+  <meta name="description" content="ContiMech — interdisciplinary engineering team from Kyiv." />
   <meta name="theme-color" content="#111111" />
-  <link rel="stylesheet" href="/assets/main.css" />
+  <!-- NOTE: Temporarily disabled external CSS to avoid overrides causing a white page -->
+  <!-- <link rel="stylesheet" href="/assets/main.css" /> -->
   <style>
-    :root{ --container: 1040px; }
-    body { background: #111; color: #e8e8e8; }
-    header, footer { background: #151515; }
-    .container{ max-width: var(--container); margin: 0 auto; padding: 0 16px; }
-    .nav{ display:flex; align-items:center; justify-content:space-between; gap:16px; }
-    .hero .container{ padding-top: 18px; }
-    .intro { font-size: 18px; line-height: 1.6; color: #c8c8c8; }
-    .highlight { color: #00d9a3; }
-    h1, h2, h3 { color: #fafafa; }
-    .team-block, .eco-block { background: #1b1b1b; border-radius: 12px; padding: 18px; border: 1px solid #2a2a2a; margin-top: 18px; box-shadow: 0 0 0 1px #232323 inset; }
-    .team-list { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 10px; margin-top: 12px; }
-    .team-item { background: #222; border-radius: 8px; padding: 10px 14px; color: #dcdcdc; text-align: center; }
-    .team-cta { margin-top: 18px; text-align: center; }
-    .cta-button { background: #00d9a3; color: #111; border-radius: 6px; padding: 10px 20px; text-decoration: none; font-weight: bold; }
-    .cta-button:hover { background: #00b88a; }
-    .eco-tree { font-family: monospace; white-space: pre; color: #a8a8a8; line-height: 1.4; font-size: 14px; }
-    .eco-branch { color: #00d9a3; font-weight: bold; }
-    pre.eco-tree{ overflow-x:auto; }
-    @media (min-width:1400px){ :root{ --container: 1120px; } }
-    @media (max-width:720px){ :root{ --container: 680px; } .intro{ font-size:16px; } }
+    /* Hard, self-contained styles to prevent 'blank white page' from external overrides */
+    :root{ --container:1040px; --bg:#111; --fg:#e8e8e8; --panel:#1b1b1b; --line:#2a2a2a; --accent:#00d9a3; }
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{ margin:0; background:var(--bg) !important; color:var(--fg) !important; font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif; }
+    a{ color:var(--accent); text-decoration:none; }
+    .mono{ font-family: ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; letter-spacing:.02em; }
+    header, footer{ background:#151515; }
+    .container{ max-width:var(--container); margin:0 auto; padding:0 16px; }
+    .nav{ display:flex; align-items:center; justify-content:space-between; gap:16px; padding:10px 0; }
+    .brand{ display:inline-flex; align-items:center; gap:8px; color:#fafafa; font-weight:700; }
+    .label{ color:#9a9a9a; font-size:12px; margin-bottom:6px; }
+    h1,h2,h3{ color:#fafafa; margin:0 0 10px; }
+    .intro{ font-size:18px; color:#c8c8c8; }
+    .section{ padding:18px 0; }
+    .panel{ background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:18px; }
+    .team-list{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px; margin-top:12px; }
+    .team-item{ background:#222; border-radius:8px; padding:10px 14px; text-align:center; color:#dcdcdc; }
+    .cta{ margin-top:16px; text-align:center; }
+    .btn{ background:var(--accent); color:#111; border-radius:6px; padding:10px 20px; font-weight:700; display:inline-block; }
+    pre.eco-tree{ white-space:pre; overflow:auto; margin:0; color:#a8a8a8; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:14px; line-height:1.35; }
+    .eco-branch{ color:var(--accent); font-weight:700; }
+    .footer-wrap{ display:flex; gap:18px; padding:14px 0; color:#bfbfbf; }
+    @media (min-width:1400px){ :root{ --container:1120px; } }
+    @media (max-width:720px){ :root{ --container:680px; } .intro{ font-size:16px; } }
   </style>
 </head>
 <body>
   <header aria-label="Site header">
     <div class="container nav">
-      <a href="/" class="brand" aria-label="Homepage">
-        <span class="dot" aria-hidden="true"></span>
-        <span class="mono">CONTIMECH</span>
-      </a>
-      <nav class="menu" aria-label="Primary">
-        <a href="/about/" class="active">About</a>
-      </nav>
+      <a href="/" class="brand" aria-label="Homepage"><span class="mono">CONTIMECH</span></a>
+      <nav class="menu" aria-label="Primary"><a href="/about/" class="mono">About</a></nav>
     </div>
   </header>
 
   <main id="top">
-    <section class="hero">
+    <section class="section">
       <div class="container">
         <div class="label mono">STRICT · LACONIC · TECHNICAL</div>
         <h1 class="mono">About ContiMech</h1>
-        <p class="intro">ContiMech (Continuous Mechatronics) is an <span class="highlight">interdisciplinary engineering startup</span> founded in 2024 in Kyiv. We unite specialists with strong academic and industrial backgrounds in robotics, automotive, and embedded systems.</p>
+        <p class="intro">ContiMech (Continuous Mechatronics) is an <span style="color:var(--accent)">interdisciplinary engineering startup</span> founded in 2024 in Kyiv. We unite specialists with strong academic and industrial backgrounds in robotics, automotive, and embedded systems.</p>
       </div>
     </section>
 
-    <section>
+    <section class="section">
       <div class="container">
         <h2 class="mono">Who We Are</h2>
         <p>We are a team of engineers formed through collaboration in multiple commercial projects. Our foundation combines <strong>academic roots</strong> with <strong>industrial precision</strong>. We emphasize structured engineering, documentation, and model-based development as integral parts of every process.</p>
@@ -60,10 +61,10 @@
       </div>
     </section>
 
-    <section>
+    <section class="section">
       <div class="container">
         <h2 class="mono">Our Team</h2>
-        <div class="team-block">
+        <div class="panel">
           <p>We are seven engineers united by shared methodology and commitment to precision. Each specialization supports a full system cycle — from system architecture and hardware co‑design to verification and documentation.</p>
           <div class="team-list">
             <div class="team-item">Engineering Management</div>
@@ -75,20 +76,19 @@
             <div class="team-item">QA Engineering</div>
             <div class="team-item">Technical Writing & Documentation</div>
           </div>
-          <p style="margin-top:12px; color:#bfbfbf;">Our documentation covers specifications, requirements, communication protocols, functional behavior, test plans, and traceable reports — everything that defines a complete engineering process.</p>
-          <div class="team-cta">
-            <p>Interested in working with us or scheduling a focused technical meeting?</p>
-            <a href="mailto:apollo.d.g@gmail.com?subject=Project%20Discussion%20with%20ContiMech&body=Hello%20ContiMech%20team,%0A%0APlease%20reply%20to%20proceed%20with%20communication.%20I%27d%20like%20to%20schedule%20a%20technical%20meeting%20to%20discuss%20a%20potential%20project.%0A%0ASnapshot:%0A-%20Domain:%20Robotics%20/%20Automotive%0A-%20Scope:%20[brief]%0A-%20Constraints:%20[safety,%20real-time,%20platform]%0A-%20Timeline:%20[dates]%0A%0AMy%20availability:%0A-%20[slots]%0A%0ABest%20regards,%0A[Your%20name],%20[Company],%20[Role]%0A[Phone]" class="cta-button">Schedule a Meeting</a>
+          <p style="margin-top:12px; color:#bfbfbf;">Our documentation covers specifications, requirements, communication protocols, functional behavior, test plans, and traceable reports.</p>
+          <div class="cta">
+            <a class="btn" href="mailto:apollo.d.g@gmail.com?subject=Project%20Discussion%20with%20ContiMech&body=Hello%20ContiMech%20team,%0A%0APlease%20reply%20to%20proceed.%20I%27d%20like%20to%20schedule%20a%20technical%20meeting.%0A%0ADomain:%20Robotics/Automotive%0AScope:%20[brief]%0ATimeline:%20[dates]%0A%0ARegards,%0A[Name]%0A">Schedule a Meeting</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section>
+    <section class="section">
       <div class="container">
         <h2 class="mono">Ecosystem & Toolchain</h2>
         <p>Our ecosystem branches into two main domains. Several tools are shared between them, reflecting our unified design and testing philosophy.</p>
-        <div class="eco-block">
+        <div class="panel">
 <pre class="eco-tree">
 <span class="eco-branch">ContiMech Ecosystem</span>
 │
@@ -110,36 +110,32 @@
       </div>
     </section>
 
-    <section>
+    <section class="section">
       <div class="container">
         <h2 class="mono">Principles</h2>
         <ul>
-          <li><strong>System thinking.</strong> Every element is part of a controlled, measurable, and goal‑oriented system.</li>
-          <li><strong>Process integrity.</strong> We design processes as deliberately as systems — measurable, repeatable, and auditable.</li>
-          <li><strong>Abstraction before implementation.</strong> Architecture, modeling, and verification precede construction or code.</li>
-          <li><strong>Controlled adaptability.</strong> Designed for evolution — scalable, reconfigurable, and failure‑tolerant.</li>
-          <li><strong>Verification by design.</strong> Validation begins with requirements and persists through release.</li>
-          <li><strong>Transparent communication.</strong> Every interface — human or technical — is explicit, documented, and traceable.</li>
+          <li><strong>System thinking.</strong> Components form measurable, goal‑oriented systems.</li>
+          <li><strong>Process integrity.</strong> Measurable, repeatable, auditable flow from concept to verification.</li>
+          <li><strong>Abstraction first.</strong> Architecture and models precede construction or code.</li>
+          <li><strong>Controlled adaptability.</strong> Scalable, reconfigurable, failure‑tolerant designs.</li>
+          <li><strong>Verification by design.</strong> Validation starts at requirements and persists through release.</li>
+          <li><strong>Transparent communication.</strong> Interfaces are explicit, documented, traceable.</li>
         </ul>
       </div>
     </section>
 
-    <section>
+    <section class="section">
       <div class="container">
         <h2 class="mono">Contact</h2>
-        <p>For collaboration or partnership inquiries:</p>
-        <p><a href="mailto:apollo.d.g@gmail.com" class="mono">apollo.d.g@gmail.com</a></p>
+        <p>For collaboration or partnership inquiries: <a href="mailto:apollo.d.g@gmail.com" class="mono">apollo.d.g@gmail.com</a></p>
       </div>
     </section>
   </main>
 
   <footer aria-label="Site footer">
     <div class="container">
-      <div class="divider" role="presentation"></div>
-      <div class="footer-wrap">
-        <div class="mono" style="letter-spacing:.08em;">CONTIMECH</div>
-        <div class="mono">Kyiv</div>
-        <div class="mono">© 2024 Dmytro Humennyi</div>
+      <div class="footer-wrap mono">
+        <div>CONTIMECH</div><div>Kyiv</div><div>© 2024 Dmytro Humennyi</div>
       </div>
     </div>
   </footer>
