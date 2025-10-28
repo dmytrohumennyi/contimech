@@ -3,180 +3,248 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contimech — Control & Mechatronics R&D</title>
-  <meta name="description" content="Contimech — an engineering initiative by Dmytro Humennyi focused on control systems, mechatronics, embedded software, and robotics PoC development." />
-  <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="Contimech — Control & Mechatronics R&D" />
-  <meta property="og:description" content="Engineering, control, mechatronics, embedded, robotics PoC." />
+  <title>Supercritical Systems — Engineering control beyond critical regimes</title>
+  <meta name="description" content="Strict, minimal landing page for an engineering group focused on robotics, automotive systems, model-based development, and safety standards." />
+  <meta name="theme-color" content="#000000" />
+  <meta property="og:title" content="Supercritical Systems" />
+  <meta property="og:description" content="Engineering control beyond critical regimes." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.contimech.org/" />
-  <!-- <link rel="icon" href="/favicon.ico" />  Add later when ready -->
+  <meta property="og:image" content="" />
   <style>
     :root {
-      --bg: #0b0f14;
-      --card: #121821;
-      --text: #e6edf3;
-      --muted: #9fb0c3;
-      --accent: #5ec2ff;
-      --accent-2: #6df0c2;
-      --border: #1c2430;
+      --bg: #000;
+      --fg: #e6e6e6;
+      --muted: #a0a0a0;
+      --accent: #66bbff; /* cold neon */
+      --accent-2: #62ffd6; /* subtle secondary */
+      --card: #0b0b0b;
+      --line: #101010;
+      --maxw: 1120px;
+      --radius: 16px;
     }
+
+    html { scroll-behavior: smooth; }
     * { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .container { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
-    header { position: sticky; top: 0; backdrop-filter: blur(8px); background: color-mix(in srgb, var(--bg) 85%, transparent); border-bottom: 1px solid var(--border); z-index: 100; }
-    .nav { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; }
-    .brand { display: flex; gap: 10px; align-items: center; font-weight: 700; letter-spacing: 0.2px; }
-    .brand-badge { width: 28px; height: 28px; border-radius: 8px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); display: grid; place-items: center; color: #001018; font-weight: 900; }
-    .nav a { color: var(--text); opacity: 0.9; margin-left: 16px; }
-    .nav a:hover { opacity: 1; }
 
-    .hero { padding: 72px 0 48px; text-align: left; }
-    .hero h1 { font-size: clamp(28px, 5vw, 48px); line-height: 1.05; margin: 0 0 12px; }
-    .hero p.lead { font-size: clamp(16px, 2.5vw, 20px); color: var(--muted); margin: 0 0 24px; }
-    .cta { display: inline-block; padding: 12px 18px; border-radius: 12px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #001018; font-weight: 700; border: none; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 1200px at 80% -10%, rgba(102,187,255,.06), transparent 60%),
+                  radial-gradient(1000px 1000px at 10% -20%, rgba(98,255,214,.04), transparent 60%),
+                  var(--bg);
+      color: var(--fg);
+      line-height: 1.5;
+    }
 
-    .grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-    .card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 18px; }
-    .card h3 { margin-top: 0; font-size: 18px; }
-    .muted { color: var(--muted); }
+    a { color: var(--fg); text-decoration: none; }
+    a:focus-visible, button:focus-visible { outline: 2px dashed var(--accent); outline-offset: 2px; }
 
-    section { padding: 56px 0; }
-    section h2 { font-size: 24px; margin: 0 0 18px; }
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
 
-    .badge { display: inline-block; padding: 6px 10px; border-radius: 999px; border: 1px solid var(--border); color: var(--muted); font-size: 12px; }
+    /* Header */
+    header {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: blur(8px);
+      background: linear-gradient(180deg, rgba(0,0,0,.8), rgba(0,0,0,.6));
+      border-bottom: 1px solid var(--line);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+    .brand { display: flex; align-items: center; gap: 12px; letter-spacing: .08em; font-weight: 600; }
+    .dot { width: 10px; height: 10px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 0 16px rgba(102,187,255,.65); }
+    .menu { display: flex; gap: 20px; }
+    .menu a { color: var(--muted); font-size: 14px; }
+    .menu a:hover { color: var(--fg); }
+    .cta { display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, rgba(102,187,255,.12), rgba(98,255,214,.12)); border: 1px solid #0f1b24; padding: 10px 14px; border-radius: 999px; font-size: 14px; }
+    .cta:hover { border-color: var(--accent); box-shadow: 0 0 24px rgba(102,187,255,.15) inset; }
 
-    .twocol { display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px; }
-    @media (max-width: 820px) { .twocol { grid-template-columns: 1fr; } }
+    /* Hero */
+    .hero { padding: 96px 0 48px; position: relative; overflow: hidden; }
+    .hero h1 { font-size: clamp(28px, 5vw, 52px); letter-spacing: .06em; line-height: 1.1; margin: 0 0 12px; }
+    .hero p { color: var(--muted); max-width: 760px; margin: 0 0 24px; }
+    .actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 18px; border-radius: 12px; border: 1px solid var(--line); background: #060606; font-weight: 600; }
+    .btn:hover { border-color: var(--accent); box-shadow: 0 0 0 1px rgba(102,187,255,.35); }
+    .btn.primary { background: linear-gradient(180deg, rgba(102,187,255,.18), rgba(102,187,255,.06)); border-color: #163044; }
 
-    footer { border-top: 1px solid var(--border); padding: 28px 0; font-size: 14px; color: var(--muted); }
+    /* Section scaffolding */
+    section { padding: 72px 0; border-top: 1px solid var(--line); }
+    .label { font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
+    h2 { font-size: clamp(22px, 3.5vw, 34px); margin: 10px 0 12px; letter-spacing: .05em; }
+    .lead { color: var(--muted); max-width: 780px; }
 
-    .list { display: grid; gap: 8px; padding: 0; list-style: none; margin: 0; }
-    .list li { display: flex; gap: 10px; align-items: start; }
-    .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); margin-top: 8px; }
+    /* Grids */
+    .grid { display: grid; gap: 18px; }
+    .grid.cols-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
+    .grid.cols-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    @media (max-width: 900px){ .grid.cols-3 { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 680px){ .grid.cols-3, .grid.cols-2 { grid-template-columns: 1fr; } }
 
-    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 13px; color: var(--muted); }
+    /* Cards */
+    .card { background: linear-gradient(180deg, #060606, #030303); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; }
+    .card h3 { margin: 8px 0 6px; font-size: 16px; letter-spacing: .06em; }
+    .card p { margin: 0; color: var(--muted); font-size: 14px; }
+
+    /* Mono line */
+    .mono { font-family: ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; letter-spacing: .04em; }
+
+    /* Accent divider */
+    .divider { width: 100%; height: 1px; background: linear-gradient(90deg, transparent, rgba(102,187,255,.45), rgba(98,255,214,.35), transparent); margin: 24px 0; }
+
+    /* Footer */
+    footer { padding: 32px 0 80px; color: var(--muted); font-size: 14px; }
+    .fine { color: #7a7a7a; font-size: 12px; }
+
+    /* Tiny aesthetics */
+    .spark { position: absolute; inset: -150px -150px auto auto; width: 300px; height: 300px; filter: blur(40px); opacity: .35; background: radial-gradient(closest-side, rgba(102,187,255,.25), transparent); pointer-events: none; }
   </style>
 </head>
 <body>
-  <header>
+  <header aria-label="Site header">
     <div class="container nav">
-      <div class="brand">
-        <div class="brand-badge">C</div>
-        <span>Contimech</span>
-      </div>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#capabilities">Capabilities</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact" class="badge">Contact</a>
+      <a href="#top" class="brand" aria-label="Homepage">
+        <span class="dot" aria-hidden="true"></span>
+        <span class="mono">SUPERCRITICAL SYSTEMS</span>
+      </a>
+      <nav class="menu" aria-label="Primary">
+        <a href="#core">Core</a>
+        <a href="#domains">Domains</a>
+        <a href="#standards">Standards</a>
+        <a href="#solutions">Solutions</a>
+        <a href="#research">Research</a>
+        <a href="#contact" class="cta">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="hero container">
-      <p class="badge">Control • Mechatronics • Embedded • Robotics</p>
-      <h1>Engineering for <span style="background:linear-gradient(135deg,var(--accent),var(--accent-2)); -webkit-background-clip:text; background-clip:text; color:transparent;">reliable control systems</span> and mechatronic products.</h1>
-      <p class="lead">Contimech is an R&D initiative by <strong>Dmytro Humennyi</strong>. We design, prototype, and validate embedded software, control algorithms, and hardware-in-the-loop setups for automotive and robotics.</p>
-      <a class="cta" href="#contact">Get in touch</a>
-      <p class="mono" style="margin-top:10px;">Kyiv, Ukraine • Working worldwide</p>
-    </section>
-
-    <section id="about" class="container twocol">
-      <div class="card">
-        <h2>About</h2>
-        <p class="muted">We combine systems thinking with hands-on engineering. Typical scope includes requirements, architecture, model-based design, embedded C/C++, ROS2 integration, validation, and documentation ready for A-SPICE / ISO 26262 workflows.</p>
-        <ul class="list" style="margin-top:12px;">
-          <li><span class="dot"></span><span>Model-Based Design (MATLAB/Simulink/Stateflow), code generation, SIL/HIL.</span></li>
-          <li><span class="dot"></span><span>Embedded software (C/C++), control loops, diagnostics, protocol design (CAN/CAN-FD).</span></li>
-          <li><span class="dot"></span><span>Robotics PoC: ROS2 nodes, sensing, actuation, testbeds.</span></li>
-        </ul>
-      </div>
-      <div class="card">
-        <h2>Snapshot</h2>
-        <ul class="list">
-          <li><span class="dot"></span><span><strong>ECU Switching System</strong>: multi-ECU signal routing, automated HW testing.</span></li>
-          <li><span class="dot"></span><span><strong>Digital Twin & Shadow</strong> for robotic assembly and BMS diagnostics.</span></li>
-          <li><span class="dot"></span><span>Reliability & safety mindset • A-SPICE-ready docs.</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="capabilities" class="container">
-      <h2>Capabilities</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Control & Algorithms</h3>
-          <p class="muted">PID/State-space, observers, estimators; signal conditioning; calibration pipelines; performance & stability validation.</p>
-        </div>
-        <div class="card">
-          <h3>Embedded & Protocols</h3>
-          <p class="muted">Bare-metal / RTOS C/C++, board bring-up, drivers, CAN/CAN-FD frames, error handling, logging.</p>
-        </div>
-        <div class="card">
-          <h3>Model-Based Development</h3>
-          <p class="muted">Simulink/Stateflow, code gen, HIL rigs (dSPACE/Speedgoat/CANoe), automated test scenarios.</p>
-        </div>
-        <div class="card">
-          <h3>Robotics PoC</h3>
-          <p class="muted">ROS2 nodes, motion control, sensor fusion, hardware testbeds, safety & failover strategies.</p>
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero" aria-label="Hero">
+      <div class="spark" aria-hidden="true"></div>
+      <div class="container">
+        <div class="label mono">STRICT · LACONIC · TECHNICAL</div>
+        <h1 class="mono">SUPERCRITICAL SYSTEMS<br><span class="mono" style="font-weight:400; color:var(--muted);">Engineering control beyond critical regimes.</span></h1>
+        <p>Systems designed to operate under instability. Predictive. Deterministic. Self‑correcting. From robotics to automotive control.</p>
+        <div class="actions">
+          <a class="btn primary" href="#core">Explore Systems</a>
+          <a class="btn" href="#solutions">View Cases</a>
         </div>
       </div>
     </section>
 
-    <section id="projects" class="container">
-      <h2>Selected Work</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>ECU Switching System</h3>
-          <p class="muted">Modular hardware + software to switch, measure, and validate signals across multiple ECUs with automated tests and logging.</p>
-        </div>
-        <div class="card">
-          <h3>Battery Assembly & Diagnostics</h3>
-          <p class="muted">Digital Twin/Shadow concepts for robotic assembly cells and BMS diagnostics with data-driven insights.</p>
-        </div>
-        <div class="card">
-          <h3>FlightGear PID Testbed</h3>
-          <p class="muted">C99 controllers evaluated via SIL/HIL-in-the-loop experiments and telemetry analytics.</p>
+    <!-- CORE -->
+    <section id="core" aria-labelledby="core-title">
+      <div class="container">
+        <div class="label mono">Core</div>
+        <h2 id="core-title" class="mono">Model. Simulate. Validate.</h2>
+        <p class="lead">We model, simulate, and validate cyber‑physical systems. Model‑based architecture. Real‑time control. Functional safety. Cybersecurity. Diagnostics.</p>
+        <div class="divider" role="presentation"></div>
+        <div class="grid cols-3">
+          <div class="card">
+            <h3 class="mono">Model‑Based Development</h3>
+            <p>Simulink, System Composer, AUTOSAR, ROS2. Executable models → tested code.</p>
+          </div>
+          <div class="card">
+            <h3 class="mono">Control & RT Firmware</h3>
+            <p>C/C++, real‑time loops, hybrid architectures, deterministic latency paths.</p>
+          </div>
+          <div class="card">
+            <h3 class="mono">Validation & Twins</h3>
+            <p>HIL/SIL, digital twin & shadow, automated diagnostics and fault injection.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="container">
-      <div class="card">
-        <h2>Contact</h2>
-        <p class="muted">Email is the fastest way to reach me. If you prefer, add a short project brief (scope, timeline, constraints).
-        </p>
-        <p><strong>Email:</strong> <a href="mailto:info@contimech.org">info@contimech.org</a> <span class="muted">(temporary: apollo.d.g@gmail.com)</span></p>
-        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/dmytrohumennyi/" target="_blank" rel="noopener">Dmytro Humennyi</a></p>
+    <!-- DOMAINS -->
+    <section id="domains" aria-labelledby="domains-title">
+      <div class="container">
+        <div class="label mono">Domains</div>
+        <h2 id="domains-title" class="mono">Automotive · Robotics · MBD</h2>
+        <div class="grid cols-3">
+          <div class="card">
+            <h3 class="mono">Automotive Systems</h3>
+            <p>ECU switching. Energy management. ISO 26262 compliance.</p>
+          </div>
+          <div class="card">
+            <h3 class="mono">Robotics</h3>
+            <p>ROS2 control. Sensor fusion. Digital twin validation.</p>
+          </div>
+          <div class="card">
+            <h3 class="mono">Model‑Based Dev</h3>
+            <p>Traceable specs, interface models, code generation and verification.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STANDARDS -->
+    <section id="standards" aria-labelledby="standards-title">
+      <div class="container">
+        <div class="label mono">Standards & Processes</div>
+        <h2 id="standards-title" class="mono">Order within complexity.</h2>
+        <p class="lead">ISO 26262 · ISO 21434 · A‑SPICE · MBSE. Every system is built for traceability, repeatability, and proof of safety.</p>
+        <div class="grid cols-2" style="margin-top: 18px;">
+          <div class="card"><h3 class="mono">Functional Safety</h3><p>Hazard analysis, safety goals, ASIL decomposition, verification plans.</p></div>
+          <div class="card"><h3 class="mono">Cybersecurity</h3><p>Threat analysis, secure interfaces, monitoring, incident response logic.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUTIONS -->
+    <section id="solutions" aria-labelledby="solutions-title">
+      <div class="container">
+        <div class="label mono">Solutions</div>
+        <h2 id="solutions-title" class="mono">From concept to verified system.</h2>
+        <div class="grid cols-2">
+          <article class="card" aria-labelledby="sol1"><h3 id="sol1" class="mono">ECU Switching Platform</h3><p>Automated validation hardware for signal routing, error injection, and real‑time analysis.</p></article>
+          <article class="card" aria-labelledby="sol2"><h3 id="sol2" class="mono">AutoQA Core</h3><p>AI‑assisted test orchestration for HIL/SIL, coverage tracking, and regression control.</p></article>
+          <article class="card" aria-labelledby="sol3"><h3 id="sol3" class="mono">Digital Twin Framework</h3><p>Predictive simulation for energy and motion control; twin/shadow alignment.</p></article>
+          <article class="card" aria-labelledby="sol4"><h3 id="sol4" class="mono">ROS2 Control Node</h3><p>Real‑time manipulator control with feedback diagnostics and safety hooks.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section id="research" aria-labelledby="research-title">
+      <div class="container">
+        <div class="label mono">Research & Events</div>
+        <h2 id="research-title" class="mono">Conferences · Publications · Blog</h2>
+        <p class="lead">MATLAB EXPO · Embedded World · KNUBA. Topics: Functional Safety, Supercritical Control, Energy Prediction.</p>
+        <div class="actions" style="margin-top: 12px;">
+          <a class="btn" href="#" aria-label="Publications">Publications</a>
+          <a class="btn" href="#" aria-label="Conferences">Conferences</a>
+          <a class="btn" href="#" aria-label="Blog">Blog</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="label mono">Contact</div>
+        <h2 id="contact-title" class="mono">Let’s talk system to system.</h2>
+        <p class="lead">Looking to build or validate a system that must not fail? Align your architecture with supercritical precision.</p>
+        <div class="grid cols-2" style="margin-top: 18px;">
+          <div class="card"><h3 class="mono">Email</h3><p><a href="mailto:Apollo.D.G@gmail.com">contact@system-engineers.ai</a></p></div>
+          <div class="card"><h3 class="mono">Location</h3><p>Kyiv</p></div>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer>
+  <footer aria-label="Site footer">
     <div class="container">
-      <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap;">
-        <span>© 2025 Contimech — Sole Proprietor Dmytro Humennyi. All rights reserved.</span>
-        <span class="muted">•</span>
-        <span class="muted">Kyiv, UA</span>
-      </div>
-      <div class="mono" style="margin-top:10px;">This site does not collect cookies or personal data. No tracking. Static hosting.
+      <div class="divider" role="presentation"></div>
+      <div style="display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:space-between;">
+        <div class="mono" style="letter-spacing:.08em;">SUPERCRITICAL SYSTEMS</div>
+        <div class="fine">© <span id="year"></span> Supercritical Systems. All rights reserved.</div>
       </div>
     </div>
   </footer>
 
   <script>
-    // Smooth scroll for in-page anchors
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', (e) => {
-        const href = a.getAttribute('href');
-        const el = document.querySelector(href);
-        if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
-      });
-    });
+    // runtime niceties
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
