@@ -18,14 +18,10 @@
     .nav{ display:flex; align-items:center; justify-content:space-between; padding:10px 0; }
     .brand{ color:#fafafa; font-weight:700; }
     .label{ color:#9a9a9a; font-size:12px; margin-bottom:6px; }
-    h1,h2,h3{ color:#fafafa; margin:0 0 10px; }
+    h1,h2{ color:#fafafa; margin:0 0 10px; }
     .intro{ font-size:18px; color:#c8c8c8; }
     .section{ padding:18px 0; }
     .panel{ background:#1b1b1b; border:1px solid #2a2a2a; border-radius:12px; padding:18px; }
-    .team-list{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px; margin-top:12px; }
-    .team-item{ background:#222; border-radius:8px; padding:10px 14px; text-align:center; color:#dcdcdc; }
-    .cta{ margin-top:16px; text-align:center; }
-    .btn{ background:#00d9a3; color:#111; border-radius:6px; padding:10px 20px; font-weight:700; display:inline-block; }
     pre.eco-tree{ white-space:pre; overflow:auto; margin:0; color:#a8a8a8; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:14px; line-height:1.35; }
     .eco-branch{ color:#00d9a3; font-weight:700; }
     .footer-wrap{ display:flex; gap:18px; padding:14px 0; color:#bfbfbf; }
@@ -39,7 +35,6 @@
     </div>
   </header>
   <main>
-    <!-- Intro -->
     <section class="section">
       <div class="container">
         <div class="label mono">STRICT · LACONIC · TECHNICAL</div>
@@ -48,40 +43,23 @@
       </div>
     </section>
 
-    <!-- Who We Are -->
     <section class="section">
       <div class="container">
         <h2 class="mono">Who We Are</h2>
         <p>We are a team of engineers formed through collaboration in multiple commercial projects. Our foundation combines <strong>academic roots</strong> with <strong>industrial precision</strong>. We emphasize structured engineering, documentation, and model-based development as integral parts of every process.</p>
-        <p>Our collective expertise covers <strong>automotive systems, robotics, and embedded control</strong>. We design, model, and validate systems where reliability, adaptability, and transparency are essential. The academic component remains our constant — we teach, research, and transfer this knowledge into practice.</p>
       </div>
     </section>
 
-    <!-- Our Team -->
     <section class="section">
       <div class="container">
         <h2 class="mono">Our Team</h2>
         <div class="panel">
-          <p>We are seven engineers united by shared methodology and commitment to precision. Each specialization supports a full system cycle — from system architecture and hardware co-design to verification and documentation.</p>
-          <div class="team-list">
-            <div class="team-item">Engineering Management</div>
-            <div class="team-item">Functional Safety & Process Management</div>
-            <div class="team-item">Mechanical Engineering (Hardware Integration)</div>
-            <div class="team-item">Hardware Engineering</div>
-            <div class="team-item">C/C++ Firmware Engineering</div>
-            <div class="team-item">Python / MATLAB Algorithm Design</div>
-            <div class="team-item">QA Engineering</div>
-            <div class="team-item">Technical Writing & Documentation</div>
-          </div>
-          <p style="margin-top:12px; color:#bfbfbf;">Our documentation covers specifications, requirements, communication protocols, functional behavior, test plans, and traceable reports.</p>
-          <div class="cta">
-            <a class="btn" href="mailto:dhumennyi@contimech.org?subject=Project%20Discussion%20with%20ContiMech&body=Hello%20ContiMech%20team,%0A%0APlease%20reply%20to%20proceed.%20I%27d%20like%20to%20schedule%20a%20technical%20meeting.%0A%0ADomain:%20Robotics/Automotive%0AScope:%20[brief]%0ATimeline:%20[dates]%0A%0ARegards,%0A[Name]%0A">Schedule a Meeting</a>
-          </div>
+          <p>We cover the full system cycle — from architecture and co-design to verification and documentation.</p>
+          <div class="mono">Engineering Management · Functional Safety · Mechanical · Hardware · Firmware (C/C++) · Algorithms (Python/MATLAB) · QA · Technical Writing</div>
         </div>
       </div>
     </section>
 
-    <!-- Ecosystem & Toolchain -->
     <section class="section">
       <div class="container">
         <h2 class="mono">Ecosystem & Toolchain</h2>
@@ -90,42 +68,21 @@
 <span class="eco-branch">ContiMech Ecosystem</span>
 │
 ├─ <span class="eco-branch">Robotics</span>
-│  ├─ Control: ROS2 / rclcpp / DDS / C / C++
-│  ├─ Modeling: Simulink / OpenModelica
-│  ├─ Algorithms: Python / MATLAB
-│  ├─ Simulation: Gazebo / RViz / CarMaker
-│  ├─ Edge: Jetson / Raspberry Pi / HIL rigs
-│  ├─ <span class="eco-branch">HW Toolset</span>:
-│  │    CAD & Schematics: Altium Designer / KiCad
-│  │    Simulation: SolidWorks Simulation / Flow Simulation (thermal & mechanical)
-│  │    Test & Measurement: Oscilloscopes / Logic analyzers / PSU via SCPI
-│  │    MCU/SoC: STM32 / ESP32 / Raspberry Pi
-│  └─ <span class="eco-branch">Mechanical Toolset</span>:
-│       CAD: SolidWorks / FreeCAD / Fusion 360
-│       Prototyping: 3D printing (Bambu Lab)
+│  • Control & Modeling: ROS2 (rclcpp), Simulink
+│  • Simulation: Gazebo, RViz, CarMaker
+│  • Edge: Jetson, Raspberry Pi, HIL
+│  • HW/Mech: Altium/KiCad; SolidWorks (Simulation & Flow); scopes & LAs; 3D printing (Bambu)
 │
 └─ <span class="eco-branch">Automotive</span>
-   ├─ Firmware: C / C++ / AUTOSAR Classic
-   ├─ Modeling: Simulink / CarMaker / OpenModelica
-   ├─ Scenarios: Carla / Vector CANoe / RViz
-   ├─ HIL: Vector tools / Raspberry Pi rigs
-   ├─ Compliance: ISO 26262 / ISO 21434 / ASPICE
-   ├─ <span class="eco-branch">HW Toolset</span>:
-   │    CAD & Schematics: Altium Designer / KiCad / DxDesigner
-   │    Simulation: SolidWorks Simulation / Flow Simulation (thermal & mechanical)
-   │    PCB Prototyping: PCBWay / JLCPCB; in-house assembly
-   │    Test & Validation: DMM / PSU / Oscilloscopes / custom benches
-   │    Interfaces: CAN / LIN / FlexRay / Ethernet
-   └─ <span class="eco-branch">Mechanical Toolset</span>:
-        CAD: SolidWorks / FreeCAD
-        Enclosures & Harnessing: sheet metal / cable management / IP rating targets
-        Validation: vibration & thermal testing; thermal imaging
+   • Firmware & Modeling: C/C++, AUTOSAR Classic; Simulink, CarMaker
+   • Validation: CANoe, Vector tools, HIL
+   • Compliance: ISO 26262, ISO 21434, ASPICE
+   • HW/Mech: Altium/KiCad/DxDesigner; SolidWorks (Simulation & Flow); PCBWay/JLCPCB; CAN/LIN/Ethernet
 </pre>
         </div>
       </div>
     </section>
 
-    <!-- Principles -->
     <section class="section">
       <div class="container">
         <h2 class="mono">Principles</h2>
@@ -140,7 +97,6 @@
       </div>
     </section>
 
-    <!-- Contact -->
     <section class="section">
       <div class="container">
         <h2 class="mono">Contact</h2>
