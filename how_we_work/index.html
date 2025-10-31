@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>How We Work — ContiMech</title>
+  <meta name="description" content="How we work at ContiMech — from idea to certified product.">
+  <meta name="theme-color" content="#111111" />
+  <style>
+    :root{ --container:1040px; --bg:#111; --fg:#e8e8e8; --panel:#1b1b1b; --line:#2a2a2a; --accent:#00d9a3; }
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{ margin:0; background:#111; color:#e8e8e8; font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif; }
+    a{ color:#00d9a3; text-decoration:none; }
+    .mono{ font-family: ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; letter-spacing:.02em; }
+    header, footer{ background:#151515; }
+    .container{ max-width:var(--container); margin:0 auto; padding:0 16px; }
+    .nav{ display:flex; align-items:center; justify-content:space-between; padding:10px 0; }
+    .brand{ color:#fafafa; font-weight:700; }
+    .label{ color:#9a9a9a; font-size:12px; margin-bottom:6px; }
+    h1,h2{ color:#fafafa; margin:0 0 10px; }
+    .intro{ font-size:18px; color:#c8c8c8; }
+    .section{ padding:18px 0; }
+    .panel{ background:#1b1b1b; border:1px solid #2a2a2a; border-radius:12px; padding:18px; }
+    pre.eco-tree{ white-space:pre; overflow:auto; margin:0; color:#a8a8a8; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:14px; line-height:1.35; }
+    .eco-branch{ color:#00d9a3; font-weight:700; }
+    .footer-wrap{ display:flex; gap:18px; padding:14px 0; color:#bfbfbf; }
+  
+    .grid.cols-2{ display:grid; gap:20px; grid-template-columns:1fr; }
+    @media(min-width:1000px){ .grid.cols-2{ grid-template-columns:1fr 1fr; } }
+    
+    .viz-flow svg, .viz-fishbone svg{ width:100%; height:auto; display:block; }
+    .viz-flow{ padding:8px; }
+    .viz-fishbone{ padding:8px; }
+    
+
+    .viz-matrix svg{ width:100%; height:auto; display:block; }
+    
+    .grid.cols-3{ display:grid; gap:20px; grid-template-columns:1fr; }
+    @media(min-width:1100px){ .grid.cols-3{ grid-template-columns:1fr 1fr 1fr; } }
+    
+</style>
+</head>
+<body>
+<header>
+    <div class="container nav">
+      <a href="/" class="brand mono">CONTIMECH</a>
+      <nav><a href="/about/" class="mono">About</a> <a href="/about/how-we-work/" class="mono">How&nbsp;We&nbsp;Work</a></nav>
+    </div>
+  </header>
+  <main>
+
+    
+    
+<section class="section" id="how-we-work">
+  <div class="container">
+    <div class="label mono">HOW WE WORK</div>
+    <h1 class="mono">Two-Dimensional Workflow: Phases × Streams</h1>
+    <p class="intro">This page explains our process for both business and technical audiences. The diagram below shows how three engineering streams progress through the phases. Circles mark checkpoints; they map to concrete artifacts and exit criteria. NDA-safe and client-agnostic by design.</p>
+    <div class="card"><div class="viz-matrix">
+<div style="margin-top:40px;"></div>
+<svg viewBox="0 0 1500 520" role="img" aria-label="2D workflow matrix">
+  <defs>
+    <marker id="arrowH" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" />
+    </marker>
+  </defs>
+
+  <!-- Grid -->
+  <g fill="none" stroke="currentColor" stroke-width="1" opacity="0.35">
+    <!-- verticals -->
+    <line x1="180" y1="120" x2="180" y2="450"/>
+    <line x1="360" y1="120" x2="360" y2="450"/>
+    <line x1="540" y1="120" x2="540" y2="450"/>
+    <line x1="720" y1="120" x2="720" y2="450"/>
+    <line x1="900" y1="120" x2="900" y2="450"/>
+    <line x1="1080" y1="120" x2="1080" y2="450"/>
+    <line x1="1260" y1="120" x2="1260" y2="450"/>
+    <!-- horizontals -->
+    <line x1="180" y1="180" x2="1320" y2="180"/>
+    <line x1="180" y1="270" x2="1320" y2="270"/>
+    <line x1="180" y1="360" x2="1320" y2="360"/>
+    <line x1="180" y1="450" x2="1320" y2="450"/>
+  </g>
+
+  <!-- Headers -->
+  <g font-family="ui-monospace, monospace" font-size="18" fill="currentColor">
+    <!-- column headers -->
+    <text x="180" y="105" text-anchor="middle">0
+Proposal</text>
+    <text x="360" y="105" text-anchor="middle">1
+A-sample</text>
+    <text x="540" y="105" text-anchor="middle">2
+Architecture</text>
+    <text x="720" y="105" text-anchor="middle">3
+Implementation</text>
+    <text x="900" y="105" text-anchor="middle">4
+B-sample</text>
+    <text x="1080" y="105" text-anchor="middle">5
+Certification</text>
+    <text x="1260" y="105" text-anchor="middle">Ops
+/Support</text>
+
+    <!-- row headers -->
+    <text x="160" y="215" text-anchor="end"><tspan x="160" dy="0">System</tspan><tspan x="160" dy="18">Engineering</tspan></text>
+    <text x="160" y="305" text-anchor="end"><tspan x="160" dy="0">Hardware &amp;</tspan><tspan x="160" dy="18">Mechanics</tspan></text>
+    <text x="160" y="395" text-anchor="end">Software</text>
+  </g>
+
+  <!-- Streams arrows -->
+  <g stroke="currentColor" stroke-width="2" fill="none">
+    <line x1="200" y1="210" x2="1300" y2="210" marker-end="url(#arrowH)"/>
+    <line x1="200" y1="300" x2="1300" y2="300" marker-end="url(#arrowH)"/>
+    <line x1="200" y1="390" x2="1300" y2="390" marker-end="url(#arrowH)"/>
+  </g>
+
+  <!-- Circle nodes: col x row (cx, cy) -->
+  <!-- System Engineering row (y≈210) -->
+  <g stroke="currentColor" fill="none">
+    <circle cx="180" cy="210" r="18"/><text x="180" y="214" text-anchor="middle" font-size="15">S0</text>
+    <circle cx="360" cy="210" r="18"/><text x="360" y="214" text-anchor="middle" font-size="15">S1</text>
+    <circle cx="540" cy="210" r="18"/><text x="540" y="214" text-anchor="middle" font-size="15">S2</text>
+    <circle cx="720" cy="210" r="18"/><text x="720" y="214" text-anchor="middle" font-size="15">S3</text>
+    <circle cx="900" cy="210" r="18"/><text x="900" y="214" text-anchor="middle" font-size="15">S4</text>
+    <circle cx="1080" cy="210" r="18"/><text x="1080" y="214" text-anchor="middle" font-size="15">S5</text>
+    <circle cx="1260" cy="210" r="18"/><text x="1260" y="214" text-anchor="middle" font-size="15">Sops</text>
+  </g>
+
+  <!-- Hardware & Mechanics row (y≈300) -->
+  <g stroke="currentColor" fill="none">
+    <circle cx="180" cy="300" r="18"/><text x="180" y="304" text-anchor="middle" font-size="15">H0</text>
+    <circle cx="360" cy="300" r="18"/><text x="360" y="304" text-anchor="middle" font-size="15">H1</text>
+    <circle cx="540" cy="300" r="18"/><text x="540" y="304" text-anchor="middle" font-size="15">H2</text>
+    <circle cx="720" cy="300" r="18"/><text x="720" y="304" text-anchor="middle" font-size="15">H3</text>
+    <circle cx="900" cy="300" r="18"/><text x="900" y="304" text-anchor="middle" font-size="15">H4</text>
+    <circle cx="1080" cy="300" r="18"/><text x="1080" y="304" text-anchor="middle" font-size="15">H5</text>
+    <circle cx="1260" cy="300" r="18"/><text x="1260" y="304" text-anchor="middle" font-size="15">Hops</text>
+  </g>
+
+  <!-- Software row (y≈390) -->
+  <g stroke="currentColor" fill="none">
+    <circle cx="180" cy="390" r="18"/><text x="180" y="394" text-anchor="middle" font-size="15">W0</text>
+    <circle cx="360" cy="390" r="18"/><text x="360" y="394" text-anchor="middle" font-size="15">W1</text>
+    <circle cx="540" cy="390" r="18"/><text x="540" y="394" text-anchor="middle" font-size="15">W2</text>
+    <circle cx="720" cy="390" r="18"/><text x="720" y="394" text-anchor="middle" font-size="15">W3</text>
+    <circle cx="900" cy="390" r="18"/><text x="900" y="394" text-anchor="middle" font-size="15">W4</text>
+    <circle cx="1080" cy="390" r="18"/><text x="1080" y="394" text-anchor="middle" font-size="15">W5</text>
+    <circle cx="1260" cy="390" r="18"/><text x="1260" y="394" text-anchor="middle" font-size="15">Wops</text>
+  </g>
+
+  <!-- Legend -->
+  <g font-family="ui-monospace, monospace" font-size="15" fill="currentColor" opacity="0.9">
+    <rect x="100" y="30" width="1320" height="40" fill="none" stroke="currentColor" opacity="0.3"/>
+    <text x="760" y="55" text-anchor="middle">Phases (columns): 0 Proposal · 1 A-sample · 2 Architecture · 3 Implementation · 4 B-sample · 5 Certification · Ops Support</text>
+  </g>
+</svg>
+</div></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="grid cols-2">
+      <div class="card">
+        <div class="card-title mono">For business stakeholders</div>
+        <ul>
+          <li><strong>Predictable scope & milestones:</strong> Phase 0 locks goals, constraints, risks, success criteria.</li>
+          <li><strong>Fast feasibility (Phase 1):</strong> A-sample demonstrates the core principle and de-risks the path.</li>
+          <li><strong>Design transparency (Phase 2):</strong> Architecture and interfaces documented, reviewed, versioned.</li>
+          <li><strong>Evidence-driven delivery (Phase 3–4):</strong> Implementation with measurable KPIs, tests, and reports.</li>
+          <li><strong>Certification readiness (Phase 5):</strong> Full traceability chain packaged for audits and market entry.</li>
+          <li><strong>Operations:</strong> Knowledge transfer, support playbooks, and maintenance windows.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-title mono">For engineers</div>
+        <ul>
+          <li><strong>System Engineering:</strong> Requirements (IDs, baselines), change control, hazards & mitigations.</li>
+          <li><strong>Hardware & Mechanics:</strong> Prototypes, thermal/load analysis, DFM/DFA, BOM & ECNs.</li>
+          <li><strong>Software:</strong> Interfaces/contracts, modular architecture, diagnostics/logging, CI/CD.</li>
+          <li><strong>Verification:</strong> Unit/integration/system, HIL where relevant, E2E regression and coverage.</li>
+          <li><strong>Artifacts:</strong> Specs, models, test plans & reports, manufacturing docs, evidence folders.</li>
+          <li><strong>Gates:</strong> Entry/exit criteria per phase; objective readiness checks before moving forward.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="card">
+      <div class="card-title mono">Reading the matrix</div>
+      <p class="intro">Each circle is a stream×phase checkpoint (e.g., <span class="mono">S2</span> — System Engineering in Architecture phase). Clicking a node can lead to deeper documentation in the future.</p>
+      <div class="grid cols-3">
+        <div>
+          <h3 class="mono" style="margin:10px 0;">System Engineering (S✱)</h3>
+          <ul>
+            <li><strong>S0:</strong> Objectives, constraints, risks, success metrics.</li>
+            <li><strong>S1:</strong> Feasibility criteria, assumptions, updated risk log.</li>
+            <li><strong>S2:</strong> Architecture views, traceability matrix, verification plan.</li>
+            <li><strong>S3:</strong> Requirements stabilization, change requests, review minutes.</li>
+            <li><strong>S4:</strong> Reliability &amp; compliance evidence, updated hazard analysis.</li>
+            <li><strong>S5:</strong> Certification package index and audit mapping.</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="mono" style="margin:10px 0;">Hardware &amp; Mechanics (H✱)</h3>
+          <ul>
+            <li><strong>H0:</strong> High-level concept, preliminary BoM outlook.</li>
+            <li><strong>H1:</strong> Prototype bring-up notes, bench results.</li>
+            <li><strong>H2:</strong> Mechanical drawings, thermal/load simulations.</li>
+            <li><strong>H3:</strong> Prototype revisions, test fixtures, measurement logs.</li>
+            <li><strong>H4:</strong> DFM/DFA changes, extended tests, pre-compliance checks.</li>
+            <li><strong>H5:</strong> Manufacturing docs, test procedures, traceability.</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="mono" style="margin:10px 0;">Software (W✱)</h3>
+          <ul>
+            <li><strong>W0:</strong> Interface assumptions, constraints &amp; risks.</li>
+            <li><strong>W1:</strong> Prototype code spikes, feasibility metrics.</li>
+            <li><strong>W2:</strong> Architecture diagrams or models; contracts &amp; timing.</li>
+            <li><strong>W3:</strong> Implementation, diagnostics, CI, unit/integration tests.</li>
+            <li><strong>W4:</strong> System tests, performance, long-run stability, regression gates.</li>
+            <li><strong>W5:</strong> Evidence bundle: coverage, results, release notes, support plan.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+    
+  </main>
+<footer>
+    <div class="container">
+      <div class="footer-wrap mono">
+        <div>CONTIMECH</div><div>Kyiv</div><div>© 2025 ContiMech</div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
