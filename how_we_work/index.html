@@ -40,21 +40,15 @@
     .grid.cols-3{ display:grid; gap:20px; grid-template-columns:1fr; }
     @media(min-width:1100px){ .grid.cols-3{ grid-template-columns:1fr 1fr 1fr; } }
     
-
-/* Auto-inserted layout for How We Work two-column */
-.row-2col{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px}
-@media (max-width: 800px){ .row-2col{grid-template-columns:1fr} }
-.row-2col .col{display:block}
 </style>
 </head>
 <body>
 <header>
 <div class="container nav">
 <a class="brand mono" href="/">CONTIMECH</a>
-<nav><a class="mono" href="/about/how-we-work/">How We Work</a></nav>
-<nav> </nav>
+<nav> <a class="mono" href="/about/how-we-work/">How We Work</a></nav>
 </div>
-</header>
+<a class="brand mono" href="/who_we_are/">Who we are</a></header>
 <main>
 <section class="section" id="how-we-work">
 <div class="container">
@@ -156,7 +150,6 @@ Certification</text>
 <section class="section">
 <div class="container">
 <div class="grid cols-2">
-</div>
 <div class="card">
 <div class="card-title mono">Reading the matrix</div>
 <p class="intro">Each circle is a stream×phase checkpoint (e.g., <span class="mono">S2</span> — System Engineering in Architecture phase). Clicking a node can lead to deeper documentation in the future.</p>
@@ -195,7 +188,7 @@ Certification</text>
 </ul>
 </div>
 </div>
-</div><div class="row-2col"><div class="col"><div class="card">
+</div><div class="card">
 <div class="card-title mono">For business stakeholders</div>
 <ul>
 <li><strong>Predictable scope &amp; milestones:</strong> Phase 0 locks goals, constraints, risks, success criteria.</li>
@@ -205,7 +198,8 @@ Certification</text>
 <li><strong>Certification readiness (Phase 5):</strong> Full traceability chain packaged for audits and market entry.</li>
 <li><strong>Operations:</strong> Knowledge transfer, support playbooks, and maintenance windows.</li>
 </ul>
-</div></div><div class="col"><div class="card">
+</div>
+<div class="card">
 <div class="card-title mono">For engineers</div>
 <ul>
 <li><strong>System Engineering:</strong> Requirements (IDs, baselines), change control, hazards &amp; mitigations.</li>
@@ -215,7 +209,9 @@ Certification</text>
 <li><strong>Artifacts:</strong> Specs, models, test plans &amp; reports, manufacturing docs, evidence folders.</li>
 <li><strong>Gates:</strong> Entry/exit criteria per phase; objective readiness checks before moving forward.</li>
 </ul>
-</div></div></div></div>
+</div>
+</div>
+</div>
 </section>
 <section class="section">
 <div class="container">
