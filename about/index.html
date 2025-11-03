@@ -25,7 +25,25 @@
     pre.eco-tree{ white-space:pre; overflow:auto; margin:0; color:#a8a8a8; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:14px; line-height:1.35; }
     .eco-branch{ color:#00d9a3; font-weight:700; }
     .footer-wrap{ display:flex; gap:18px; padding:14px 0; color:#bfbfbf; }
-  </style>
+  
+    /* Brick layout for skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .skill-brick {
+      border: 1px solid var(--accent);
+      border-radius: 8px;
+      padding: 8px 10px;
+      text-align: center;
+      color: var(--accent);
+      font-weight: 500;
+      background: rgba(0, 217, 163, 0.05);
+    }
+
+</style>
 </head>
 <body>
   <header>
@@ -55,7 +73,7 @@
         <h2 class="mono">Our Team</h2>
         <div class="panel">
           <p>We cover the full system cycle — from architecture and co-design to verification and documentation.</p>
-          <div class="mono">Engineering Management · Functional Safety · Mechanical · Hardware · Firmware (C/C++) · Algorithms (Python/MATLAB) · QA · Technical Writing</div>
+          <div class="skills-grid mono"><div class="skill-brick">Engineering Management</div><div class="skill-brick">Functional Safety</div><div class="skill-brick">Mechanical</div><div class="skill-brick">Hardware</div><div class="skill-brick">Firmware (C/C++)</div><div class="skill-brick">Algorithms (Python/MATLAB)</div><div class="skill-brick">QA</div><div class="skill-brick">Technical Writing</div></div>
         </div>
       </div>
     </section>
@@ -100,7 +118,7 @@
     <section class="section">
       <div class="container">
         <h2 class="mono">Contact</h2>
-        <p>For collaboration or partnership inquiries: <a href="mailto:dhumennyi@contimech.org" class="mono">dhumennyi@contimech.org</a></p>
+        <p>For collaboration or partnership inquiries: <a href="mailto:ToBeAdded@contimech.org" class="mono">ToBeAdded@contimech.org</a></p>
       </div>
     </section>
   </main>
