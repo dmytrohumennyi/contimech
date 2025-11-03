@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)file:///home/dhumennyi/Downloads/contimech/academic/index1.html -->
+<html lang="uk"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="meta.title">Academic — ContiMech</title>
+  <meta name="description" content="Навчальні матеріали: програми курсів, лекції, лабораторні, відео та посилання для студентів КНУБА і КПІ." data-i18n-attr="content:meta.description">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./index_files/css2" rel="stylesheet">
+  <style>
+    :root{--bg:#0b0e13;--fg:#e8ecf1;--muted:#9aa7b1;--card:#121722;--line:#1f2632;--brand:#5ee3ff;--accent:#7ee787;}
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,'Helvetica Neue',Arial,'Noto Sans',sans-serif}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1100px;margin:0 auto;padding:28px 20px}
+    header{position:sticky;top:0;background:rgba(11,14,19,.85);backdrop-filter:saturate(160%) blur(10px);border-bottom:1px solid var(--line);z-index:10}
+    .nav{display:flex;align-items:center;gap:14px}
+    .nav a.logo{font-weight:700;letter-spacing:.2px}
+    .spacer{flex:1}
+    .pill{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);padding:6px 10px;border-radius:999px;color:var(--muted);font-size:12px}
+    h1{font-size:34px;line-height:1.2;margin:18px 0 6px}
+    p.lead{color:var(--muted);max-width:800px;margin:0 0 6px}
+    .grid{display:grid;gap:14px}
+    .cards{grid-template-columns:repeat(3,minmax(0,1fr))}
+    @media (max-width:1024px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media (max-width:720px){.cards{grid-template-columns:1fr}}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
+    .card h3{margin:4px 0 8px;font-size:18px}
+    .tag{display:inline-block;font-size:11px;padding:3px 8px;border:1px solid var(--line);border-radius:999px;color:var(--muted);margin-right:6px}
+    .toolbar{display:flex;gap:8px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);padding:8px 12px;border-radius:10px;background:#121722;color:var(--fg);cursor:pointer}
+    .btn:hover{border-color:#2b3544}
+    .tabs{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}
+    .tab{padding:8px 12px;border-radius:10px;border:1px solid var(--line);background:#0f141d;color:var(--fg);cursor:pointer}
+    .tab[aria-selected="true"]{outline:2px solid var(--brand);}
+    .section{margin:24px 0}
+    .table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+    .table th,.table td{border-bottom:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+    .table th{color:#b7c2cc;font-weight:600;background:#121722}
+    .table tr:last-child td{border-bottom:none}
+    .muted{color:var(--muted)}
+    .kicker{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.12em}
+    .notice{border:1px dashed #2b3544;border-radius:12px;padding:12px;background:#0f141d;color:var(--muted)}
+    footer{margin:40px 0 10px;color:var(--muted);font-size:13px}
+    .lang{margin-left:8px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="logo" href="file:///">ContiMech</a>
+      <span class="pill" title="КНУБА та КПІ" data-i18n="pill">Academic • KNUBA/KPI</span>
+      <div class="spacer"></div>
+      <a href="file:///about/" data-i18n="nav.about">About</a>
+      <button id="lang-switch" class="btn lang" type="button" aria-label="Switch language" data-i18n="lang.button">🇬🇧 English</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1 data-i18n="h1">Academic</h1>
+    <p class="lead" data-i18n="lead">Матеріали для студентів КНУБА та КПІ: програми курсів, лекції, лабораторні, відео та корисні посилання. Усе структуровано, щоб швидко знайти й завантажити.</p>
+
+    <div class="tabs" role="tablist" aria-label="Інституції" data-i18n-attr="aria-label:tabs.label">
+      <button class="tab" role="tab" aria-selected="true" aria-controls="panel-knuba" id="tab-knuba" data-i18n="tabs.knuba">КНУБА</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="panel-kpi" id="tab-kpi" data-i18n="tabs.kpi">КПІ</button>
+    </div>
+
+    <!-- KNUBA Panel -->
+    <section id="panel-knuba" class="section" role="tabpanel" aria-labelledby="tab-knuba">
+      <div class="grid cards">
+        <article class="card">
+          <div class="kicker" data-i18n="course.kicker">Курс</div>
+          <h3 data-i18n="knuba.rel.title">Надійність комп’ютерних систем</h3>
+          <div class="muted" data-i18n="knuba.rel.meta">Бакалаври, 3–4 курс • Осінній семестр</div>
+          <div class="toolbar" style="margin:10px 0 6px">
+            <a class="btn" href="file:///assets/academic/knuba/reliability/syllabus.pdf" data-i18n="btn.syllabus">📄 Програма</a>
+            <a class="btn" href="file:///home/dhumennyi/Downloads/contimech/academic/index1.html#knuba-reliability-materials" data-i18n="btn.materials">⬇️ Матеріали</a>
+            <a class="btn" href="https://youtube.com/playlist?list=RELIABILITY_PLACEHOLDER" target="_blank" rel="noopener" data-i18n="btn.video">▶️ Відео</a>
+          </div>
+          <div class="muted" data-i18n="knuba.rel.note">Оцінювання: модулі + РГР. Формат: лекції/практика.</div>
+        </article>
+
+        <article class="card">
+          <div class="kicker" data-i18n="course.kicker">Курс</div>
+          <h3 data-i18n="knuba.sim.title">Моделювання динаміки технічних систем</h3>
+          <div class="muted" data-i18n="knuba.sim.meta">Магістри • Весняний семестр</div>
+          <div class="toolbar" style="margin:10px 0 6px">
+            <a class="btn" href="file:///assets/academic/knuba/simulation/syllabus.pdf" data-i18n="btn.syllabus">📄 Програма</a>
+            <a class="btn" href="file:///home/dhumennyi/Downloads/contimech/academic/index1.html#knuba-sim-materials" data-i18n="btn.materials">⬇️ Матеріали</a>
+            <a class="btn" href="https://youtube.com/playlist?list=SIM_PLACEHOLDER" target="_blank" rel="noopener" data-i18n="btn.video">▶️ Відео</a>
+          </div>
+          <div class="muted" data-i18n="knuba.sim.note">Матеріали: MATLAB/Simulink + приклади з робототехніки/автомотів.</div>
+        </article>
+
+        <article class="card">
+          <div class="kicker" data-i18n="course.kicker">Курс</div>
+          <h3 data-i18n="knuba.fusa.title">Методи функціональної безпеки</h3>
+          <div class="muted" data-i18n="knuba.fusa.meta">Електив • Осінь/Весна</div>
+          <div class="toolbar" style="margin:10px 0 6px">
+            <a class="btn" href="file:///assets/academic/knuba/fusa/syllabus.pdf" data-i18n="btn.syllabus">📄 Програма</a>
+            <a class="btn" href="file:///home/dhumennyi/Downloads/contimech/academic/index1.html#knuba-fusa-materials" data-i18n="btn.materials">⬇️ Матеріали</a>
+            <a class="btn" href="https://youtube.com/playlist?list=FUSA_PLACEHOLDER" target="_blank" rel="noopener" data-i18n="btn.video">▶️ Відео</a>
+          </div>
+          <div class="muted" data-i18n="knuba.fusa.note">ISO 26262, HARA, FTA/FMEA, приклади з ECU.</div>
+        </article>
+      </div>
+
+      <!-- KNUBA tables -->
+      <h2 id="knuba-reliability-materials" style="margin-top:26px" data-i18n="knuba.rel.h2">Надійність комп’ютерних систем — матеріали</h2>
+      <div class="notice" data-i18n="knuba.rel.notice">посилання на сховище буде додано сюди: <code>/assets/academic/knuba/reliability/</code></div>
+      <table class="table" style="margin-top:10px">
+        <thead><tr>
+          <th data-i18n="table.topic">Тема</th>
+          <th data-i18n="table.format">Формат</th>
+          <th data-i18n="table.updated">Оновлено</th>
+          <th data-i18n="table.download">Завантаження</th>
+        </tr></thead>
+        <tbody>
+          <tr><td data-i18n="knuba.rel.r1.t">Лекція 01. Вступ, надійність і відмовостійкість</td><td>PDF</td><td>—</td><td><a href="file:///assets/academic/knuba/reliability/lectures/L01_intro.pdf">L01_intro.pdf</a></td></tr>
+          <tr><td data-i18n="knuba.rel.r2.t">Лекція 02. Моделі безвідмовності</td><td>PDF</td><td>—</td><td><a href="file:///assets/academic/knuba/reliability/lectures/L02_models.pdf">L02_models.pdf</a></td></tr>
+          <tr><td data-i18n="knuba.rel.r3.t">РГР. Варіанти завдань</td><td>DOCX</td><td>—</td><td><a href="file:///assets/academic/knuba/reliability/RGR_tasks.docx">RGR_tasks.docx</a></td></tr>
+          <tr><td data-i18n="knuba.rel.r4.t">Шаблон звіту РГР</td><td>DOCX</td><td>—</td><td><a href="file:///assets/academic/knuba/reliability/RGR_report_template.docx">RGR_report_template.docx</a></td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="knuba-sim-materials" style="margin-top:26px" data-i18n="knuba.sim.h2">Моделювання динаміки технічних систем — матеріали</h2>
+      <div class="notice" data-i18n="knuba.sim.notice">Шлях: <code>/assets/academic/knuba/simulation/</code></div>
+      <table class="table" style="margin-top:10px">
+        <thead><tr>
+          <th data-i18n="table.topic">Тема</th>
+          <th data-i18n="table.format">Формат</th>
+          <th data-i18n="table.updated">Оновлено</th>
+          <th data-i18n="table.download">Завантаження</th>
+        </tr></thead>
+        <tbody>
+          <tr><td data-i18n="knuba.sim.r1.t">Лекція 01. Лінійні моделі та стани</td><td>PDF</td><td>—</td><td><a href="file:///assets/academic/knuba/simulation/lectures/L01_state_space.pdf">L01_state_space.pdf</a></td></tr>
+          <tr><td data-i18n="knuba.sim.r2.t">Лаб. 01. Симуляція ПІД-регулятора</td><td>ZIP</td><td>—</td><td><a href="file:///assets/academic/knuba/simulation/labs/Lab01_PID.zip">Lab01_PID.zip</a></td></tr>
+          <tr><td data-i18n="knuba.sim.r3.t">Приклад. HIL із FlightGear</td><td>ZIP</td><td>—</td><td><a href="file:///assets/academic/knuba/simulation/examples/FG_HIL_demo.zip">FG_HIL_demo.zip</a></td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="knuba-fusa-materials" style="margin-top:26px" data-i18n="knuba.fusa.h2">Методи функціональної безпеки — матеріали</h2>
+      <div class="notice" data-i18n="knuba.fusa.notice">Шлях: <code>/assets/academic/knuba/fusa/</code></div>
+      <table class="table" style="margin-top:10px">
+        <thead><tr>
+          <th data-i18n="table.topic">Тема</th>
+          <th data-i18n="table.format">Формат</th>
+          <th data-i18n="table.updated">Оновлено</th>
+          <th data-i18n="table.download">Завантаження</th>
+        </tr></thead>
+        <tbody>
+          <tr><td data-i18n="knuba.fusa.r1.t">Лекція 01. Вступ до ISO 26262</td><td>PDF</td><td>—</td><td><a href="file:///assets/academic/knuba/fusa/lectures/L01_iso26262_intro.pdf">L01_iso26262_intro.pdf</a></td></tr>
+          <tr><td data-i18n="knuba.fusa.r2.t">Приклад HARA</td><td>XLSX</td><td>—</td><td><a href="file:///assets/academic/knuba/fusa/examples/HARA_example.xlsx">HARA_example.xlsx</a></td></tr>
+          <tr><td data-i18n="knuba.fusa.r3.t">Чекліст FMEA</td><td>XLSX</td><td>—</td><td><a href="file:///assets/academic/knuba/fusa/templates/FMEA_checklist.xlsx">FMEA_checklist.xlsx</a></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- KPI Panel -->
+    <section id="panel-kpi" class="section" role="tabpanel" aria-labelledby="tab-kpi" hidden="">
+      <div class="grid cards">
+        <article class="card">
+          <div class="kicker" data-i18n="course.kicker">Курс</div>
+          <h3 data-i18n="kpi.emb.title">Embedded C/C++ та сенсор-ф’южн</h3>
+          <div class="muted" data-i18n="kpi.emb.meta">Спецкурс • Весна</div>
+          <div class="toolbar" style="margin:10px 0 6px">
+            <a class="btn" href="file:///assets/academic/kpi/embedded/syllabus.pdf" data-i18n="btn.syllabus">📄 Програма</a>
+            <a class="btn" href="file:///home/dhumennyi/Downloads/contimech/academic/index1.html#kpi-embedded-materials" data-i18n="btn.materials">⬇️ Матеріали</a>
+            <a class="btn" href="https://youtube.com/playlist?list=EMBEDDED_PLACEHOLDER" target="_blank" rel="noopener" data-i18n="btn.video">▶️ Відео</a>
+          </div>
+          <div class="muted" data-i18n="kpi.emb.note">C/C++, FreeRTOS, бази ROS2, UART/CAN, приклади з Лідара LD06.</div>
+        </article>
+        <article class="card">
+          <div class="kicker" data-i18n="course.kicker">Курс</div>
+          <h3 data-i18n="kpi.auto.title">Автомотів: процеси та стандарти</h3>
+          <div class="muted" data-i18n="kpi.auto.meta">Електив • Осінь</div>
+          <div class="toolbar" style="margin:10px 0 6px">
+            <a class="btn" href="file:///assets/academic/kpi/automotive/syllabus.pdf" data-i18n="btn.syllabus">📄 Програма</a>
+            <a class="btn" href="file:///home/dhumennyi/Downloads/contimech/academic/index1.html#kpi-auto-materials" data-i18n="btn.materials">⬇️ Матеріали</a>
+            <a class="btn" href="https://youtube.com/playlist?list=AUTO_PLACEHOLDER" target="_blank" rel="noopener" data-i18n="btn.video">▶️ Відео</a>
+          </div>
+          <div class="muted" data-i18n="kpi.auto.note">ASPICE, ISO 21434, UDS, AUTOSAR Classic (DaVinci/Vector).</div>
+        </article>
+      </div>
+
+      <h2 id="kpi-embedded-materials" style="margin-top:26px" data-i18n="kpi.emb.h2">Embedded C/C++ та сенсор-ф’южн — матеріали</h2>
+      <div class="notice" data-i18n="kpi.emb.notice">Шлях: <code>/assets/academic/kpi/embedded/</code></div>
+      <table class="table" style="margin-top:10px">
+        <thead><tr>
+          <th data-i18n="table.topic">Тема</th>
+          <th data-i18n="table.format">Формат</th>
+          <th data-i18n="table.updated">Оновлено</th>
+          <th data-i18n="table.download">Завантаження</th>
+        </tr></thead>
+        <tbody>
+          <tr><td data-i18n="kpi.emb.r1.t">Лекція 01. C для мікроконтролерів</td><td>PDF</td><td>—</td><td><a href="file:///assets/academic/kpi/embedded/lectures/L01_c_for_mc.pdf">L01_c_for_mc.pdf</a></td></tr>
+          <tr><td data-i18n="kpi.emb.r2.t">Приклад. LD06 → UDP стрім (C99)</td><td>ZIP</td><td>—</td><td><a href="file:///assets/academic/kpi/embedded/examples/LD06_UDP_stream.zip">LD06_UDP_stream.zip</a></td></tr>
+          <tr><td data-i18n="kpi.emb.r3.t">Лаб. 02. UART/CAN шлюз</td><td>ZIP</td><td>—</td><td><a href="file:///assets/academic/kpi/embedded/labs/Lab02_UART_CAN_gateway.zip">Lab02_UART_CAN_gateway.zip</a></td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="kpi-auto-materials" style="margin-top:26px" data-i18n="kpi.auto.h2">Автомотів: процеси та стандарти — матеріали</h2>
+      <div class="notice" data-i18n="kpi.auto.notice">Шлях: <code>/assets/academic/kpi/automotive/</code></div>
+      <table class="table" style="margin-top:10px">
+        <thead><tr>
+          <th data-i18n="table.topic">Тема</th>
+          <th data-i18n="table.format">Формат</th>
+          <th data-i18n="table.updated">Оновлено</th>
+          <th data-i18n="table.download">Завантаження</th>
+        </tr></thead>
+        <tbody>
+          <tr><td data-i18n="kpi.auto.r1.t">Лекція 01. ASPICE overview</td><td>PDF</td><td>—</td><td><a href="file:///assets/academic/kpi/automotive/lectures/L01_aspice_overview.pdf">L01_aspice_overview.pdf</a></td></tr>
+          <tr><td data-i18n="kpi.auto.r2.t">UDS шпаргалка</td><td>PDF</td><td>—</td><td><a href="file:///assets/academic/kpi/automotive/notes/UDS_cheatsheet.pdf">UDS_cheatsheet.pdf</a></td></tr>
+          <tr><td data-i18n="kpi.auto.r3.t">AUTOSAR Classic — старт з DaVinci</td><td>PDF</td><td>—</td><td><a href="file:///assets/academic/kpi/automotive/notes/AUTOSAR_Classic_getting_started.pdf">AUTOSAR_Classic_getting_started.pdf</a></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2 data-i18n="rules.h2">Загальні правила та зворотний зв’язок</h2>
+      <ul>
+        <li data-i18n="rules.r1">Формат робіт: DOCX/PDF, шрифт 10pt, одинарний інтервал, до 3 рівнів заголовків.</li>
+        <li data-i18n="rules.r2">Робота з посиланнями: будь ласка, додавайте короткі DOI/URL у кінці звіту.</li>
+        <li data-i18n="rules.r3">Питання та фідбек: пишіть на <a href="mailto:d.gumennuy@kpi.ua">d.gumennuy@kpi.ua</a>.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2 data-i18n="faq.h2">Часті питання (FAQ)</h2>
+      <details class="card"><summary><strong data-i18n="faq.q1">Чи будуть додаткові матеріали?</strong></summary><div class="muted" data-i18n="faq.a1">Так, розділ оновлюється протягом семестру. Дивіться датy «Оновлено» в таблицях.</div></details>
+      <details class="card"><summary><strong data-i18n="faq.q2">Як подати РГР/лаби?</strong></summary><div class="muted" data-i18n="faq.a2">Надсилати файли у вказаному форматі на email або у LMS/Google Drive (за домовленістю на лекції).</div></details>
+    </section>
+
+    <footer>
+      <span data-i18n="footer.c">©</span> <span id="y">2025</span> ContiMech • <span data-i18n="footer.ac">Academic</span>.
+      <span data-i18n="footer.updated">Останнє оновлення сторінки:</span> <span id="updated">2025-11-03</span>
+    </footer>
+  </main>
+
+  <script>
+    // i18n dictionary
+    const i18n = {
+      uk: {
+        "meta.title":"Academic — ContiMech",
+        "meta.description":"Навчальні матеріали: програми курсів, лекції, лабораторні, відео та посилання для студентів КНУБА і КПІ.",
+        "pill":"Academic • KNUBA/KPI",
+        "nav.about":"About",
+        "lang.button":"🇬🇧 English",
+        "h1":"Academic",
+        "lead":"Матеріали для студентів КНУБА та КПІ: програми курсів, лекції, лабораторні, відео та корисні посилання. Усе структуровано, щоб швидко знайти й завантажити.",
+        "tabs.label":"Інституції",
+        "tabs.knuba":"КНУБА","tabs.kpi":"КПІ",
+        "course.kicker":"Курс",
+        "btn.syllabus":"📄 Програма","btn.materials":"⬇️ Матеріали","btn.video":"▶️ Відео",
+        "table.topic":"Тема","table.format":"Формат","table.updated":"Оновлено","table.download":"Завантаження",
+        "knuba.rel.title":"Надійність комп’ютерних систем",
+        "knuba.rel.meta":"Бакалаври, 3–4 курс • Осінній семестр",
+        "knuba.rel.note":"Оцінювання: модулі + РГР. Формат: лекції/практика.",
+        "knuba.rel.h2":"Надійність комп’ютерних систем — матеріали",
+        "knuba.rel.notice":"Конейнер PDF/ZIP з лекціями, РГР, шаблони звітів. Шлях: <code>/assets/academic/knuba/reliability/</code>",
+        "knuba.rel.r1.t":"Лекція 01. Вступ, надійність і відмовостійкість",
+        "knuba.rel.r2.t":"Лекція 02. Моделі безвідмовності",
+        "knuba.rel.r3.t":"РГР. Варіанти завдань",
+        "knuba.rel.r4.t":"Шаблон звіту РГР",
+
+        "knuba.sim.title":"Моделювання динаміки технічних систем",
+        "knuba.sim.meta":"Магістри • Весняний семестр",
+        "knuba.sim.note":"Матеріали: MATLAB/Simulink + приклади з робототехніки/автомотів.",
+        "knuba.sim.h2":"Моделювання динаміки технічних систем — матеріали",
+        "knuba.sim.notice":"Шлях: <code>/assets/academic/knuba/simulation/</code>",
+        "knuba.sim.r1.t":"Лекція 01. Лінійні моделі та стани",
+        "knuba.sim.r2.t":"Лаб. 01. Симуляція ПІД-регулятора",
+        "knuba.sim.r3.t":"Приклад. HIL із FlightGear",
+
+        "knuba.fusa.title":"Методи функціональної безпеки",
+        "knuba.fusa.meta":"Електив • Осінь/Весна",
+        "knuba.fusa.note":"ISO 26262, HARA, FTA/FMEA, приклади з ECU.",
+        "knuba.fusa.h2":"Методи функціональної безпеки — матеріали",
+        "knuba.fusa.notice":"Шлях: <code>/assets/academic/knuba/fusa/</code>",
+        "knuba.fusa.r1.t":"Лекція 01. Вступ до ISO 26262",
+        "knuba.fusa.r2.t":"Приклад HARA",
+        "knuba.fusa.r3.t":"Чекліст FMEA",
+
+        "kpi.emb.title":"Embedded C/C++ та сенсор-ф’южн",
+        "kpi.emb.meta":"Спецкурс • Весна",
+        "kpi.emb.note":"C/C++, FreeRTOS, бази ROS2, UART/CAN, приклади з Лідара LD06.",
+        "kpi.emb.h2":"Embedded C/C++ та сенсор-ф’южн — матеріали",
+        "kpi.emb.notice":"Шлях: <code>/assets/academic/kpi/embedded/</code>",
+        "kpi.emb.r1.t":"Лекція 01. C для мікроконтролерів",
+        "kpi.emb.r2.t":"Приклад. LD06 → UDP стрім (C99)",
+        "kpi.emb.r3.t":"Лаб. 02. UART/CAN шлюз",
+
+        "kpi.auto.title":"Автомотів: процеси та стандарти",
+        "kpi.auto.meta":"Електив • Осінь",
+        "kpi.auto.note":"ASPICE, ISO 21434, UDS, AUTOSAR Classic (DaVinci/Vector).",
+        "kpi.auto.h2":"Автомотів: процеси та стандарти — матеріали",
+        "kpi.auto.notice":"Шлях: <code>/assets/academic/kpi/automotive/</code>",
+        "kpi.auto.r1.t":"Лекція 01. ASPICE overview",
+        "kpi.auto.r2.t":"UDS шпаргалка",
+        "kpi.auto.r3.t":"AUTOSAR Classic — старт з DaVinci",
+
+        "rules.h2":"Загальні правила та зворотний зв’язок",
+        "rules.r1":"Формат робіт: DOCX/PDF, шрифт 10pt, одинарний інтервал, до 3 рівнів заголовків.",
+        "rules.r2":"Робота з посиланнями: будь ласка, додавайте короткі DOI/URL у кінці звіту.",
+        "rules.r3":"Питання та фідбек: пишіть на <a href=\"mailto:humennyi.do@knuba.edu.ua\">humennyi.do@knuba.edu.ua</a>.",
+        "faq.h2":"Часті питання (FAQ)",
+        "faq.q1":"Чи будуть додаткові матеріали?",
+        "faq.a1":"Так, розділ оновлюється протягом семестру. Дивіться датy «Оновлено» в таблицях.",
+        "faq.q2":"Як подати РГР/лаби?",
+        "faq.a2":"Надсилати файли у вказаному форматі на email або у LMS/Google Drive (за домовленістю на лекції).",
+        "footer.c":"©",
+        "footer.ac":"Academic",
+        "footer.updated":"Останнє оновлення сторінки:"
+      },
+      en: {
+        "meta.title":"Academic — ContiMech",
+        "meta.description":"Course syllabi, lectures, labs, videos and useful links for KNUBA and KPI students.",
+        "pill":"Academic • KNUBA/KPI",
+        "nav.about":"About",
+        "lang.button":"🇺🇦 Українською",
+        "h1":"Academic",
+        "lead":"Resources for KNUBA and KPI students: syllabi, lectures, labs, videos and useful links — structured for quick access and download.",
+        "tabs.label":"Institutions",
+        "tabs.knuba":"KNUBA","tabs.kpi":"KPI",
+        "course.kicker":"Course",
+        "btn.syllabus":"📄 Syllabus","btn.materials":"⬇️ Materials","btn.video":"▶️ Videos",
+        "table.topic":"Topic","table.format":"Format","table.updated":"Updated","table.download":"Download",
+        "knuba.rel.title":"Reliability of Computer Systems",
+        "knuba.rel.meta":"BSc, 3–4 year • Fall",
+        "knuba.rel.note":"Grading: modules + term paper. Format: lectures/practice.",
+        "knuba.rel.h2":"Reliability of Computer Systems — materials",
+        "knuba.rel.notice":"Put PDFs/ZIPs here (lectures, term paper tasks, report templates). Path: <code>/assets/academic/knuba/reliability/</code>",
+        "knuba.rel.r1.t":"Lecture 01. Introduction, reliability & fault tolerance",
+        "knuba.rel.r2.t":"Lecture 02. Reliability models",
+        "knuba.rel.r3.t":"Term paper. Task variants",
+        "knuba.rel.r4.t":"Term paper report template",
+
+        "knuba.sim.title":"Modeling the Dynamics of Technical Systems",
+        "knuba.sim.meta":"MSc • Spring",
+        "knuba.sim.note":"MATLAB/Simulink + robotics/automotive examples.",
+        "knuba.sim.h2":"Modeling the Dynamics of Technical Systems — materials",
+        "knuba.sim.notice":"Path: <code>/assets/academic/knuba/simulation/</code>",
+        "knuba.sim.r1.t":"Lecture 01. Linear models & state-space",
+        "knuba.sim.r2.t":"Lab 01. PID controller simulation",
+        "knuba.sim.r3.t":"Example. FlightGear HIL demo",
+
+        "knuba.fusa.title":"Functional Safety Methods",
+        "knuba.fusa.meta":"Elective • Fall/Spring",
+        "knuba.fusa.note":"ISO 26262, HARA, FTA/FMEA, ECU examples.",
+        "knuba.fusa.h2":"Functional Safety Methods — materials",
+        "knuba.fusa.notice":"Path: <code>/assets/academic/knuba/fusa/</code>",
+        "knuba.fusa.r1.t":"Lecture 01. Intro to ISO 26262",
+        "knuba.fusa.r2.t":"HARA example",
+        "knuba.fusa.r3.t":"FMEA checklist",
+
+        "kpi.emb.title":"Embedded C/C++ and Sensor Fusion",
+        "kpi.emb.meta":"Special course • Spring",
+        "kpi.emb.note":"C/C++, FreeRTOS, ROS2 basics, UART/CAN, LD06 lidar examples.",
+        "kpi.emb.h2":"Embedded C/C++ and Sensor Fusion — materials",
+        "kpi.emb.notice":"Path: <code>/assets/academic/kpi/embedded/</code>",
+        "kpi.emb.r1.t":"Lecture 01. C for microcontrollers",
+        "kpi.emb.r2.t":"Example. LD06 → UDP stream (C99)",
+        "kpi.emb.r3.t":"Lab 02. UART/CAN gateway",
+
+        "kpi.auto.title":"Automotive: Processes and Standards",
+        "kpi.auto.meta":"Elective • Fall",
+        "kpi.auto.note":"ASPICE, ISO 21434, UDS, AUTOSAR Classic (DaVinci/Vector).",
+        "kpi.auto.h2":"Automotive: Processes and Standards — materials",
+        "kpi.auto.notice":"Path: <code>/assets/academic/kpi/automotive/</code>",
+        "kpi.auto.r1.t":"Lecture 01. ASPICE overview",
+        "kpi.auto.r2.t":"UDS cheat sheet",
+        "kpi.auto.r3.t":"AUTOSAR Classic — getting started with DaVinci",
+
+        "rules.h2":"General rules & feedback",
+        "rules.r1":"Report format: DOCX/PDF, 10pt font, single spacing, up to 3 heading levels.",
+        "rules.r2":"References: please include short DOI/URLs at the end of the report.",
+        "rules.r3":"Questions & feedback: email <a href=\"mailto:apollo.d.g@gmail.com\">apollo.d.g@gmail.com</a>.",
+        "faq.h2":"FAQ",
+        "faq.q1":"Will there be additional materials?",
+        "faq.a1":"Yes, the section is updated during the semester. See the “Updated” date in tables.",
+        "faq.q2":"How to submit term papers/labs?",
+        "faq.a2":"Send files in the specified format by email or via LMS/Google Drive (agreed in class).",
+        "footer.c":"©",
+        "footer.ac":"Academic",
+        "footer.updated":"Page last updated:"
+      }
+    };
+
+    // i18n helpers: text content and attribute bindings via data-i18n-attr="attr:key"
+    function applyI18n(lang) {
+      // Text nodes
+      document.querySelectorAll("[data-i18n]").forEach(el=>{
+        const key = el.getAttribute("data-i18n");
+        if (i18n[lang] && i18n[lang][key] !== undefined) {
+          el.innerHTML = i18n[lang][key];
+        }
+      });
+      // Attribute bindings
+      document.querySelectorAll("[data-i18n-attr]").forEach(el=>{
+        const pairs = el.getAttribute("data-i18n-attr").split(",").map(s=>s.trim());
+        pairs.forEach(p=>{
+          const [attr, key] = p.split(":");
+          if (i18n[lang] && i18n[lang][key] !== undefined) {
+            el.setAttribute(attr, i18n[lang][key]);
+          }
+        });
+      });
+      // html lang
+      document.documentElement.lang = lang;
+      // title element text (also duplicated as text node)
+      const titleEl = document.querySelector("title[data-i18n='meta.title']");
+      if (titleEl && i18n[lang]["meta.title"]) titleEl.textContent = i18n[lang]["meta.title"];
+      // Update tab hash label if needed (no change in IDs; only visual labels change)
+      const btn = document.getElementById("lang-switch");
+      if (btn) btn.textContent = i18n[lang]["lang.button"];
+      // Update About nav text
+      const about = document.querySelector("a[href='/about/'][data-i18n='nav.about']");
+      if (about) about.textContent = i18n[lang]["nav.about"];
+    }
+
+    // Tabs (KNUBA / KPI)
+    const tabs = document.querySelectorAll('.tab');
+    const panels = {'tab-knuba':document.getElementById('panel-knuba'),'tab-kpi':document.getElementById('panel-kpi')};
+    tabs.forEach(t=>t.addEventListener('click',()=>{
+      tabs.forEach(x=>x.setAttribute('aria-selected','false'));
+      t.setAttribute('aria-selected','true');
+      Object.values(panels).forEach(p=>p.hidden=true);
+      panels[t.id].hidden=false;
+      history.replaceState(null,'',`#${t.id==='tab-knuba'?'knuba':'kpi'}`);
+    }));
+
+    // Footer dates
+    document.getElementById('y').textContent=new Date().getFullYear();
+    document.getElementById('updated').textContent=new Date().toISOString().slice(0,10);
+
+    // Language switching
+    const langBtn = document.getElementById("lang-switch");
+    function setLang(lang) {
+      localStorage.setItem("lang", lang);
+      applyI18n(lang);
+    }
+    langBtn.addEventListener("click", () => {
+      const current = localStorage.getItem("lang") || "uk";
+      setLang(current === "uk" ? "en" : "uk");
+    });
+    // Initialize language (default UA)
+    setLang(localStorage.getItem("lang") || "uk");
+    // Deep-link to KPI
+    const h=location.hash.replace('#','');
+    if(h==='kpi'){document.getElementById('tab-kpi').click()}
+  </script>
+
+
+</body></html>
