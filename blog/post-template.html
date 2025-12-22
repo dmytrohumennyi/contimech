@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ContiMech — Post template</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+  <!-- Копіюй цей файл у blog/posts/<id>.html і заміни контент -->
+  <header class="header">
+    <div class="header-inner">
+      <a class="brand" href="../../index.html">
+        <div class="logo"></div>
+        <div class="brand-text">
+          <div class="brand-title">ContiMech</div>
+          <div class="brand-sub">Дмитро Гуменний, к.т.н.</div>
+        </div>
+      </a>
+      <nav class="nav">
+        <a href="../../index.html">Головне</a>
+        <a href="../../cooperation.html">Співпраця</a>
+        <a href="../../experience.html">Досвід</a>
+        <a href="../../projects.html">Проєкти</a>
+        <a href="../../publications.html">Публікації</a>
+        <a href="../index.html">Блог</a>
+        <a href="../../contacts.html">Контакти</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <a class="link" href="../index.html">← Назад до блогу</a>
+
+    <h1 style="margin-top:10px">Заголовок поста</h1>
+    <div class="muted" style="margin-top:-6px">YYYY-MM-DD • Місто</div>
+
+    <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap">
+      <span class="chip chip-sm">Tag</span>
+      <span class="chip chip-sm">Tag</span>
+    </div>
+
+    <section class="panel" style="margin-top:14px">
+      <div class="blog-cover" style="height:260px;border-radius:16px;overflow:hidden">
+        <img src="../../assets/img/blog/<id>/cover.jpg" alt="cover">
+      </div>
+
+      <h2 style="margin-top:14px">Коротко</h2>
+      <p class="lead">1–2 речення summary (це піде і в карточку на index).</p>
+
+      <h2>Що виніс</h2>
+      <ul>
+        <li>Пункт 1</li>
+        <li>Пункт 2</li>
+        <li>Пункт 3</li>
+      </ul>
+
+      <h2>Нотатки</h2>
+      <p>Основний текст.</p>
+
+      <h2>Артефакти</h2>
+      <ul>
+        <li><a class="link" href="../../assets/cases/case_<id>.pdf">PDF</a></li>
+      </ul>
+
+      <h2>Фото</h2>
+      <div class="gallery">
+        <img data-lightbox data-lightbox-group="<id>" src="../../assets/img/blog/<id>/01.jpg" alt="Фото 1">
+        <img data-lightbox data-lightbox-group="<id>" src="../../assets/img/blog/<id>/02.jpg" alt="Фото 2">
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© ContiMech</div>
+      <div class="muted">GitHub Pages-ready</div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/site.js"></script>
+  <script src="../../assets/js/lightbox.js"></script>
+</body>
+</html>

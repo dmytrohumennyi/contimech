@@ -1,0 +1,124 @@
+[
+  {
+    "id": "2025-12-exhibitions-strategy",
+    "title": "Виставки як інструмент залучення клієнтів та партнерів: Embedded World 2023 і The Battery Show 2023",
+    "date": "2025-12-21",
+    "year": 2025,
+    "type": "professional",
+    "mode": "attendee",
+    "location": "Нюрнберг / Штутгарт",
+    "tags": [
+      "Виставки",
+      "Партнерства",
+      "B2B",
+      "Embedded",
+      "Battery",
+      "Sales",
+      "Стратегія"
+    ],
+    "summary": "Короткий конспект з практики відвідування Embedded World 2023 (Нюрнберг) та The Battery Show 2023 (Штутгарт): як готуватися, кого брати в команду та як конвертувати контакти у партнерства.",
+    "cover": "../assets/img/blog/2025-12-exhibitions-strategy/cover.jpg",
+    "gallery": [
+      "../assets/img/blog/2025-12-exhibitions-strategy/01.jpg",
+      "../assets/img/blog/2025-12-exhibitions-strategy/02.jpg"
+    ],
+    "post_url": "posts/2025-12-exhibitions-strategy.html"
+  },
+  {
+    "id": "2025-12-knuba-masters-predefense",
+    "title": "Передзахист магістрів КНУБА (КБКІ), грудень 2025: підсумки та спостереження",
+    "date": "2025-12-18",
+    "year": 2025,
+    "type": "academic",
+    "mode": "committee",
+    "location": "Київ",
+    "tags": [
+      "КНУБА",
+      "Освіта",
+      "Якість",
+      "ДЕК"
+    ],
+    "summary": "15–18 грудня 2025 року брав участь у передзахисті магістерських робіт кафедри КБКІ КНУБА як заступник голови ДЕК. Орієнтовно 85% студентів рекомендовано до захисту; решту — не рекомендовано за результатами колегіального обговорення.",
+    "cover": "../assets/img/blog/2025-12-knuba-masters-predefense/cover.jpg",
+    "gallery": [],
+    "post_url": "posts/2025-12-knuba-masters-predefense.html"
+  },
+  {
+    "id": "2025-10-matlab-expo-takeaways",
+    "title": "MATLAB EXPO Deutschland 2025: ключові теми та висновки",
+    "date": "2025-10-29",
+    "year": 2025,
+    "type": "professional",
+    "mode": "attendee",
+    "location": "Мюнхен",
+    "tags": [
+      "MATLAB",
+      "Simulink",
+      "Конференції",
+      "AI",
+      "Model-Based",
+      "FuSa",
+      "HIL",
+      "PIL",
+      "Automotive",
+      "Energy",
+      "HVDC"
+    ],
+    "summary": "Нотатки з MATLAB EXPO Deutschland 2025 (Мюнхен): AI на edge, модельно-орієнтована розробка, FuSa/traceability, PIL/HIL та кейси з енергетики (HVDC).",
+    "cover": "../assets/img/blog/2025-10-matlab-expo-takeaways/cover.jpg",
+    "gallery": [
+      "../assets/img/blog/2025-10-matlab-expo-takeaways/01.jpg",
+      "../assets/img/blog/2025-10-matlab-expo-takeaways/02.jpg",
+      "../assets/img/blog/2025-10-matlab-expo-takeaways/03.jpg",
+      "../assets/img/blog/2025-10-matlab-expo-takeaways/04.jpg"
+    ],
+    "post_url": "posts/2025-10-matlab-expo-takeaways.html"
+  },
+  {
+    "id": "2025-07-kpi-nix-mou",
+    "title": "N-iX × КПІ: меморандум, який працює",
+    "date": "2025-07-01",
+    "year": 2025,
+    "type": "partnership",
+    "mode": "partnership",
+    "location": "Київ · КПІ ім. Ігоря Сікорського",
+    "tags": [
+      "Партнерство",
+      "КПІ",
+      "N-iX",
+      "Освіта",
+      "R&D",
+      "Прототипи"
+    ],
+    "summary": "Як меморандум N‑iX × КПІ перетворився на регулярну роботу: щотижнева координація, спільні R&D теми та ідея нової навчальної програми на стику бізнесу й науки.",
+    "cover": "../assets/img/blog/2025-07-kpi-nix-mou/cover.jpg",
+    "gallery": [
+      "../assets/img/blog/2025-07-kpi-nix-mou/01.jpg"
+    ],
+    "post_url": "posts/2025-07-kpi-nix-mou.html"
+  },
+  {
+    "id": "2024-09-autoai-europe",
+    "title": "Auto.AI Europe 2024: камерна спільнота та практичні інсайти",
+    "date": "2024-09-15",
+    "year": 2024,
+    "type": "professional",
+    "mode": "speaker",
+    "location": "Берлін",
+    "tags": [
+      "Automotive",
+      "AI",
+      "Networking",
+      "Community",
+      "N-iX"
+    ],
+    "summary": "Нотатки з Auto.AI Europe (09.2024, Берлін): чому важливо бути «своїм» у спільноті, що я модерував у секції про енергоефективність, і який практичний результат ми забрали після поїздки.",
+    "cover": "../assets/img/blog/2024-09-autoai-europe/cover.jpg",
+    "gallery": [
+      "../assets/img/blog/2024-09-autoai-europe/01.jpg",
+      "../assets/img/blog/2024-09-autoai-europe/02.jpg",
+      "../assets/img/blog/2024-09-autoai-europe/03.jpg"
+    ],
+    "post_url": "posts/2024-09-autoai-europe.html"
+  }
+]

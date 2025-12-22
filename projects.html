@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>ContiMech — Проєкти</title>
+  <meta name="description" content="ContiMech — проєкти Дмитра: наукові, pet‑проєкти та NDA-safe комерційні кейси."/>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <div class="brand-title">ContiMech</div>
+          <div class="brand-sub">Дмитро Гуменний, к.т.н.</div>
+        </div>
+      </a>
+      <nav class="nav">
+        <a href="index.html">Головне</a>
+        <a href="cooperation.html">Співпраця</a>
+        <a href="experience.html">Досвід</a>
+        <a class="active" href="projects.html">Проєкти</a>
+        <a href="publications.html">Публікації</a>
+        <a href="blog/index.html">Блог</a>
+        <a href="contacts.html">Контакти</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="section-title">Проєкти</h1>
+    <p class="meta">
+      Тут — проєкти, які були активні у <b>2025+</b> (або мають ключові результати/етапи, що використовуються у цей період).
+      Список поділено на: <b>офіційні наукові</b>, <b>pet‑проєкти</b>, та <b>комерційні (NDA‑safe)</b>.
+    </p>
+
+    <div class="grid pub-app" id="projects-app">
+      <div class="card pub-filters">
+        <div class="pub-filters-row" style="grid-template-columns:2fr 1fr 1fr 1fr">
+          <div class="field">
+            <div class="field-label">Пошук</div>
+            <input id="proj-q" type="text" placeholder="Назва, теги, роль, опис…" />
+          </div>
+          <div class="field">
+            <div class="field-label">Рік</div>
+            <select id="proj-year">
+              <option value="">Усі</option>
+            </select>
+          </div>
+          <div class="field">
+            <div class="field-label">Категорія</div>
+            <select id="proj-cat">
+              <option value="">Усі</option>
+              <option value="scientific">Офіційні наукові</option>
+              <option value="pet">Pet‑проєкти</option>
+              <option value="commercial">Комерційні (NDA‑safe)</option>
+            </select>
+          </div>
+          <div class="field">
+            <div class="field-label">Видимість</div>
+            <select id="proj-vis">
+              <option value="">Усі</option>
+              <option value="public">Public</option>
+              <option value="nda">NDA‑safe</option>
+            </select>
+          </div>
+        </div>
+        <div class="pub-filters-footer">
+          <a class="btn" href="#" id="proj-reset">Скинути</a>
+        </div>
+      </div>
+
+      <div class="card wide" id="projects-status" style="display:none"></div>
+
+      <div class="proj-tiles" id="proj-list" aria-live="polite"></div>
+
+      <!-- Message area for empty search results -->
+      <div class="card wide" id="projects-msg" style="display:none"></div>
+
+      <div class="card small">
+        <h2>Формат “case study”</h2>
+        <p class="meta">
+          Кожен проєкт тут — короткий опис + PDF з матеріалами (презентація/витяг/one‑pager). <b>Клік по плитці</b> відкриває відповідний PDF.
+          Це дозволяє тримати сторінку стабільною, а матеріали — оновлювати окремо.
+        </p>
+        <ul class="list">
+          <li><b>PDF у репозиторії:</b> <code>assets/cases/</code></li>
+          <li><b>Неймінг:</b> <code>case_&lt;project_id&gt;.pdf</code> (напр. <code>case_sci_0123U103640.pdf</code>)</li>
+          <li><b>Автопідключення:</b> якщо в <code>projects.json</code> є лінк на PDF — кнопка з’явиться автоматично.</li>
+        </ul>
+      </div>
+
+      <div class="card small">
+        <h2>Примітка про NDA</h2>
+        <p class="meta">
+          Комерційні кейси описані навмисно узагальнено, щоб не наражати клієнтів на ризики та не порушувати умови NDA.
+          Якщо потрібні деталі — напиши, і я надам те, що можна, у дозволеному форматі.
+        </p>
+        <div style="margin-top:12px"><a class="btn" href="contacts.html">Контакти →</a></div>
+      </div>
+
+      <div class="card wide">
+        <div class="meta" id="proj-count"></div>
+      </div>
+    </div>
+
+    <!-- Embedded data for file:// режим (fetch часто блокується) -->
+    <script id="projects-data" type="application/json">
+
+[
+  {
+    "id": "sci_0123U103640",
+    "title": "Методи і моделі забезпечення безпеки та діагностики критичних параметрів у складних системах з використанням ІоТ",
+    "title_en": "Methods and models for ensuring safety and diagnosing critical parameters in complex systems using IoT",
+    "category": "scientific",
+    "visibility": "public",
+    "status": "Active",
+    "start_year": 2023,
+    "end_year": 2025,
+    "customer": "Ініціативна ДіР (КНУБА)",
+    "one_liner": "Методи та моделі для безпеки й діагностики критичних параметрів у IoT‑орієнтованих складних системах.",
+    "case_url": "assets/cases/case_sci_0123U103640.pdf",
+    "active_years": [
+      2025
+    ],
+    "period": "09.2023 — 09.2025 (активно у 2025)",
+    "role": "Керівник/співкерівник ДіР (КНУБА)",
+    "summary": "Фундаментальне дослідження: методи та моделі для надійності/безпеки у складних системах з IoT, з фокусом на ідентифікацію, моніторинг і діагностику критичних параметрів.",
+    "tags": [
+      "IoT",
+      "Safety",
+      "Diagnostics",
+      "System Modeling"
+    ],
+    "links": [
+      {
+        "label": "Офіційний витяг (PDF)",
+        "url": "assets/cases/case_sci_0123U103640.pdf"
+      }
+    ],
+    "note": "У 2025 році прийняв на себе керівництво проєктом після того, як Ю. Хлапонін припинив участь."
+  },
+  {
+    "id": "sci_0123U103047",
+    "title": "Ідентифікація переходу до закритичного режиму роботи робототехнічної системи",
+    "title_en": "Identification of transitioning to a post-critical operating mode of a robotic system",
+    "category": "scientific",
+    "visibility": "public",
+    "status": "In use",
+    "start_year": 2023,
+    "end_year": 2025,
+    "customer": "Ініціативна ДіР (КНУБА)",
+    "one_liner": "Ідентифікація переходу робототехнічної системи у закритичний (post‑critical) режим для подальшого керування та відновлення.",
+    "case_url": "assets/cases/case_sci_0123U103047.pdf",
+    "active_years": [
+      2025
+    ],
+    "period": "07.2023 — 12.2024 (результати використовуються у 2025+)",
+    "role": "Керівник ДіР (КНУБА)",
+    "summary": "Прикладне дослідження: базові методи та ідентифікатори для виявлення переходу робототехнічної системи в закритичний режим з метою подальшого відновлення працездатності за системними вимогами високої критичності.",
+    "tags": [
+      "Robotics",
+      "Post-critical modes",
+      "Identification",
+      "Control"
+    ],
+    "links": [
+      {
+        "label": "Офіційний витяг (PDF)",
+        "url": "assets/cases/case_sci_0123U103047.pdf"
+      }
+    ],
+    "note": "Супровід проєкту зараз веду я (КНУБА)."
+  },
+  {
+    "id": "pet_spherical_robot_extremum_2025",
+    "title": "Розподілене керування роботом-кулькою на рельєфній поверхні (ROS2/DDS)",
+    "title_en": "Distributed Control for a Spherical XY Robot on a Non-Flat Surface (ROS2/DDS)",
+    "category": "pet",
+    "visibility": "public",
+    "status": "Prototype",
+    "start_year": 2025,
+    "end_year": null,
+    "customer": "Інститут точної механіки НАН України",
+    "one_liner": "Розподілене керування (ROS2/DDS) для гіростабілізованого робота-кулі: пошук локальних максимумів поверхні та стабілізація на вибраних вершинах.",
+    "case_url": "assets/cases/case_pet_spherical_robot_extremum_2025.pdf",
+    "active_years": [
+      2025
+    ],
+    "period": "2025 — …",
+    "role": "Автор",
+    "summary": "Навчальний стенд: два ПК з ROS2 + MCU керують гіростабілізованою кулею, яка рухається по поверхні з рельєфом. Фокус: extremum-seeking і стабілізація з real-time метриками.",
+    "tags": [
+      "ROS2",
+      "DDS",
+      "Robotics",
+      "Control",
+      "Real-time"
+    ],
+    "links": [
+      {
+        "label": "One-pager (PDF)",
+        "url": "assets/cases/case_pet_spherical_robot_extremum_2025.pdf"
+      }
+    ]
+  },
+  {
+    "id": "pet_poc_navigation_lyapunov_2025",
+    "title": "PoC: навігація для високоінерційного об'єкта в Lyapunov-like просторі",
+    "title_en": "PoC: Navigation for a High-Inertia Controlled Object in a Lyapunov-Like State Space",
+    "category": "pet",
+    "visibility": "public",
+    "status": "PoC",
+    "start_year": 2025,
+    "end_year": null,
+    "customer": "",
+    "one_liner": "PoC навігаційної системи для об'єкта з високою інерційністю з фокусом на позиціюванні в області нестійкої рівноваги (Lyapunov-like state space).",
+    "case_url": "assets/cases/case_pet_poc_navigation_lyapunov_2025.pdf",
+    "active_years": [
+      2025
+    ],
+    "period": "2025 — …",
+    "role": "Автор / R&D",
+    "summary": "Proof of concept for navigation and positioning of a high-inertia controlled object in a Lyapunov-like state space, with emphasis on holding near unstable equilibrium under timing constraints. Implemented as an engineering test stand; parts were later adapted into NDA-covered systems.",
+    "tags": [
+      "Navigation",
+      "Control",
+      "Lyapunov",
+      "Real-time",
+      "PoC"
+    ],
+    "links": [
+      {
+        "label": "One-pager (PDF)",
+        "url": "assets/cases/case_pet_poc_navigation_lyapunov_2025.pdf"
+      }
+    ]
+  },
+  {
+    "id": "pet_robotics_tooling_2025",
+    "title": "Pet projects (робототехніка та інженерні інструменти)",
+    "category": "pet",
+    "visibility": "public",
+    "status": "Ongoing",
+    "start_year": 2025,
+    "end_year": null,
+    "one_liner": "Колекція pet‑проєктів для прототипування робототехніки та embedded‑систем; публікація артефактів — по мірі готовності.",
+    "case_url": "assets/cases/case_pet_robotics_tooling_2025.pdf",
+    "active_years": [
+      2025
+    ],
+    "period": "2025 — …",
+    "role": "Автор",
+    "summary": "A curated set of small robotics and embedded prototypes used as scaffolding for experiments, tooling, and repeatable test stands. Public artifacts are released progressively.",
+    "tags": [
+      "Robotics",
+      "Embedded",
+      "Prototyping"
+    ],
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/dmytrohumennyi"
+      },
+      {
+        "label": "One-pager (PDF)",
+        "url": "assets/cases/case_pet_robotics_tooling_2025.pdf"
+      }
+    ]
+  },
+  {
+    "id": "com_automotive_test_systems_2025",
+    "title": "Automotive test systems (NDA-safe)",
+    "category": "commercial",
+    "visibility": "nda",
+    "status": "Ongoing",
+    "start_year": 2025,
+    "end_year": null,
+    "customer": "Automotive Tier‑1 (узагальнено)",
+    "one_liner": "NDA‑safe опис: тестові системи для ECU, комутація сигналів, контроль живлення/навантажень та автоматизація валідації.",
+    "case_url": "assets/cases/case_com_automotive_test_systems_2025.pdf",
+    "active_years": [
+      2025
+    ],
+    "period": "2025 — …",
+    "role": "Engineering management / delivery",
+    "summary": "NDA-safe overview of automotive test systems: signal switching/routing for multiple ECUs, power and load control, automated validation workflows, and traceability of test artifacts. Details are restricted by customer agreements.",
+    "tags": [
+      "Automotive",
+      "ECU",
+      "Signal switching",
+      "HIL",
+      "Traceability"
+    ],
+    "links": [
+      {
+        "label": "NDA-safe one-pager (PDF)",
+        "url": "assets/cases/case_com_automotive_test_systems_2025.pdf"
+      },
+      {
+        "label": "Запитати деталі/демо",
+        "url": "contacts.html"
+      }
+    ]
+  }
+]
+    
+    </script>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>© 2025 Dmytro Humennyi</div>
+      <div class="meta">GitHub Pages-ready · Статичний сайт (HTML/CSS/JS)</div>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js"></script>
+  <script src="assets/js/projects.js"></script>
+</body>
+</html>

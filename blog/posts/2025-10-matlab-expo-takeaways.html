@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MATLAB EXPO Deutschland 2025: ключові теми та висновки — Блог</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="../../index.html">
+        <div class="brand-mark">ContiMech</div>
+        <div>
+          <div class="brand-title">ContiMech</div>
+          <div class="brand-sub">Дмитро Гуменний, к.т.н.</div>
+        </div>
+      </a>
+      <nav class="nav">
+        <a href="../../index.html">Головне</a>
+        <a href="../../cooperation.html">Співпраця</a>
+        <a href="../../experience.html">Досвід</a>
+        <a href="../../projects.html">Проєкти</a>
+        <a href="../../publications.html">Публікації</a>
+        <a class="active" href="../index.html">Блог</a>
+        <a href="../../contacts.html">Контакти</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <a class="link" href="../index.html">← Назад до блогу</a>
+
+    <h1 style="margin-top:10px">MATLAB EXPO Deutschland 2025: ключові теми та висновки</h1>
+    <div class="muted" style="margin-top:-6px">29.10.2025 • Мюнхен</div>
+
+    <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap">
+      <span class="chip chip-sm">Конференції</span>
+      <span class="chip chip-sm">MATLAB/Simulink</span>
+      <span class="chip chip-sm">Model-Based</span>
+      <span class="chip chip-sm">AI</span>
+      <span class="chip chip-sm">FuSa</span>
+      <span class="chip chip-sm">HIL/PIL</span>
+      <span class="chip chip-sm">Automotive</span>
+      <span class="chip chip-sm">Energy</span>
+    </div>
+
+    <section class="panel" style="margin-top:14px">
+      <div class="blog-cover" style="height:260px;border-radius:16px;overflow:hidden">
+        <img src="../../assets/img/blog/2025-10-matlab-expo-takeaways/cover.jpg" alt="MATLAB EXPO Deutschland 2025">
+      </div>
+
+      <h2 style="margin-top:14px">Коротко</h2>
+      <p class="lead">
+        21.10.2025 у Мюнхені відбувся MATLAB EXPO 2025 (Deutschland Edition) від MathWorks. Для мене цей івент — хороший зріз того,
+        куди рухається інженерія: тісніше зшивання software+hardware, модельно-орієнтована розробка, інструменти для сертифікації
+        та AI “на краю” (на реальному залізі, ближче до сенсорів).
+      </p>
+
+      <h2>Що виніс</h2>
+      <ul>
+        <li><b>Фокус змістився від “окремих доменів” до інтеграції:</b> AI, embedded, V&V, системна інженерія та реальний час в одному контурі.</li>
+        <li><b>FuSa/traceability стають інженерною “платформою”:</b> вимоги → модель/код → тести → звіти — з автоматизацією та контролем якості.</li>
+        <li><b>PIL/HIL — не “екзотика”, а стандартна частина V-model:</b> від кремнію до цілісної системи.</li>
+        <li><b>Енергетика (HVDC/FACTS) — приклад масштабної інженерії:</b> коли програмні практики буквально тримають гіга-вати в межах допусків.</li>
+      </ul>
+
+      <h2>Нотатки</h2>
+
+      <h3>Контекст і роль</h3>
+      <p>
+        Команда N-iX була на події як учасник, і ми спілкувалися з відвідувачами на стенді. Для мене це був корисний формат: паралельно з
+        розмовами про практику (робототехніка, automotive, критичні системи) — можливість “помацати” тренди з перших рук.
+      </p>
+
+      <h3>Основні напрями, які були найпомітніші</h3>
+      <ul>
+        <li><b>AI в інженерії</b> (не тільки “хмара”, а embedded/edge сценарії).</li>
+        <li><b>Software + hardware integration</b> та системний дизайн.</li>
+        <li><b>V&V / QA</b> для моделей і коду, автоматизація перевірок.</li>
+        <li><b>Функціонально безпечні системи</b> і практичні процеси сертифікації.</li>
+        <li><b>Контроль/фільтрація/DSP</b> як база для “розумних” систем.</li>
+      </ul>
+
+      <p>
+        Відчутно, що automotive вже не “єдиний хедлайнер”: поруч стоять aerospace та енергетика, які тягнуть за собою складні
+        контури керування, вимоги до якості та масштабовані процеси розробки.
+      </p>
+
+      <h3>Інструментальний контур для FuSa/traceability</h3>
+      <p>
+        Ключовий меседж: компактні команди можуть будувати сертифіковані системи ефективніше, якщо інструменти зшивають життєвий цикл наскрізь.
+        У MathWorks-екосистемі це зазвичай комбінація:
+      </p>
+      <ul>
+        <li>Polyspace (аналіз коду, відповідність практикам на кшталт MISRA),</li>
+        <li>Simulink Check (перевірки моделей),</li>
+        <li>Requirements Toolbox (зв’язування вимог),</li>
+        <li>Simulink Test / Simulink Coverage (тести та покриття),</li>
+        <li>Simulink Report Generator (автоматичні звіти),</li>
+        <li>System Composer (архітектура), AUTOSAR Blockset (портативність рішень).</li>
+      </ul>
+
+      <h3>Реальний час та “польові” рішення</h3>
+      <p>
+        Окрім “класичного” Simulink-підходу, в очі впали рішення, які прямо підсилюють практичні сценарії real-time і тестування:
+        апаратні реальні платформи (типу Speedgoat) та спеціалізовані інтерфейси/генератори сигналів для ECU дебагу і валідації.
+        Це хороший маркер, що екосистема живе не тільки в академічних прикладах, а в залізі та стендах.
+      </p>
+
+      <h3>Keynote: AI на “інтелектуальному edge”</h3>
+      <p>
+        Окремо запам’ятався погляд з боку напівпровідникового вендора: AI для розпізнавання (обличчя/голос), “віртуальні сенсори”
+        як критичні софт-компоненти і дуже прагматична тема — як не переписувати все під кожен новий чип.
+        Практичні акценти: виконання моделей на чипі, оптимізація ресурсів, бібліотеки/SDK, орієнтація на дані та апаратні прискорювачі,
+        плюс фокус на FuSa.
+      </p>
+
+      <h3>Keynote: HVDC керування (межа між електрикою та ПЗ)</h3>
+      <p>
+        Дуже сильний кейс з енергетики: керування HVDC системами, де потрібно синхронізувати величезну кількість силових елементів у дуже малих
+        часових вікнах, щоб утримувати стабільну частоту мережі. Тут “системна простота” не про спрощення фізики, а про правильну організацію
+        моделей, підсистем, тестів і валідації — так, щоб команда могла масштабуватися і не втрачати керованість продукту.
+      </p>
+
+      <h2>Висновок</h2>
+      <p>
+        MATLAB EXPO 2025 ще раз підкреслив: інновації сьогодні — це не окремі технології, а <b>інтеграція</b>.
+        AI на залізі, модельно-орієнтована розробка, FuSa/traceability та real-time інструменти разом формують “скелет” сучасних критичних систем —
+        як в automotive, так і в енергетиці чи aerospace.
+      </p>
+
+      <p class="muted">
+        Примітка: це перефразований конспект моїх особистих вражень від події, без копіювання корпоративного контенту.
+      </p>
+
+      <h2>Фото</h2>
+      <div class="gallery">
+        <img data-lightbox data-lightbox-group="2025-10-matlab-expo-takeaways" src="../../assets/img/blog/2025-10-matlab-expo-takeaways/01.jpg" alt="Зона експо та стенди (MATLAB EXPO Deutschland 2025)">
+        <img data-lightbox data-lightbox-group="2025-10-matlab-expo-takeaways" src="../../assets/img/blog/2025-10-matlab-expo-takeaways/02.jpg" alt="Спілкування на стенді та нетворкінг">
+        <img data-lightbox data-lightbox-group="2025-10-matlab-expo-takeaways" src="../../assets/img/blog/2025-10-matlab-expo-takeaways/03.jpg" alt="Сцена та виступ (MATLAB EXPO Deutschland 2025)">
+        <img data-lightbox data-lightbox-group="2025-10-matlab-expo-takeaways" src="../../assets/img/blog/2025-10-matlab-expo-takeaways/04.jpg" alt="Фрагменти презентацій: HVDC та інженерні виклики">
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© ContiMech</div>
+      <div class="muted">GitHub Pages-ready</div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/site.js"></script>
+  <script src="../../assets/js/lightbox.js"></script>
+</body>
+</html>
