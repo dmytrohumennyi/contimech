@@ -68,6 +68,79 @@
   </aside>
 </div>
 
+
+<h2 class="section-title" id="students">Для студентів (КНУБА)</h2>
+<section class="panel">
+  <p class="meta">Це централізований каталог матеріалів: методички, вимоги (DoD), слайди, а також теми для дипломних/дисертаційних робіт.</p>
+
+  <div class="pills" style="margin-top:12px">
+    <button type="button" class="btn primary" data-students-tab="courses">Мої курси</button>
+    <button type="button" class="btn" data-students-tab="thesis">Дипломники</button>
+  </div>
+
+  <!-- TAB: COURSES -->
+  <div id="studentsTabCourses" style="margin-top:14px">
+    <div class="field" style="max-width:560px">
+      <div class="field-label">Оберіть дисципліну</div>
+      <select id="studentCourseSelect" aria-label="Оберіть дисципліну">
+        <option value="" selected disabled>Оберіть дисципліну…</option>
+      </select>
+    </div>
+
+    <div id="studentCourseMeta" class="pills" style="margin-top:12px;display:none"></div>
+    <div id="studentCourseResources" style="margin-top:14px"></div>
+
+    <details style="margin-top:16px">
+      <summary class="btn" style="display:inline-flex">Як додавати/оновлювати файли у GitHub</summary>
+      <div class="meta" style="margin-top:10px">
+        Для кожної дисципліни використовується папка:
+        <div style="margin:8px 0 12px">
+          <code>assets/files/students/courses/&lt;course-slug&gt;/</code>
+        </div>
+        Усередині — фіксовані імена файлів (щоб посилання на сайті не змінювались):
+        <ul class="list">
+          <li><code>Methodical.pdf</code> — методичка</li>
+          <li><code>DoD.md</code> — Definition of Done (вимоги до здачі)</li>
+          <li><code>Slides.pdf</code> — слайди (опційно)</li>
+          <li><code>Sources.md</code> — рекомендовані джерела</li>
+        </ul>
+        Ви можете просто замінити файл у GitHub на нову версію з тим самим ім’ям.
+      </div>
+    </details>
+  </div>
+
+  <!-- TAB: THESIS -->
+  <div id="studentsTabThesis" style="margin-top:14px;display:none">
+    <h2 style="margin:0 0 8px;font-size:18px">Дипломники (бакалавр / магістр / Ph.D)</h2>
+    <p class="meta">Перелік тем, на які я готовий взяти студента/докторанта, — у файлі нижче. Я оновлюю його за потреби.</p>
+
+    <div class="grid" style="margin-top:12px">
+      <div class="card" style="grid-column:span 6">
+        <h2 style="margin:0 0 8px;font-size:16px">Реєстр тем (Excel)</h2>
+        <p style="margin:0;color:var(--muted)">Актуальний список тем для бакалаврів, магістрів і Ph.D.</p>
+        <div style="margin-top:12px">
+          <a class="btn primary" href="assets/files/students/thesis/Thesis_Topics_Register.xlsx" download>Завантажити</a>
+        </div>
+      </div>
+    </div>
+
+    <details style="margin-top:16px">
+      <summary class="btn" style="display:inline-flex">Як оновити реєстр тем</summary>
+      <div class="meta" style="margin-top:10px">
+        Файл на який посилається сайт:
+        <div style="margin:8px 0 12px">
+          <code>assets/files/students/thesis/Thesis_Topics_Register.xlsx</code>
+        </div>
+        Просто замініть його у GitHub на нову версію (назва має лишитися такою самою).
+      </div>
+    </details>
+  </div>
+
+  <div class="notice" style="margin-top:16px">
+    Якщо потрібного ресурсу тут ще немає — напишіть мені (розділ «Контакти») і я додам його у цей каталог.
+  </div>
+</section>
+
   </main>
   <footer class="footer">
     <div class="footer-inner">
@@ -76,5 +149,6 @@
     </div>
   </footer>
   <script src="assets/js/site.js"></script>
+  <script src="assets/js/students.js"></script>
 </body>
 </html>
