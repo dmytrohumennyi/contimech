@@ -33,7 +33,7 @@
 <h1 class="section-title">Співпраця</h1>
 <div class="split">
   <section class="panel">
-    <h2>Сфери співпраці, які для мене відверті та цікаві</h2>
+    <h2>Сфери співпраці, які для мене цікаві</h2>
     <ul class="list">
       <li><b>Спільні публікації</b> (статті/конференції, технічні огляди, методики)</li>
       <li><b>Спільні проєкти</b> (включно зі співпрацею по грантах)</li>
@@ -68,6 +68,50 @@
   </aside>
 </div>
 
+
+<h2 class="section-title" id="students">Для студентів (КНУБА)</h2>
+<section class="panel">
+  <p class="meta">Це централізований каталог матеріалів: методички, вимоги (DoD), слайди, а також теми для дипломних/дисертаційних робіт.</p>
+
+  <div class="pills" style="margin-top:12px">
+    <button type="button" class="btn primary" data-students-tab="courses">Мої курси</button>
+    <button type="button" class="btn" data-students-tab="thesis">Дипломники</button>
+  </div>
+
+  <!-- TAB: COURSES -->
+  <div id="studentsTabCourses" style="margin-top:14px">
+    <div class="field" style="max-width:560px">
+      <div class="field-label">Оберіть дисципліну</div>
+      <select id="studentCourseSelect" aria-label="Оберіть дисципліну">
+        <option value="" selected disabled>Оберіть дисципліну…</option>
+      </select>
+    </div>
+
+    <div id="studentCourseMeta" class="pills" style="margin-top:12px;display:none"></div>
+    <div id="studentCourseResources" style="margin-top:14px"></div>
+  </div>
+
+  <!-- TAB: THESIS -->
+  <div id="studentsTabThesis" style="margin-top:14px;display:none">
+    <h2 style="margin:0 0 8px;font-size:18px">Дипломники (бакалавр / магістр / Ph.D)</h2>
+    <p class="meta">Перелік тем, на які я готовий взяти студента/докторанта, — у файлі нижче. Я оновлюю його за потреби.</p>
+
+    <div class="grid" style="margin-top:12px">
+      <div class="card" style="grid-column:span 6">
+        <h2 style="margin:0 0 8px;font-size:16px">Реєстр тем (Excel)</h2>
+        <p style="margin:0;color:var(--muted)">Актуальний список тем для бакалаврів, магістрів і Ph.D.</p>
+        <div style="margin-top:12px">
+          <a class="btn primary" href="assets/files/students/thesis/Thesis_Topics_Register.xlsx" download>Завантажити</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="notice" style="margin-top:16px">
+    Якщо потрібного ресурсу тут ще немає — напишіть мені (розділ «Контакти») і я додам його у цей каталог.
+  </div>
+</section>
+
   </main>
   <footer class="footer">
     <div class="footer-inner">
@@ -76,5 +120,6 @@
     </div>
   </footer>
   <script src="assets/js/site.js"></script>
+  <script src="assets/js/students.js"></script>
 </body>
 </html>
