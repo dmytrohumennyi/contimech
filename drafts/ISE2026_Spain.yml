@@ -1,0 +1,37 @@
+tags:
+  - ASUS
+  - Mini PC
+  - ASUS NUC
+  - ASUS NUC 16 Pro
+  - Edge AI
+  - Robotics
+  - AI
+  - Llama LLM
+  - ASR
+  - Voice Control
+  - ROS 2
+  - OpenCV
+title: "Lift a 520 kg barbell: ASUS NUC Mini PC for real-time AI robotics"
+conference: "Integrated Systems Europe (ISE)"
+year: 2026
+location: "Barcelona, Spain"
+nix_attendees:
+  - "Igor Kozakevych"
+  - "Dmytro Humennyi"
+web: "https://www.asus.com/us/business/resources/news/asus--at-ise-2026/"
+text_components:
+  - >
+    We are working on a robot manipulator project for an auto-verification workflow on the shop floor.
+    The robot must communicate with production workers (non-developers) who are on shift at the same time
+    as the robot, and the most natural interface is real-time voice interaction.
+  - >
+    Technically, our voice loop is: mic → speech-to-text (ASR) → LLM intent parsing → robot command / spoken feedback.
+    In a demo setup, we observe up to ~4 seconds end-to-end latency, mostly around the ASR/LLM stage.
+    This is acceptable for conversation, but noticeable when coordinating actions with a moving robot.
+  - >
+    At ISE 2026 in Barcelona, we had a great technical discussion with ASUS about edge AI for robotics.
+    ASUS materials for ISE highlight compact NUC platforms with "up to 180 platform TOPS" (as stated by ASUS),
+    and we are interested in validating what this means for stable, low-latency inference in robotics pipelines
+    (ROS 2 + OpenCV + Llama-based command interpretation).
+  - >
+    Congrats to ASUS on a strong presence at ISE — see you again.
