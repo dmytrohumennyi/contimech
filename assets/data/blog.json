@@ -20,11 +20,11 @@
       "Логістика"
     ],
     "summary": "Короткі нотатки з ISE 2026: формат виставки, логістика Київ–Краків–Барселона, транспорт у місті, харчування, одяг/клімат і кілька корисних контактів.",
-    "cover": "assets/img/blog/2026-02-ise-2026-barcelona/cover.jpg",
+    "cover": "../assets/img/blog/2026-02-ise-2026-barcelona/cover.jpg",
     "gallery": [
-      "assets/img/blog/2026-02-ise-2026-barcelona/collage.jpg"
+      "../assets/img/blog/2026-02-ise-2026-barcelona/collage.jpg"
     ],
-    "post_url": "blog/posts/2026-02-ise-2026-barcelona.html"
+    "post_url": "posts/2026-02-ise-2026-barcelona.html"
   },
   {
     "id": "2025-12-knuba-seminar-quality-cycle",
