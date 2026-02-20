@@ -977,19 +977,6 @@
       "date": ""
     },
     {
-      "id": "pub-037",
-      "num": 37,
-      "title": "ENSURING SURVIVABILITY OF COMPLEX SUPER-CRITICAL SYSTEMS BASED ON HIERARCHICAL ABSTRACTION MODEL AND ADAPTIVE RECONFIGURATION IN POST-CRITICAL STATE",
-      "type_raw": "стаття",
-      "type": "article",
-      "domain": "scientific",
-      "year": 2025,
-      "outlet": "PREPRINT",
-      "coauthors": "",
-      "url": "",
-      "date": "expected - 12/2025"
-    },
-    {
       "id": "pub-038",
       "num": 38,
       "title": "Practical Implementation and Simulation of Adaptive Control for Super-Critical Cyber-Physical Systems",
@@ -1001,6 +988,19 @@
       "coauthors": "",
       "url": "",
       "date": "expected - 03/2026"
+    },
+    {
+      "id": "pub-039",
+      "num": 39,
+      "title": "Ensuring survivability of complex super-critical systems based on hierarchical abstraction modeland adaptive reconfiguration in post-critical state",
+      "type_raw": "стаття",
+      "type": "article",
+      "domain": "scientific",
+      "year": 2025,
+      "outlet": "SMARTTECHNOLOGIES:Industrial and Civil Engineering, Issue 4(17), 2025, 75-82",
+      "coauthors": "",
+      "url": "https://smarttech.knuba.edu.ua/article/view/350823/337865",
+      "date": "12/2025"
     }
   ],
   "enums": {
