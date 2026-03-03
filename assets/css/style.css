@@ -152,3 +152,8 @@ a.pub-title:hover{text-decoration:underline}
 .gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:10px}
 @media (max-width:920px){.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .gallery img{width:100%;height:160px;object-fit:cover;border-radius:12px;border:1px solid rgba(255,255,255,.08)}
+
+/* Card Links */
+.card-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;padding-top:12px;border-top:1px solid var(--line)}
+.card-links a{display:inline-block;font-size:13px;padding:6px 10px;border:1px solid rgba(125,211,252,.35);border-radius:8px;color:var(--accent);transition:all .12s ease}
+.card-links a:hover{border-color:rgba(125,211,252,.7);background:rgba(125,211,252,.06);text-decoration:none}
