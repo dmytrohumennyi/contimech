@@ -36,6 +36,13 @@ code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberati
 .card{grid-column:span 6;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
 .card.small{grid-column:span 4}
 .card.wide{grid-column:span 12}
+
+/* grid span helpers (used to keep experience layout stable) */
+.grid .span-3{grid-column:span 3}
+.grid .span-6{grid-column:span 6}
+.grid .span-9{grid-column:span 9}
+.grid .span-12{grid-column:span 12}
+
 .card h2{margin:0 0 8px;font-size:18px}
 .card p{margin:0;color:var(--muted)}
 .kv{display:grid;grid-template-columns:1fr;gap:10px;margin-top:10px}
