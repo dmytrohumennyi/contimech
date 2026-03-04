@@ -157,3 +157,26 @@ a.pub-title:hover{text-decoration:underline}
 .card-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;padding-top:12px;border-top:1px solid var(--line)}
 .card-links a{display:inline-block;font-size:13px;padding:6px 10px;border:1px solid rgba(125,211,252,.35);border-radius:8px;color:var(--accent);transition:all .12s ease}
 .card-links a:hover{border-color:rgba(125,211,252,.7);background:rgba(125,211,252,.06);text-decoration:none}
+
+/* ===== Experience page: kill wallpaper feel ===== */
+body.page-experience{
+  background: #0b0f14 !important;
+  background-image: none !important;
+}
+
+/* якщо “шпалери” намальовані через псевдоелемент */
+body.page-experience::before,
+body.page-experience::after{
+  content: none !important;
+  display: none !important;
+}
+
+/* зробити контент “суцільним блоком”, а не текстом на фоні */
+body.page-experience main.container{
+  max-width: 1240px;
+  margin: 24px auto;
+  padding: 28px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 16px;
+}
