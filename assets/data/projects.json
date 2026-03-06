@@ -1,5 +1,41 @@
 [
   {
+    "id": "sci_project_oriented_education_2026",
+    "title": "Project-Oriented Education Synchronized with Industry",
+    "category": "scientific",
+    "visibility": "public",
+    "status": "Pilot",
+    "start_year": 2026,
+    "end_year": null,
+    "customer": "Igor Sikorsky KPI / academic–industry initiative",
+    "one_liner": "A sprint-based university engineering model built around a real hardware project, daily standups, public artifacts, and grant-ready outputs.",
+    "case_url": "projects/project-oriented-education.html",
+    "active_years": [
+      2026
+    ],
+    "period": "2026 — …",
+    "role": "Program architect / academic lead",
+    "summary": "A case study of integrating an industrial delivery model into university teaching: PM → Leads → Executors hierarchy, three-week sprints, real hardware work, grant-oriented artifacts, and partner-facing visibility from the start.",
+    "tags": [
+      "Education",
+      "Project-based learning",
+      "Robotics",
+      "Grants",
+      "Industry collaboration"
+    ],
+    "links": [
+      {
+        "label": "Case page",
+        "url": "projects/project-oriented-education.html"
+      },
+      {
+        "label": "PDF artifact",
+        "url": "assets/cases/case_edu_project_oriented_2026.pdf"
+      }
+    ],
+    "note": "Built as a reusable case for department development, grant preparation, and partner communication."
+  },
+  {
     "id": "sci_0123U103640",
     "title": "Methods and models for ensuring safety and diagnosing critical parameters in complex systems using IoT",
     "category": "scientific",

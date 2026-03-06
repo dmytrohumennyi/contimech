@@ -78,13 +78,13 @@
       <div class="card small">
         <h2>Case-study format</h2>
         <p class="meta">
-          Each project here is presented as a short description plus a PDF artifact (presentation, extract, or one-pager). <b>Clicking a tile</b> opens the corresponding PDF.
+          Each project here is presented as a short description plus a case artifact (project page, PDF, presentation, extract, or one-pager). <b>Clicking a tile</b> opens the main case asset.
           This keeps the page stable while the supporting materials can be updated independently.
         </p>
         <ul class="list">
-          <li><b>PDF location:</b> <code>assets/cases/</code></li>
-          <li><b>Naming:</b> <code>case_&lt;project_id&gt;.pdf</code> (for example, <code>case_sci_0123U103640.pdf</code>)</li>
-          <li><b>Auto-linking:</b> if <code>projects.json</code> contains a PDF link, the button appears automatically.</li>
+          <li><b>Case assets:</b> usually in <code>assets/cases/</code> or a dedicated project page</li>
+          <li><b>Naming:</b> <code>case_&lt;project_id&gt;.pdf</code> is used for downloadable PDF artifacts when needed</li>
+          <li><b>Auto-linking:</b> if <code>projects.json</code> contains links, the buttons appear automatically.</li>
         </ul>
       </div>
 
@@ -105,197 +105,233 @@
     <script id="projects-data" type="application/json">
     [
       {
-        "id": "sci_0123U103640",
-        "title": "Methods and models for ensuring safety and diagnosing critical parameters in complex systems using IoT",
-        "category": "scientific",
-        "visibility": "public",
-        "status": "Active",
-        "start_year": 2023,
-        "end_year": 2025,
-        "customer": "Initiative R&D project (KNUBA)",
-        "one_liner": "Methods and models for safety and diagnostics of critical parameters in IoT-oriented complex systems.",
-        "case_url": "assets/cases/case_sci_0123U103640.pdf",
-        "active_years": [
-          2025
-        ],
-        "period": "09.2023 — 09.2025 (active in 2025)",
-        "role": "Project lead / co-lead (KNUBA)",
-        "summary": "Fundamental research focused on reliability and safety in IoT-enabled complex systems, with emphasis on identification, monitoring, and diagnostics of critical parameters.",
-        "tags": [
-          "IoT",
-          "Safety",
-          "Diagnostics",
-          "System Modeling"
-        ],
-        "links": [
-          {
-            "label": "Official extract (PDF)",
-            "url": "assets/cases/case_sci_0123U103640.pdf"
-          }
-        ],
-        "note": "In 2025 I assumed project leadership after Yu. Khlaponin stopped participating."
+            "id": "sci_project_oriented_education_2026",
+            "title": "Project-Oriented Education Synchronized with Industry",
+            "category": "scientific",
+            "visibility": "public",
+            "status": "Pilot",
+            "start_year": 2026,
+            "end_year": null,
+            "customer": "Igor Sikorsky KPI / academic–industry initiative",
+            "one_liner": "A sprint-based university engineering model built around a real hardware project, daily standups, public artifacts, and grant-ready outputs.",
+            "case_url": "projects/project-oriented-education.html",
+            "active_years": [
+                  2026
+            ],
+            "period": "2026 — …",
+            "role": "Program architect / academic lead",
+            "summary": "A case study of integrating an industrial delivery model into university teaching: PM → Leads → Executors hierarchy, three-week sprints, real hardware work, grant-oriented artifacts, and partner-facing visibility from the start.",
+            "tags": [
+                  "Education",
+                  "Project-based learning",
+                  "Robotics",
+                  "Grants",
+                  "Industry collaboration"
+            ],
+            "links": [
+                  {
+                        "label": "Case page",
+                        "url": "projects/project-oriented-education.html"
+                  },
+                  {
+                        "label": "PDF artifact",
+                        "url": "assets/cases/case_edu_project_oriented_2026.pdf"
+                  }
+            ],
+            "note": "Built as a reusable case for department development, grant preparation, and partner communication."
       },
       {
-        "id": "sci_0123U103047",
-        "title": "Identification of transition to a post-critical operating mode of a robotic system",
-        "category": "scientific",
-        "visibility": "public",
-        "status": "In use",
-        "start_year": 2023,
-        "end_year": 2025,
-        "customer": "Initiative R&D project (KNUBA)",
-        "one_liner": "Identification of a robotic system entering a post-critical mode for subsequent control and recovery.",
-        "case_url": "assets/cases/case_sci_0123U103047.pdf",
-        "active_years": [
-          2025
-        ],
-        "period": "07.2023 — 12.2024 (results used in 2025+)",
-        "role": "Project lead (KNUBA)",
-        "summary": "Applied research into base methods and identifiers for detecting a robotic system's transition to a post-critical mode, aimed at restoring operability under high-criticality system requirements.",
-        "tags": [
-          "Robotics",
-          "Post-critical modes",
-          "Identification",
-          "Control"
-        ],
-        "links": [
-          {
-            "label": "Official extract (PDF)",
-            "url": "assets/cases/case_sci_0123U103047.pdf"
-          }
-        ],
-        "note": "I currently maintain and evolve this project on behalf of KNUBA."
+            "id": "sci_0123U103640",
+            "title": "Methods and models for ensuring safety and diagnosing critical parameters in complex systems using IoT",
+            "category": "scientific",
+            "visibility": "public",
+            "status": "Active",
+            "start_year": 2023,
+            "end_year": 2025,
+            "customer": "Initiative R&D project (KNUBA)",
+            "one_liner": "Methods and models for safety and diagnostics of critical parameters in IoT-oriented complex systems.",
+            "case_url": "assets/cases/case_sci_0123U103640.pdf",
+            "active_years": [
+                  2025
+            ],
+            "period": "09.2023 — 09.2025 (active in 2025)",
+            "role": "Project lead / co-lead (KNUBA)",
+            "summary": "Fundamental research focused on reliability and safety in IoT-enabled complex systems, with emphasis on identification, monitoring, and diagnostics of critical parameters.",
+            "tags": [
+                  "IoT",
+                  "Safety",
+                  "Diagnostics",
+                  "System Modeling"
+            ],
+            "links": [
+                  {
+                        "label": "Official extract (PDF)",
+                        "url": "assets/cases/case_sci_0123U103640.pdf"
+                  }
+            ],
+            "note": "In 2025 I assumed project leadership after Yu. Khlaponin stopped participating."
       },
       {
-        "id": "pet_spherical_robot_extremum_2025",
-        "title": "Distributed control of a spherical robot on a profiled surface (ROS2/DDS)",
-        "category": "pet",
-        "visibility": "public",
-        "status": "Prototype",
-        "start_year": 2025,
-        "end_year": null,
-        "customer": "Institute of Precision Mechanics, NAS of Ukraine",
-        "one_liner": "ROS2/DDS-based distributed control for a gyrostabilized spherical robot: local-maximum search and stabilization on selected peaks.",
-        "case_url": "assets/cases/case_pet_spherical_robot_extremum_2025.pdf",
-        "active_years": [
-          2025
-        ],
-        "period": "2025 — …",
-        "role": "Author",
-        "summary": "Educational test bench: two PCs with ROS2 plus an MCU control a gyrostabilized sphere moving over a profiled surface. The focus is extremum-seeking and stabilization with real-time metrics.",
-        "tags": [
-          "ROS2",
-          "DDS",
-          "Robotics",
-          "Control",
-          "Real-time"
-        ],
-        "links": [
-          {
-            "label": "One-pager (PDF)",
-            "url": "assets/cases/case_pet_spherical_robot_extremum_2025.pdf"
-          }
-        ]
+            "id": "sci_0123U103047",
+            "title": "Identification of transition to a post-critical operating mode of a robotic system",
+            "category": "scientific",
+            "visibility": "public",
+            "status": "In use",
+            "start_year": 2023,
+            "end_year": 2025,
+            "customer": "Initiative R&D project (KNUBA)",
+            "one_liner": "Identification of a robotic system entering a post-critical mode for subsequent control and recovery.",
+            "case_url": "assets/cases/case_sci_0123U103047.pdf",
+            "active_years": [
+                  2025
+            ],
+            "period": "07.2023 — 12.2024 (results used in 2025+)",
+            "role": "Project lead (KNUBA)",
+            "summary": "Applied research into base methods and identifiers for detecting a robotic system's transition to a post-critical mode, aimed at restoring operability under high-criticality system requirements.",
+            "tags": [
+                  "Robotics",
+                  "Post-critical modes",
+                  "Identification",
+                  "Control"
+            ],
+            "links": [
+                  {
+                        "label": "Official extract (PDF)",
+                        "url": "assets/cases/case_sci_0123U103047.pdf"
+                  }
+            ],
+            "note": "I currently maintain and evolve this project on behalf of KNUBA."
       },
       {
-        "id": "pet_poc_navigation_lyapunov_2025",
-        "title": "PoC: navigation for a high-inertia object in a Lyapunov-like state space",
-        "category": "pet",
-        "visibility": "public",
-        "status": "PoC",
-        "start_year": 2025,
-        "end_year": null,
-        "customer": "",
-        "one_liner": "Proof of concept for a navigation system for a high-inertia object, focused on positioning near unstable equilibrium in a Lyapunov-like state space.",
-        "case_url": "assets/cases/case_pet_poc_navigation_lyapunov_2025.pdf",
-        "active_years": [
-          2025
-        ],
-        "period": "2025 — …",
-        "role": "Author / R&D",
-        "summary": "Proof of concept for navigation and positioning of a high-inertia controlled object in a Lyapunov-like state space, with emphasis on holding near unstable equilibrium under timing constraints. Implemented as an engineering test stand; parts were later adapted into NDA-covered systems.",
-        "tags": [
-          "Navigation",
-          "Control",
-          "Lyapunov",
-          "Real-time",
-          "PoC"
-        ],
-        "links": [
-          {
-            "label": "One-pager (PDF)",
-            "url": "assets/cases/case_pet_poc_navigation_lyapunov_2025.pdf"
-          }
-        ]
+            "id": "pet_spherical_robot_extremum_2025",
+            "title": "Distributed control of a spherical robot on a profiled surface (ROS2/DDS)",
+            "category": "pet",
+            "visibility": "public",
+            "status": "Prototype",
+            "start_year": 2025,
+            "end_year": null,
+            "customer": "Institute of Precision Mechanics, NAS of Ukraine",
+            "one_liner": "ROS2/DDS-based distributed control for a gyrostabilized spherical robot: local-maximum search and stabilization on selected peaks.",
+            "case_url": "assets/cases/case_pet_spherical_robot_extremum_2025.pdf",
+            "active_years": [
+                  2025
+            ],
+            "period": "2025 — …",
+            "role": "Author",
+            "summary": "Educational test bench: two PCs with ROS2 plus an MCU control a gyrostabilized sphere moving over a profiled surface. The focus is extremum-seeking and stabilization with real-time metrics.",
+            "tags": [
+                  "ROS2",
+                  "DDS",
+                  "Robotics",
+                  "Control",
+                  "Real-time"
+            ],
+            "links": [
+                  {
+                        "label": "One-pager (PDF)",
+                        "url": "assets/cases/case_pet_spherical_robot_extremum_2025.pdf"
+                  }
+            ]
       },
       {
-        "id": "pet_robotics_tooling_2025",
-        "title": "Pet projects (robotics and engineering tooling)",
-        "category": "pet",
-        "visibility": "public",
-        "status": "Ongoing",
-        "start_year": 2025,
-        "end_year": null,
-        "one_liner": "A collection of pet projects for robotics and embedded prototyping; public artifacts are published as they become ready.",
-        "case_url": "assets/cases/case_pet_robotics_tooling_2025.pdf",
-        "active_years": [
-          2025
-        ],
-        "period": "2025 — …",
-        "role": "Author",
-        "summary": "A curated set of small robotics and embedded prototypes used as scaffolding for experiments, tooling, and repeatable test stands. Public artifacts are released progressively.",
-        "tags": [
-          "Robotics",
-          "Embedded",
-          "Prototyping"
-        ],
-        "links": [
-          {
-            "label": "GitHub",
-            "url": "https://github.com/dmytrohumennyi"
-          },
-          {
-            "label": "One-pager (PDF)",
-            "url": "assets/cases/case_pet_robotics_tooling_2025.pdf"
-          }
-        ]
+            "id": "pet_poc_navigation_lyapunov_2025",
+            "title": "PoC: navigation for a high-inertia object in a Lyapunov-like state space",
+            "category": "pet",
+            "visibility": "public",
+            "status": "PoC",
+            "start_year": 2025,
+            "end_year": null,
+            "customer": "",
+            "one_liner": "Proof of concept for a navigation system for a high-inertia object, focused on positioning near unstable equilibrium in a Lyapunov-like state space.",
+            "case_url": "assets/cases/case_pet_poc_navigation_lyapunov_2025.pdf",
+            "active_years": [
+                  2025
+            ],
+            "period": "2025 — …",
+            "role": "Author / R&D",
+            "summary": "Proof of concept for navigation and positioning of a high-inertia controlled object in a Lyapunov-like state space, with emphasis on holding near unstable equilibrium under timing constraints. Implemented as an engineering test stand; parts were later adapted into NDA-covered systems.",
+            "tags": [
+                  "Navigation",
+                  "Control",
+                  "Lyapunov",
+                  "Real-time",
+                  "PoC"
+            ],
+            "links": [
+                  {
+                        "label": "One-pager (PDF)",
+                        "url": "assets/cases/case_pet_poc_navigation_lyapunov_2025.pdf"
+                  }
+            ]
       },
       {
-        "id": "com_automotive_test_systems_2025",
-        "title": "Automotive test systems (NDA-safe)",
-        "category": "commercial",
-        "visibility": "nda",
-        "status": "Ongoing",
-        "start_year": 2025,
-        "end_year": null,
-        "customer": "Automotive Tier-1 (generalized)",
-        "one_liner": "NDA-safe description: ECU test systems, signal switching, power/load control, and validation automation.",
-        "case_url": "assets/cases/case_com_automotive_test_systems_2025.pdf",
-        "active_years": [
-          2025
-        ],
-        "period": "2025 — …",
-        "role": "Engineering management / delivery",
-        "summary": "NDA-safe overview of automotive test systems: signal switching and routing for multiple ECUs, power and load control, automated validation workflows, and traceability of test artifacts. Details are restricted by customer agreements.",
-        "tags": [
-          "Automotive",
-          "ECU",
-          "Signal switching",
-          "HIL",
-          "Traceability"
-        ],
-        "links": [
-          {
-            "label": "NDA-safe one-pager (PDF)",
-            "url": "assets/cases/case_com_automotive_test_systems_2025.pdf"
-          },
-          {
-            "label": "Ask for details / demo",
-            "url": "contacts.html"
-          }
-        ]
+            "id": "pet_robotics_tooling_2025",
+            "title": "Pet projects (robotics and engineering tooling)",
+            "category": "pet",
+            "visibility": "public",
+            "status": "Ongoing",
+            "start_year": 2025,
+            "end_year": null,
+            "one_liner": "A collection of pet projects for robotics and embedded prototyping; public artifacts are published as they become ready.",
+            "case_url": "assets/cases/case_pet_robotics_tooling_2025.pdf",
+            "active_years": [
+                  2025
+            ],
+            "period": "2025 — …",
+            "role": "Author",
+            "summary": "A curated set of small robotics and embedded prototypes used as scaffolding for experiments, tooling, and repeatable test stands. Public artifacts are released progressively.",
+            "tags": [
+                  "Robotics",
+                  "Embedded",
+                  "Prototyping"
+            ],
+            "links": [
+                  {
+                        "label": "GitHub",
+                        "url": "https://github.com/dmytrohumennyi"
+                  },
+                  {
+                        "label": "One-pager (PDF)",
+                        "url": "assets/cases/case_pet_robotics_tooling_2025.pdf"
+                  }
+            ]
+      },
+      {
+            "id": "com_automotive_test_systems_2025",
+            "title": "Automotive test systems (NDA-safe)",
+            "category": "commercial",
+            "visibility": "nda",
+            "status": "Ongoing",
+            "start_year": 2025,
+            "end_year": null,
+            "customer": "Automotive Tier-1 (generalized)",
+            "one_liner": "NDA-safe description: ECU test systems, signal switching, power/load control, and validation automation.",
+            "case_url": "assets/cases/case_com_automotive_test_systems_2025.pdf",
+            "active_years": [
+                  2025
+            ],
+            "period": "2025 — …",
+            "role": "Engineering management / delivery",
+            "summary": "NDA-safe overview of automotive test systems: signal switching and routing for multiple ECUs, power and load control, automated validation workflows, and traceability of test artifacts. Details are restricted by customer agreements.",
+            "tags": [
+                  "Automotive",
+                  "ECU",
+                  "Signal switching",
+                  "HIL",
+                  "Traceability"
+            ],
+            "links": [
+                  {
+                        "label": "NDA-safe one-pager (PDF)",
+                        "url": "assets/cases/case_com_automotive_test_systems_2025.pdf"
+                  },
+                  {
+                        "label": "Ask for details / demo",
+                        "url": "contacts.html"
+                  }
+            ]
       }
-    ]
+]
     </script>
   </main>
   <footer class="footer">

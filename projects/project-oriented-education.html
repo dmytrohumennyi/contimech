@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Project-Oriented Education Synchronized with Industry — ContiMech</title>
+  <meta name="description" content="Case study on a sprint-based, industry-synchronized education model built around a real engineering project, grant-ready deliverables, and daily standups."/>
+  <link rel="stylesheet" href="../assets/css/style.css"/>
+  <style>
+    .case-hero{padding:26px 0 6px}
+    .case-kicker{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(125,211,252,.35);padding:6px 10px;border-radius:999px;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.12em}
+    .case-title{margin:14px 0 10px;font-size:38px;line-height:1.08;max-width:14ch}
+    .case-lead{max-width:78ch;color:var(--muted);font-size:16px}
+    .case-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px;margin-top:18px}
+    .case-grid > *{grid-column:span 12}
+    .kpi-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+    .kpi-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+    .kpi-value{font-size:34px;line-height:1;font-weight:800;color:var(--accent)}
+    .kpi-label{margin-top:8px;color:var(--muted);font-size:13px;line-height:1.35}
+    .case-grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-top:12px}
+    .flow .step{background:rgba(125,211,252,.08);border:1px solid rgba(125,211,252,.22);border-radius:16px;padding:14px;text-align:center;font-weight:650;line-height:1.3}
+    .callout{border-left:3px solid var(--accent);padding:14px 16px;background:rgba(125,211,252,.06);border-radius:0 14px 14px 0;color:var(--text);font-style:italic}
+    .mini-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .project-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+    .project-table th,.project-table td{font-size:14px}
+    @media (max-width:920px){
+      .case-title{font-size:30px;max-width:none}
+      .kpi-grid,.case-grid-2,.flow{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a class="brand" href="../index.html">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <div class="brand-title">ContiMech</div>
+          <div class="brand-sub">Dmytro Humennyi, Ph.D.</div>
+        </div>
+      </a>
+      <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="../cooperation.html">Cooperation</a>
+        <a href="../experience.html">Experience</a>
+        <a href="../projects.html" class="active">Projects</a>
+        <a href="../publications.html">Publications</a>
+        <a href="../blog/index.html">Blog</a>
+        <a href="../contacts.html">Contacts</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="case-hero">
+      <div class="case-kicker">Case study · 2026</div>
+      <h1 class="case-title">Project-Oriented Education Synchronized with Industry</h1>
+      <p class="case-lead">
+        How an engineering manager deploys a sprint-based, business-aligned project model inside a university department —
+        with real hardware work, daily standups, grant-ready deliverables, and visible public artifacts.
+      </p>
+      <div class="mini-meta">
+        <span class="chip chip-strong">Scientific / educational</span>
+        <span class="chip">Public</span>
+        <span class="chip">Pilot in progress</span>
+        <span class="chip">KPI</span>
+        <span class="chip">Industry-aligned</span>
+      </div>
+      <div class="project-actions">
+        <a class="btn primary" href="../assets/cases/case_edu_project_oriented_2026.pdf">Download PDF</a>
+        <a class="btn" href="../projects.html">Back to Projects</a>
+      </div>
+    </section>
+
+    <section class="case-grid">
+      <div class="kpi-grid">
+        <article class="kpi-card">
+          <div class="kpi-value">9</div>
+          <div class="kpi-label">weeks to first MVP</div>
+        </article>
+        <article class="kpi-card">
+          <div class="kpi-value">5</div>
+          <div class="kpi-label">parallel engineering tracks</div>
+        </article>
+        <article class="kpi-card">
+          <div class="kpi-value">17–22</div>
+          <div class="kpi-label">participants across PM, leads, and students</div>
+        </article>
+        <article class="kpi-card">
+          <div class="kpi-value">≥2</div>
+          <div class="kpi-label">grant proposals targeted from the same project stream</div>
+        </article>
+      </div>
+
+      <div class="case-grid-2">
+        <article class="card">
+          <h2>Problem</h2>
+          <p>
+            Traditional engineering education often separates theory from the full product-development cycle.
+            Students solve isolated laboratory tasks, departments accumulate too few reusable project artifacts,
+            and industry feedback loops remain weak. As a result, students arrive at interviews without real delivery,
+            teamwork, or CI/CD experience.
+          </p>
+        </article>
+
+        <article class="card">
+          <h2>Solution</h2>
+          <p>
+            Introduce an industrial project model directly into the curriculum: three-week sprint cycles, a PM → Leads → Executors hierarchy,
+            mandatory daily standups, a real hardware-centered platform, and public artifacts designed from day one to be reusable in grants,
+            partner communication, and future academic work.
+          </p>
+        </article>
+      </div>
+
+      <article class="card wide">
+        <h2>Operating model</h2>
+        <div class="flow">
+          <div class="step">Real project</div>
+          <div class="step">Sprint delivery</div>
+          <div class="step">Grant deliverable</div>
+          <div class="step">Industry demo</div>
+          <div class="step">Next project</div>
+        </div>
+        <div class="kv" style="margin-top:16px">
+          <div><strong>Three-week sprints:</strong> short planning cycles with explicit deliverables and exit criteria.</div>
+          <div><strong>Daily standup:</strong> done / in progress / blocked — a lightweight control loop that keeps execution visible.</div>
+          <div><strong>Vertical inheritance:</strong> firmware work from one cohort becomes ROS2 and system integration material for the next.</div>
+          <div><strong>Parallel visibility:</strong> GitHub, LinkedIn, short case studies, and demo materials are produced together with the technical work.</div>
+        </div>
+      </article>
+
+      <div class="case-grid-2">
+        <article class="card">
+          <h2>Why this model works</h2>
+          <ul class="list">
+            <li>One project generates three outputs at once: educational value, grant material, and industry-facing evidence.</li>
+            <li>Daily standups reduce the “invisible student” problem and force early escalation of blockers.</li>
+            <li>Open repositories and public artifacts support Open Science expectations in grant applications.</li>
+            <li>Industry mentors help translate academic effort into engineering-grade execution.</li>
+            <li>The model scales as a flywheel: project → grant → partner → next project.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>Pilot platform</h2>
+          <p>
+            The current pilot centers on restoration and modernization of a <strong>PUMA industrial manipulator</strong>.
+            The same project spans mechanics, hardware, firmware, ROS2 integration, computer vision, and grant preparation.
+            This keeps the educational process grounded in a real engineering system instead of a paper-only topic.
+          </p>
+          <div class="mini-meta">
+            <span class="chip">Mechanics</span>
+            <span class="chip">Hardware</span>
+            <span class="chip">Firmware</span>
+            <span class="chip">ROS2</span>
+            <span class="chip">Computer vision</span>
+            <span class="chip">Grants</span>
+          </div>
+        </article>
+      </div>
+
+      <article class="card wide">
+        <h2>Before / After</h2>
+        <table class="table project-table">
+          <thead>
+            <tr>
+              <th style="width:42%">Traditional model</th>
+              <th>Project-oriented model</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Isolated lab exercises</td><td>One shared project with several coordinated technical tracks</td></tr>
+            <tr><td>Semester-end grading</td><td>Sprint review every three weeks plus demo checkpoints</td></tr>
+            <tr><td>No stable industry connection</td><td>Mentors, MoUs, internships, and partner-facing artifacts</td></tr>
+            <tr><td>Grant work is separate from teaching</td><td>Grant deliverables are generated inside the learning process</td></tr>
+            <tr><td>Low department visibility</td><td>Public GitHub, LinkedIn, conference-ready case materials</td></tr>
+            <tr><td>Students as passive listeners</td><td>Students as accountable executors within a delivery structure</td></tr>
+            <tr><td>No graduate portfolio</td><td>Commits, demos, case studies, and team experience</td></tr>
+          </tbody>
+        </table>
+      </article>
+
+      <div class="case-grid-2">
+        <article class="card">
+          <h2>Grant strategy</h2>
+          <ul class="list">
+            <li><strong>Horizon Europe Cluster 4:</strong> use the platform as a demonstrator for AI, digital twin, and engineering education integration.</li>
+            <li><strong>Erasmus+ KA220:</strong> replicate the lab model jointly with EU universities through shared modules and open artifacts.</li>
+            <li><strong>Seed efficiency:</strong> a relatively small departmental investment can return value if even one proposal succeeds.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>Scalability</h2>
+          <ul class="list">
+            <li>The framework is reusable beyond PUMA: IoT, drones, digital twins, industrial safety, and other tracks fit the same model.</li>
+            <li>Every cycle adds case studies, repositories, publications, and collaboration evidence.</li>
+            <li>External grants can fund replication across partner universities and deepen industry participation.</li>
+          </ul>
+        </article>
+      </div>
+
+      <article class="card wide">
+        <div class="callout">
+          “A student who spends nine weeks in a sprint team with daily standups comes to an interview with GitHub evidence and delivery experience that a traditional course rarely provides.”
+        </div>
+      </article>
+
+      <div class="case-grid-2">
+        <article class="card">
+          <h2>Author</h2>
+          <p>
+            <strong>Dmytro Humennyi</strong>, Ph.D. — Engineering Manager at N-iX and Associate Professor.
+            Focus areas include embedded systems, AUTOSAR, ROS2, safety-critical engineering, and industry-synchronized academic work.
+          </p>
+        </article>
+
+        <article class="card">
+          <h2>Artifact source</h2>
+          <p>
+            This website version was adapted from the provided case-study material and reformatted to match the ContiMech project section.
+            The original PDF-style artifact is also available for download.
+          </p>
+          <div class="project-actions">
+            <a class="btn" href="../assets/cases/case_edu_project_oriented_2026.pdf">Open PDF artifact</a>
+            <a class="btn" href="../contacts.html">Discuss collaboration</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>© 2026 Dmytro Humennyi</div>
+      <div class="meta">contimech.org · Project case page</div>
+    </div>
+  </footer>
+  <script src="../assets/js/site.js"></script>
+</body>
+</html>
