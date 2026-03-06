@@ -217,11 +217,9 @@
       console.error(err);
       app.innerHTML = `
         <div class="card">
-          <p><strong>Не вдалося завантажити публікації.</strong></p>
+          <p><strong>Failed to load publications.</strong></p>
           <p class="muted">
-            Якщо ти відкриваєш сторінку як <code>file://</code>, браузер може блокувати <code>fetch()</code>.
-            Виправлення: або відкрий сайт через локальний сервер (наприклад, <code>python3 -m http.server</code>),
-            або переконайся, що в <code>publications.html</code> є вбудовані дані (<code>#publications-data</code>).
+            If you open the page as <code>file://</code>, the browser may block <code>fetch()</code>. Fix: either open the site through a local server (for example, <code>python3 -m http.server</code>), or make sure that <code>publications.html</code> contains embedded data (<code>#publications-data</code>).
           </p>
         </div>
       `;

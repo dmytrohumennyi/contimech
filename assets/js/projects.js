@@ -1,307 +1,128 @@
-(function(){
-  const YEAR_MIN = 2025;
+(function () {
+  const dataEl = document.getElementById('projects-data');
+  const app = document.getElementById('projects-app');
+  if (!dataEl || !app) return;
 
+  const data = JSON.parse(dataEl.textContent || '[]');
   const els = {
-    app: null,
-    list: null,
-    msg: null,
-    q: null,
-    year: null,
-    category: null,
-    visibility: null,
-    reset: null,
-    count: null
+    q: document.getElementById('proj-q'),
+    year: document.getElementById('proj-year'),
+    category: document.getElementById('proj-cat'),
+    visibility: document.getElementById('proj-vis'),
+    reset: document.getElementById('proj-reset'),
+    list: document.getElementById('proj-list'),
+    msg: document.getElementById('projects-msg'),
+    status: document.getElementById('projects-status'),
+    count: document.getElementById('proj-count')
   };
 
-  function byId(id){ return document.getElementById(id); }
-
-  function getEmbeddedData(){
-    const el = byId('projects-data');
-    if(!el) return null;
-    try{ return JSON.parse(el.textContent); }catch(e){ return null; }
+  function escapeHtml(str) {
+    return String(str || '')
+      .replaceAll('&', '&amp;')
+      .replaceAll('<', '&lt;')
+      .replaceAll('>', '&gt;')
+      .replaceAll('"', '&quot;')
+      .replaceAll("'", '&#039;');
   }
 
-  async function loadData(){
-    // Prefer fetch when hosted; fall back to embedded JSON for file://.
-    try{
-      const res = await fetch('assets/data/projects.json', { cache: 'no-store' });
-      if(!res.ok) throw new Error('HTTP ' + res.status);
-      const data = await res.json();
-      if(Array.isArray(data)) return data;
-      throw new Error('Invalid JSON');
-    } catch(e){
-      const embedded = getEmbeddedData();
-      if(Array.isArray(embedded)) return embedded;
-      throw e;
-    }
-  }
+  function norm(v) { return String(v || '').toLowerCase(); }
 
-  function uniq(arr){ return Array.from(new Set(arr)); }
-
-  function normalize(s){
-    return (s || '').toString().toLowerCase();
-  }
-
-  function withinTimeWindow(p){
-    // Keep items that are relevant to YEAR_MIN+.
-    const years = Array.isArray(p.active_years) ? p.active_years : [];
-    if(years.some(y => Number(y) >= YEAR_MIN)) return true;
-
-    // If no active_years provided, attempt to infer from period string.
-    const txt = normalize(p.period);
-    const m = txt.match(/(20\d{2})/g);
-    if(m){
-      const ys = m.map(x => Number(x)).filter(n => !Number.isNaN(n));
-      if(ys.some(y => y >= YEAR_MIN)) return true;
-    }
-    // Otherwise keep (so we don't silently hide data), but mark later.
-    return true;
-  }
-
-  function buildOptions(projects){
-    const years = uniq(projects.flatMap(p => Array.isArray(p.active_years) ? p.active_years : [])
-      .map(y => Number(y)).filter(y => !Number.isNaN(y)))
-      .sort((a,b)=>b-a);
-
-    // If none provided, still show YEAR_MIN.
-    const yearOptions = years.length ? years : [YEAR_MIN];
-
-    // Categories
-    const cats = uniq(projects.map(p => p.category).filter(Boolean));
-
-    // Visibilities
-    const vis = uniq(projects.map(p => p.visibility).filter(Boolean));
-
-    // Render
-    els.year.innerHTML = '<option value="">Усі</option>' +
-      yearOptions.map(y => `<option value="${y}">${y}</option>`).join('');
+  function initFilters() {
+    const years = [...new Set(data.flatMap(p => p.active_years || [p.start_year]).filter(Boolean))].sort((a, b) => b - a);
+    els.year.innerHTML = '<option value="">All</option>' + years.map(y => `<option value="${y}">${y}</option>`).join('');
 
     const catLabels = {
-      scientific: 'Офіційні наукові',
-      pet: 'Особисті pet‑проєкти',
-      commercial: 'Комерційні (NDA‑safe)'
+      scientific: 'Official scientific',
+      pet: 'Personal pet projects',
+      commercial: 'Commercial (NDA-safe)'
     };
-
-    els.category.innerHTML = '<option value="">Усі</option>' +
-      cats.map(c => `<option value="${c}">${catLabels[c] || c}</option>`).join('');
+    els.category.innerHTML = '<option value="">All</option>' + Object.entries(catLabels).map(([v, l]) => `<option value="${v}">${l}</option>`).join('');
 
     const visLabels = {
-      public: 'Публічні',
-      nda: 'Під NDA',
-      internal: 'Внутрішні'
+      public: 'Public',
+      nda: 'Under NDA',
+      internal: 'Internal'
     };
-
-    els.visibility.innerHTML = '<option value="">Усі</option>' +
-      vis.map(v => `<option value="${v}">${visLabels[v] || v}</option>`).join('');
+    els.visibility.innerHTML = '<option value="">All</option>' + Object.entries(visLabels).map(([v, l]) => `<option value="${v}">${l}</option>`).join('');
   }
 
-  function matches(project, q){
-    if(!q) return true;
-    const hay = [
-      project.title,
-      project.title_en,
-      project.one_liner,
-      project.summary,
-      project.period,
-      project.customer,
-      project.status,
-      project.start_year,
-      project.end_year,
-      project.role,
-      project.category,
-      project.visibility,
-      (project.tags || []).join(' '),
-      (project.links || []).map(l => `${l.label} ${l.url}`).join(' ')
-    ].join(' ');
-    return normalize(hay).includes(normalize(q));
-  }
-
-  function yearMatch(project, year){
-    if(!year) return true;
-    const ys = Array.isArray(project.active_years) ? project.active_years.map(Number) : [];
-    if(ys.includes(Number(year))) return true;
-
-    // Also allow match by period string.
-    const txt = normalize(project.period);
-    return txt.includes(String(year));
-  }
-
-  function renderProject(p){
-    // Standard tile fields:
-    // Title
-    // Start/end years
-    // Status (optional)
-    // Customer description (optional)
-    // One-liner summary
-
-    const start = p.start_year ?? inferYear(p.period, 'min');
-    const end = p.end_year ?? inferYear(p.period, 'max');
-    const years = formatYears(start, end);
-
-    const status = p.status ? String(p.status) : '';
-    const customer = p.customer ? String(p.customer) : '';
-    const oneLiner = p.one_liner || p.summary || '';
-
-    const url = pickPrimaryUrl(p);
-    const isDisabled = !url;
-    const targetBlank = url && (isPdf(url) || isExternal(url));
-
-    const isScientific = (p.category === 'scientific');
-
-    const chips = [
-      years ? `<span class="chip">${escapeHtml(years)}</span>` : '',
-      status ? `<span class="chip">${escapeHtml(status)}</span>` : '',
-      isScientific ? `<span class="chip chip-strong">Офіційний науковий</span>` : '',
-      (p.visibility === 'nda') ? `<span class="chip">NDA‑safe</span>` : ''
-    ].filter(Boolean).join('');
-
-    const inner = `
-      <div class="proj-kv">${chips}</div>
-      <h3 class="proj-title">${escapeHtml(p.title || '')}</h3>
-      <div class="proj-lines">
-        ${customer ? `<div><strong>Замовник:</strong> ${escapeHtml(customer)}</div>` : ''}
-        ${oneLiner ? `<div class="proj-desc">${escapeHtml(toOneSentence(oneLiner))}</div>` : ''}
-        ${(p.note && isScientific) ? `<div class="proj-note">${escapeHtml(p.note)}</div>` : ''}
-      </div>
-    `;
-
-    const cls = `proj-tile${isScientific ? ' proj-tile--scientific' : ''}${isDisabled ? ' disabled' : ''}`;
-
-    if(isDisabled){
-      return `<div class="${cls}" aria-disabled="true">${inner}</div>`;
-    }
-
+  function tile(p) {
+    const href = p.case_url || (p.links && p.links[0] && p.links[0].url) || '#';
+    const customer = p.customer || '';
+    const role = p.role || '';
+    const note = p.note || '';
+    const tags = (p.tags || []).map(t => `<span class="chip chip-sm">${escapeHtml(t)}</span>`).join('');
+    const links = (p.links || []).map(l => `<a class="btn" href="${escapeHtml(l.url)}"${/^https?:/.test(l.url) ? ' target="_blank" rel="noopener"' : ''}>${escapeHtml(l.label)}</a>`).join(' ');
+    const isScientific = p.category === 'scientific';
     return `
-      <a class="${cls}" href="${escapeAttr(url)}" ${targetBlank ? 'target="_blank" rel="noopener"' : ''}>
-        ${inner}
-      </a>
-    `;
+      <article class="card proj-tile">
+        <a class="proj-overlay" href="${escapeHtml(href)}"${/^https?:/.test(href) ? ' target="_blank" rel="noopener"' : ''} aria-label="Open case study"></a>
+        <div class="proj-tile-body">
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px">
+            ${isScientific ? `<span class="chip chip-strong">Official scientific</span>` : ''}
+            <span class="chip chip-sm">${escapeHtml(p.status || '')}</span>
+            <span class="chip chip-sm">${escapeHtml(p.period || '')}</span>
+          </div>
+          <h2 style="margin:0 0 8px">${escapeHtml(p.title)}</h2>
+          <p class="muted" style="margin:0 0 10px">${escapeHtml(p.one_liner || '')}</p>
+          <div class="kv">
+            ${customer ? `<div><strong>Customer:</strong> ${escapeHtml(customer)}</div>` : ''}
+            ${role ? `<div><strong>Role:</strong> ${escapeHtml(role)}</div>` : ''}
+          </div>
+          <p style="margin-top:10px">${escapeHtml(p.summary || '')}</p>
+          ${note ? `<p class="muted">${escapeHtml(note)}</p>` : ''}
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">${tags}</div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px">${links}</div>
+        </div>
+      </article>`;
   }
 
-  function isExternal(url){
-    return /^https?:\/\//i.test(url);
-  }
-
-  function isPdf(url){
-    return (url || '').toLowerCase().endsWith('.pdf');
-  }
-
-  function pickPrimaryUrl(p){
-    if(p.case_url) return p.case_url;
-    const links = Array.isArray(p.links) ? p.links : [];
-    const pdf = links.find(l => isPdf(l.url));
-    if(pdf && pdf.url) return pdf.url;
-    const any = links.find(l => l && l.url);
-    return any ? any.url : '';
-  }
-
-  function inferYear(period, mode){
-    const txt = normalize(period);
-    const m = txt.match(/\b20\d{2}\b/g);
-    if(!m || !m.length) return '';
-    const ys = m.map(x => Number(x)).filter(n => !Number.isNaN(n));
-    if(!ys.length) return '';
-    return mode === 'min' ? Math.min(...ys) : Math.max(...ys);
-  }
-
-  function formatYears(start, end){
-    const s = start ? String(start) : '';
-    const e = end ? String(end) : '';
-    if(s && e && s !== e) return `${s}–${e}`;
-    if(s && e && s === e) return s;
-    if(s && !e) return `${s}–…`;
-    return '';
-  }
-
-  function toOneSentence(text){
-    const t = (text || '').toString().trim();
-    if(!t) return '';
-    // keep only the first sentence-ish chunk
-    const m = t.match(/^(.+?[\.!?])(\s|$)/);
-    return m ? m[1] : t;
-  }
-
-  function escapeHtml(s){
-    return (s ?? '').toString()
-      .replace(/&/g,'&amp;')
-      .replace(/</g,'&lt;')
-      .replace(/>/g,'&gt;')
-      .replace(/"/g,'&quot;')
-      .replace(/'/g,'&#39;');
-  }
-
-  function escapeAttr(s){
-    return escapeHtml(s);
-  }
-
-  function applyFilters(projects){
-    const q = els.q.value.trim();
+  function render() {
+    const q = norm(els.q.value);
     const year = els.year.value;
     const cat = els.category.value;
     const vis = els.visibility.value;
 
-    const filtered = projects
-      .filter(withinTimeWindow)
-      .filter(p => matches(p, q))
-      .filter(p => yearMatch(p, year))
-      .filter(p => !cat || p.category === cat)
-      .filter(p => !vis || p.visibility === vis);
-
-    els.count.textContent = `${filtered.length} шт.`;
-    els.list.innerHTML = filtered.map(renderProject).join('');
-
-    if(filtered.length === 0){
-      if(els.msg){
-        els.msg.style.display = 'block';
-        els.msg.textContent = 'Нічого не знайдено. Спробуй змінити фільтри.';
+    const filtered = data.filter(p => {
+      if (year && !(p.active_years || []).map(String).includes(String(year)) && String(p.start_year) !== String(year)) return false;
+      if (cat && p.category !== cat) return false;
+      if (vis && p.visibility !== vis) return false;
+      if (q) {
+        const hay = [p.title, p.one_liner, p.summary, p.role, p.customer, ...(p.tags || [])].join(' ').toLowerCase();
+        if (!hay.includes(q)) return false;
       }
-    } else {
-      if(els.msg) els.msg.style.display = 'none';
+      return true;
+    });
+
+    els.count.textContent = `${filtered.length} items`;
+    if (!filtered.length) {
+      els.list.innerHTML = '';
+      els.msg.style.display = 'block';
+      els.msg.textContent = 'Nothing found. Try adjusting the filters.';
+      return;
     }
+    els.msg.style.display = 'none';
+    els.list.innerHTML = filtered.map(tile).join('');
   }
 
-  function init(projects){
-    els.app = byId('projects-app');
-    // Keep compatibility with both id variants.
-    els.list = byId('proj-list') || byId('projects-list');
-    els.msg  = byId('projects-msg') || byId('proj-msg');
-    els.q = byId('proj-q');
-    els.year = byId('proj-year');
-    els.category = byId('proj-cat');
-    els.visibility = byId('proj-vis');
-    els.reset = byId('proj-reset');
-    els.count = byId('proj-count');
-
-    buildOptions(projects);
-    applyFilters(projects);
-
-    const onChange = () => applyFilters(projects);
-    els.q.addEventListener('input', onChange);
-    els.year.addEventListener('change', onChange);
-    els.category.addEventListener('change', onChange);
-    els.visibility.addEventListener('change', onChange);
-
+  try {
+    initFilters();
+    render();
+    [els.q, els.year, els.category, els.visibility].forEach(el => {
+      el.addEventListener('input', render);
+      el.addEventListener('change', render);
+    });
     els.reset.addEventListener('click', (e) => {
       e.preventDefault();
       els.q.value = '';
       els.year.value = '';
       els.category.value = '';
       els.visibility.value = '';
-      applyFilters(projects);
+      render();
     });
+  } catch (e) {
+    console.error(e);
+    els.status.style.display = 'block';
+    els.status.textContent = 'Failed to load projects. Please check that assets/data/projects.json exists and is accessible.';
   }
-
-  (async function main(){
-    const status = byId('projects-status');
-    try{
-      const projects = await loadData();
-      init(Array.isArray(projects) ? projects : []);
-      if(status) status.style.display = 'none';
-    } catch(e){
-      if(status){
-        status.style.display = 'block';
-        status.textContent = 'Не вдалося завантажити проєкти. Перевір, що assets/data/projects.json існує та доступний.';
-      }
-    }
-  })();
 })();

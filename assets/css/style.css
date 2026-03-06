@@ -143,6 +143,27 @@ a.pub-title:hover{text-decoration:underline}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 12px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.03);color:var(--text);text-decoration:none}
 .btn:hover{background:rgba(255,255,255,.06)}
 .btn-primary{border-color:rgba(112,203,255,.6)}
+
+
+/* Blog listing cards */
+.filters-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr auto;gap:12px;align-items:end}
+.page-head .lead{margin:10px 0 0;color:var(--muted);max-width:72ch}
+.post-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.post-card{grid-column:auto;padding:0;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.post-card-cover{display:block;background:#0f1319;aspect-ratio:16/9;max-height:180px;overflow:hidden}
+.post-card-cover img{display:block;width:100%;height:100%;object-fit:cover}
+.post-card-body{padding:14px 16px 16px}
+.post-card-title{margin:8px 0 0;font-size:18px;line-height:1.3}
+.post-card-title a{color:var(--text);text-decoration:none}
+.post-card-title a:hover{text-decoration:underline}
+.muted{color:var(--muted);font-size:13px;line-height:1.45}
+.chip-sm{font-size:12px;padding:4px 8px}
+@media (max-width:920px){
+  .filters-grid{grid-template-columns:1fr}
+  .post-grid{grid-template-columns:1fr}
+  .post-card-cover{max-height:160px}
+}
+
 /* LIGHTBOX */
 .no-scroll{overflow:hidden}
 #lb-overlay{position:fixed;inset:0;display:none;z-index:9999}

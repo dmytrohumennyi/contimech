@@ -1,116 +1,61 @@
-(function(){
-  // Tabs
-  const tabButtons = document.querySelectorAll('[data-students-tab]');
-  const tabCourses = document.getElementById('studentsTabCourses');
-  const tabThesis = document.getElementById('studentsTabThesis');
-
-  function setTab(name){
-    if(!tabCourses || !tabThesis || !tabButtons.length) return;
-    const isCourses = name === 'courses';
-    tabCourses.style.display = isCourses ? '' : 'none';
-    tabThesis.style.display = isCourses ? 'none' : '';
-
-    tabButtons.forEach(btn => {
-      const active = btn.getAttribute('data-students-tab') === name;
-      btn.classList.toggle('primary', active);
-    });
-  }
-
-  tabButtons.forEach(btn => {
-    btn.addEventListener('click', () => setTab(btn.getAttribute('data-students-tab')));
-  });
-
-  // Courses dropdown
+(function () {
   const select = document.getElementById('studentCourseSelect');
   const meta = document.getElementById('studentCourseMeta');
   const resources = document.getElementById('studentCourseResources');
-  if(!select || !meta || !resources) return;
+  const tabCourses = document.getElementById('studentsTabCourses');
+  const tabThesis = document.getElementById('studentsTabThesis');
+  if (!select || !resources || !meta) return;
 
-  const COURSES = {
-    specialized_architectures: {
-      title: 'Спеціалізовані архітектури комп’ютеризованих систем',
-      folder: 'specialized-architectures',
-      tags: ['КНУБА', 'Архітектура', 'Embedded/SoC'],
-    },
-    operations_management_it: {
-      title: 'Операційний менеджмент в ІТ',
-      folder: 'operations-management-it',
-      tags: ['КНУБА', 'Delivery', 'Процеси'],
-    },
-    reliability: {
-      title: 'Надійність комп’ютерних систем',
-      folder: 'reliability-computer-systems',
-      tags: ['КНУБА', 'Надійність', 'Відмовостійкість'],
-    }
-  };
+  const tabs = document.querySelectorAll('[data-students-tab]');
+  tabs.forEach((btn) => btn.addEventListener('click', () => {
+    tabs.forEach(b => b.classList.remove('primary'));
+    btn.classList.add('primary');
+    const mode = btn.getAttribute('data-students-tab');
+    tabCourses.style.display = mode === 'courses' ? '' : 'none';
+    tabThesis.style.display = mode === 'thesis' ? '' : 'none';
+  }));
 
-  const order = ['operations_management_it','specialized_architectures','reliability'];
+  const courses = [
+    { slug: 'specialized-architectures', title: 'Specialized Architectures of Computerized Systems', folder: 'assets/files/students/courses/specialized-architectures', tags: ['KNUBA', 'Architecture', 'Embedded/SoC'] },
+    { slug: 'operations-management-it', title: 'Operations Management in IT', folder: 'assets/files/students/courses/operations-management-it', tags: ['KNUBA', 'Delivery', 'Processes'] },
+    { slug: 'reliability-computer-systems', title: 'Reliability of Computer Systems', folder: 'assets/files/students/courses/reliability-computer-systems', tags: ['KNUBA', 'Reliability', 'Fault Tolerance'] }
+  ];
 
-  order.forEach(id => {
-    const c = COURSES[id];
-    const opt = document.createElement('option');
-    opt.value = id;
-    opt.textContent = c.title;
-    select.appendChild(opt);
-  });
-
-  function escapeHtml(s){
-    return String(s)
-      .replaceAll('&','&amp;')
-      .replaceAll('<','&lt;')
-      .replaceAll('>','&gt;')
-      .replaceAll('"','&quot;')
-      .replaceAll("'",'&#39;');
+  function escapeHtml(str) {
+    return String(str || '')
+      .replaceAll('&', '&amp;')
+      .replaceAll('<', '&lt;')
+      .replaceAll('>', '&gt;')
+      .replaceAll('"', '&quot;')
+      .replaceAll("'", '&#039;');
   }
 
-  function fileHref(folder, filename){
-    return `assets/files/students/courses/${folder}/${filename}`;
-  }
+  function fileHref(folder, name) { return `${folder}/${name}`; }
 
-  function card(title, desc, href, download=true){
-    const safeTitle = escapeHtml(title);
-    const safeDesc = escapeHtml(desc || '');
-    const action = href
-      ? `<a class="btn primary" href="${escapeHtml(href)}"${download ? ' download' : ''}>Завантажити</a>`
-      : `<span class="btn" aria-disabled="true" style="opacity:.65;cursor:not-allowed">Немає</span>`;
-
+  function card(title, desc, href, download = false) {
     return `
-      <div class="card" style="grid-column:span 6">
-        <h2 style="margin:0 0 8px;font-size:16px">${safeTitle}</h2>
-        <p style="margin:0;color:var(--muted)">${safeDesc}</p>
-        <div style="margin-top:12px">${action}</div>
-      </div>
-    `;
+      <div class="card" style="grid-column:span 4">
+        <h3 style="margin:0 0 8px;font-size:16px">${escapeHtml(title)}</h3>
+        <p class="muted" style="margin:0 0 12px">${escapeHtml(desc)}</p>
+        ${href ? `<a class="btn primary" href="${escapeHtml(href)}"${download ? ' download' : ''}>Download</a>` : `<span class="btn" aria-disabled="true" style="opacity:.65;cursor:not-allowed">Missing</span>`}
+      </div>`;
   }
 
-  function renderCourse(id){
-    const c = COURSES[id];
-    if(!c){
-      meta.style.display = 'none';
-      resources.innerHTML = '';
-      return;
-    }
-
+  function renderCourse(c) {
     meta.style.display = '';
-    meta.innerHTML = c.tags.map(t => `<span class="pill">${escapeHtml(t)}</span>`).join('');
-
-    const folder = c.folder;
-    const cards = [
-      card('Методичка (PDF)', 'Офіційна методичка/гайд по дисципліні.', fileHref(folder,'Methodical.pdf')),
-      card('DoD — критерії здачі (MD)', 'Definition of Done: що саме треба здати і як перевіряється.', fileHref(folder,'DoD.md')),
-      card('Слайди (PDF)', 'Лекційні слайди. Очікуваний файл: Slides.pdf (можна просто замінювати вміст).', fileHref(folder,'Slides.pdf')),
-      card('Рекомендовані джерела (MD)', 'Список для самостійного опрацювання.', fileHref(folder,'Sources.md')),
-    ].join('');
-
+    meta.innerHTML = (c.tags || []).map(t => `<span class="pill">${escapeHtml(t)}</span>`).join('');
     resources.innerHTML = `
-      <div class="grid" style="margin-top:12px">
-        ${cards}
-      </div>
-    `;
+      <div class="grid">
+        ${card('Methodical guide (PDF)', 'Official course guide / handbook.', fileHref(c.folder,'Methodical.pdf'))}
+        ${card('DoD — delivery criteria (MD)', 'Definition of Done: what exactly must be submitted and how it is checked.', fileHref(c.folder,'DoD.md'))}
+        ${card('Slides (PDF)', 'Lecture slides. Expected file name: Slides.pdf.', fileHref(c.folder,'Slides.pdf'))}
+        ${card('Recommended sources (MD)', 'Reading list for self-study.', fileHref(c.folder,'Sources.md'))}
+      </div>`;
   }
 
-  select.addEventListener('change', ()=> renderCourse(select.value));
-
-  // Default tab
-  setTab('courses');
+  select.innerHTML += courses.map(c => `<option value="${c.slug}">${escapeHtml(c.title)}</option>`).join('');
+  select.addEventListener('change', () => {
+    const c = courses.find(x => x.slug === select.value);
+    if (c) renderCourse(c);
+  });
 })();

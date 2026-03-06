@@ -1,22 +1,21 @@
 [
   {
     "id": "sci_0123U103640",
-    "title": "Методи і моделі забезпечення безпеки та діагностики критичних параметрів у складних системах з використанням ІоТ",
-    "title_en": "Methods and models for ensuring safety and diagnosing critical parameters in complex systems using IoT",
+    "title": "Methods and models for ensuring safety and diagnosing critical parameters in complex systems using IoT",
     "category": "scientific",
     "visibility": "public",
     "status": "Active",
     "start_year": 2023,
     "end_year": 2025,
-    "customer": "Ініціативна ДіР (КНУБА)",
-    "one_liner": "Методи та моделі для безпеки й діагностики критичних параметрів у IoT‑орієнтованих складних системах.",
+    "customer": "Initiative R&D project (KNUBA)",
+    "one_liner": "Methods and models for safety and diagnostics of critical parameters in IoT-oriented complex systems.",
     "case_url": "assets/cases/case_sci_0123U103640.pdf",
     "active_years": [
       2025
     ],
-    "period": "09.2023 — 09.2025 (активно у 2025)",
-    "role": "Керівник/співкерівник ДіР (КНУБА)",
-    "summary": "Фундаментальне дослідження: методи та моделі для надійності/безпеки у складних системах з IoT, з фокусом на ідентифікацію, моніторинг і діагностику критичних параметрів.",
+    "period": "09.2023 — 09.2025 (active in 2025)",
+    "role": "Project lead / co-lead (KNUBA)",
+    "summary": "Fundamental research focused on reliability and safety in IoT-enabled complex systems, with emphasis on identification, monitoring, and diagnostics of critical parameters.",
     "tags": [
       "IoT",
       "Safety",
@@ -25,30 +24,29 @@
     ],
     "links": [
       {
-        "label": "Офіційний витяг (PDF)",
+        "label": "Official extract (PDF)",
         "url": "assets/cases/case_sci_0123U103640.pdf"
       }
     ],
-    "note": "У 2025 році прийняв на себе керівництво проєктом після того, як Ю. Хлапонін припинив участь."
+    "note": "In 2025 I assumed project leadership after Yu. Khlaponin stopped participating."
   },
   {
     "id": "sci_0123U103047",
-    "title": "Ідентифікація переходу до закритичного режиму роботи робототехнічної системи",
-    "title_en": "Identification of transitioning to a post-critical operating mode of a robotic system",
+    "title": "Identification of transition to a post-critical operating mode of a robotic system",
     "category": "scientific",
     "visibility": "public",
     "status": "In use",
     "start_year": 2023,
     "end_year": 2025,
-    "customer": "Ініціативна ДіР (КНУБА)",
-    "one_liner": "Ідентифікація переходу робототехнічної системи у закритичний (post‑critical) режим для подальшого керування та відновлення.",
+    "customer": "Initiative R&D project (KNUBA)",
+    "one_liner": "Identification of a robotic system entering a post-critical mode for subsequent control and recovery.",
     "case_url": "assets/cases/case_sci_0123U103047.pdf",
     "active_years": [
       2025
     ],
-    "period": "07.2023 — 12.2024 (результати використовуються у 2025+)",
-    "role": "Керівник ДіР (КНУБА)",
-    "summary": "Прикладне дослідження: базові методи та ідентифікатори для виявлення переходу робототехнічної системи в закритичний режим з метою подальшого відновлення працездатності за системними вимогами високої критичності.",
+    "period": "07.2023 — 12.2024 (results used in 2025+)",
+    "role": "Project lead (KNUBA)",
+    "summary": "Applied research into base methods and identifiers for detecting a robotic system's transition to a post-critical mode, aimed at restoring operability under high-criticality system requirements.",
     "tags": [
       "Robotics",
       "Post-critical modes",
@@ -57,30 +55,29 @@
     ],
     "links": [
       {
-        "label": "Офіційний витяг (PDF)",
+        "label": "Official extract (PDF)",
         "url": "assets/cases/case_sci_0123U103047.pdf"
       }
     ],
-    "note": "Супровід проєкту зараз веду я (КНУБА)."
+    "note": "I currently maintain and evolve this project on behalf of KNUBA."
   },
   {
     "id": "pet_spherical_robot_extremum_2025",
-    "title": "Розподілене керування роботом-кулькою на рельєфній поверхні (ROS2/DDS)",
-    "title_en": "Distributed Control for a Spherical XY Robot on a Non-Flat Surface (ROS2/DDS)",
+    "title": "Distributed control of a spherical robot on a profiled surface (ROS2/DDS)",
     "category": "pet",
     "visibility": "public",
     "status": "Prototype",
     "start_year": 2025,
     "end_year": null,
-    "customer": "Інститут точної механіки НАН України",
-    "one_liner": "Розподілене керування (ROS2/DDS) для гіростабілізованого робота-кулі: пошук локальних максимумів поверхні та стабілізація на вибраних вершинах.",
+    "customer": "Institute of Precision Mechanics, NAS of Ukraine",
+    "one_liner": "ROS2/DDS-based distributed control for a gyrostabilized spherical robot: local-maximum search and stabilization on selected peaks.",
     "case_url": "assets/cases/case_pet_spherical_robot_extremum_2025.pdf",
     "active_years": [
       2025
     ],
     "period": "2025 — …",
-    "role": "Автор",
-    "summary": "Навчальний стенд: два ПК з ROS2 + MCU керують гіростабілізованою кулею, яка рухається по поверхні з рельєфом. Фокус: extremum-seeking і стабілізація з real-time метриками.",
+    "role": "Author",
+    "summary": "Educational test bench: two PCs with ROS2 plus an MCU control a gyrostabilized sphere moving over a profiled surface. The focus is extremum-seeking and stabilization with real-time metrics.",
     "tags": [
       "ROS2",
       "DDS",
@@ -97,21 +94,20 @@
   },
   {
     "id": "pet_poc_navigation_lyapunov_2025",
-    "title": "PoC: навігація для високоінерційного об'єкта в Lyapunov-like просторі",
-    "title_en": "PoC: Navigation for a High-Inertia Controlled Object in a Lyapunov-Like State Space",
+    "title": "PoC: navigation for a high-inertia object in a Lyapunov-like state space",
     "category": "pet",
     "visibility": "public",
     "status": "PoC",
     "start_year": 2025,
     "end_year": null,
     "customer": "",
-    "one_liner": "PoC навігаційної системи для об'єкта з високою інерційністю з фокусом на позиціюванні в області нестійкої рівноваги (Lyapunov-like state space).",
+    "one_liner": "Proof of concept for a navigation system for a high-inertia object, focused on positioning near unstable equilibrium in a Lyapunov-like state space.",
     "case_url": "assets/cases/case_pet_poc_navigation_lyapunov_2025.pdf",
     "active_years": [
       2025
     ],
     "period": "2025 — …",
-    "role": "Автор / R&D",
+    "role": "Author / R&D",
     "summary": "Proof of concept for navigation and positioning of a high-inertia controlled object in a Lyapunov-like state space, with emphasis on holding near unstable equilibrium under timing constraints. Implemented as an engineering test stand; parts were later adapted into NDA-covered systems.",
     "tags": [
       "Navigation",
@@ -129,19 +125,19 @@
   },
   {
     "id": "pet_robotics_tooling_2025",
-    "title": "Pet projects (робототехніка та інженерні інструменти)",
+    "title": "Pet projects (robotics and engineering tooling)",
     "category": "pet",
     "visibility": "public",
     "status": "Ongoing",
     "start_year": 2025,
     "end_year": null,
-    "one_liner": "Колекція pet‑проєктів для прототипування робототехніки та embedded‑систем; публікація артефактів — по мірі готовності.",
+    "one_liner": "A collection of pet projects for robotics and embedded prototyping; public artifacts are published as they become ready.",
     "case_url": "assets/cases/case_pet_robotics_tooling_2025.pdf",
     "active_years": [
       2025
     ],
     "period": "2025 — …",
-    "role": "Автор",
+    "role": "Author",
     "summary": "A curated set of small robotics and embedded prototypes used as scaffolding for experiments, tooling, and repeatable test stands. Public artifacts are released progressively.",
     "tags": [
       "Robotics",
@@ -167,15 +163,15 @@
     "status": "Ongoing",
     "start_year": 2025,
     "end_year": null,
-    "customer": "Automotive Tier‑1 (узагальнено)",
-    "one_liner": "NDA‑safe опис: тестові системи для ECU, комутація сигналів, контроль живлення/навантажень та автоматизація валідації.",
+    "customer": "Automotive Tier-1 (generalized)",
+    "one_liner": "NDA-safe description: ECU test systems, signal switching, power/load control, and validation automation.",
     "case_url": "assets/cases/case_com_automotive_test_systems_2025.pdf",
     "active_years": [
       2025
     ],
     "period": "2025 — …",
     "role": "Engineering management / delivery",
-    "summary": "NDA-safe overview of automotive test systems: signal switching/routing for multiple ECUs, power and load control, automated validation workflows, and traceability of test artifacts. Details are restricted by customer agreements.",
+    "summary": "NDA-safe overview of automotive test systems: signal switching and routing for multiple ECUs, power and load control, automated validation workflows, and traceability of test artifacts. Details are restricted by customer agreements.",
     "tags": [
       "Automotive",
       "ECU",
@@ -189,7 +185,7 @@
         "url": "assets/cases/case_com_automotive_test_systems_2025.pdf"
       },
       {
-        "label": "Запитати деталі/демо",
+        "label": "Ask for details / demo",
         "url": "contacts.html"
       }
     ]
