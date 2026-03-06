@@ -1,25 +1,48 @@
 [
   {
+    "id": "2026-03-kpi-syllabus-embedded-sw",
+    "title": "The Embedded Software Development Processes syllabus for KPI: why I created it",
+    "date": "2026-03-03",
+    "year": 2026,
+    "type": "academic",
+    "mode": "",
+    "location": "Kyiv · Igor Sikorsky KPI",
+    "tags": [
+      "KPI",
+      "Syllabus",
+      "Embedded",
+      "Education",
+      "Firmware",
+      "AUTOSAR",
+      "CI/CD",
+      "GitHub"
+    ],
+    "summary": "Why I created the Embedded Software Development Processes syllabus for KPI: expected background, hands-on structure, toolchain, and evaluation logic.",
+    "cover": "",
+    "gallery": [],
+    "post_url": "posts/2026-03-kpi-syllabus-embedded-sw.html"
+  },
+  {
     "id": "2026-02-ise-2026-barcelona",
-    "title": "ISE 2026, Барселона: короткі нотатки з поїздки",
+    "title": "ISE 2026, Barcelona: brief travel notes",
     "date": "2026-02-07",
     "year": 2026,
     "type": "professional",
     "mode": "attendee",
-    "location": "Барселона · Іспанія",
+    "location": "Barcelona · Spain",
     "tags": [
       "ISE",
-      "Виставка",
-      "Барселона",
+      "Exhibition",
+      "Barcelona",
       "AV",
-      "Світло",
-      "Звук",
+      "Lighting",
+      "Sound",
       "ASUS",
       "KNX",
       "Robotics",
-      "Логістика"
+      "Logistics"
     ],
-    "summary": "Короткі нотатки з ISE 2026: формат виставки, логістика Київ–Краків–Барселона, транспорт у місті, харчування, одяг/клімат і кілька корисних контактів.",
+    "summary": "Short notes from ISE 2026: event format, Kyiv–Krakow–Barcelona travel logistics, city transport, food, weather/clothing, and a few useful contacts.",
     "cover": "../assets/img/blog/2026-02-ise-2026-barcelona/cover.jpg",
     "gallery": [
       "../assets/img/blog/2026-02-ise-2026-barcelona/collage.jpg"
@@ -28,43 +51,43 @@
   },
   {
     "id": "2025-12-knuba-seminar-quality-cycle",
-    "title": "Науковий семінар кафедри КБКІ КНУБА: проміжний огляд аспірантського дослідження та план переходу до зовнішнього семінару й передзахистів",
+    "title": "KNUBA KBKI research seminar: interim PhD review and transition plan toward the external seminar and pre-defenses",
     "date": "2025-12-24",
     "year": 2025,
     "type": "academic",
     "mode": "",
-    "location": "Київ · КНУБА",
+    "location": "Kyiv · KNUBA",
     "tags": [
-      "КНУБА",
-      "КБКІ",
-      "Аспірантура",
-      "Семінар",
-      "Якість",
-      "Наука"
+      "KNUBA",
+      "KBKI",
+      "PhD",
+      "Seminar",
+      "Quality",
+      "Research"
     ],
-    "summary": "24 грудня 2025 року на кафедрі КБКІ КНУБА проведено науковий семінар у форматі 30+30 (доповідь+дискусія). Мета — технічний огляд готовності дослідження до зовнішнього семінару та передзахистів, із фіксацією критичних правок і керованим циклом якості.",
+    "summary": "On 24 December 2025, the KBKI department at KNUBA held a 30+30 research seminar. The goal was a technical readiness review before the external seminar and pre-defenses, with critical corrections captured inside a managed quality cycle.",
     "cover": "../assets/img/blog/2025-12-knuba-seminar-quality-cycle/cover.jpg",
     "gallery": [],
     "post_url": "posts/2025-12-knuba-seminar-quality-cycle.html"
   },
   {
     "id": "2025-12-exhibitions-strategy",
-    "title": "Виставки як інструмент залучення клієнтів та партнерів: Embedded World 2023 і The Battery Show 2023",
+    "title": "Exhibitions as a tool for winning customers and partners: Embedded World 2023 and The Battery Show 2023",
     "date": "2025-12-21",
     "year": 2025,
     "type": "professional",
     "mode": "attendee",
-    "location": "Нюрнберг / Штутгарт",
+    "location": "Nuremberg / Stuttgart",
     "tags": [
-      "Виставки",
-      "Партнерства",
+      "Exhibitions",
+      "Partnerships",
       "B2B",
       "Embedded",
       "Battery",
       "Sales",
-      "Стратегія"
+      "Strategy"
     ],
-    "summary": "Короткий конспект з практики відвідування Embedded World 2023 (Нюрнберг) та The Battery Show 2023 (Штутгарт): як готуватися, кого брати в команду та як конвертувати контакти у партнерства.",
+    "summary": "A short practical memo from Embedded World 2023 and The Battery Show 2023: how to prepare, who to bring, and how to convert contacts into partnerships.",
     "cover": "../assets/img/blog/2025-12-exhibitions-strategy/cover.jpg",
     "gallery": [
       "../assets/img/blog/2025-12-exhibitions-strategy/01.jpg",
@@ -74,35 +97,35 @@
   },
   {
     "id": "2025-12-knuba-masters-predefense",
-    "title": "Передзахист магістрів КНУБА (КБКІ), грудень 2025: підсумки та спостереження",
+    "title": "KNUBA master's pre-defense (KBKI), December 2025: outcomes and observations",
     "date": "2025-12-18",
     "year": 2025,
     "type": "academic",
     "mode": "committee",
-    "location": "Київ",
+    "location": "Kyiv",
     "tags": [
-      "КНУБА",
-      "Освіта",
-      "Якість",
-      "ДЕК"
+      "KNUBA",
+      "Education",
+      "Quality",
+      "State Examination Board"
     ],
-    "summary": "15–18 грудня 2025 року брав участь у передзахисті магістерських робіт кафедри КБКІ КНУБА як заступник голови ДЕК. Орієнтовно 85% студентів рекомендовано до захисту; решту — не рекомендовано за результатами колегіального обговорення.",
+    "summary": "From 15 to 18 December 2025, I participated in the master's pre-defense at the KBKI department of KNUBA as Deputy Chair of the State Examination Board. Roughly 85% of students were recommended for defense; the rest were not recommended after a collegial review.",
     "cover": "../assets/img/blog/2025-12-knuba-masters-predefense/cover.jpg",
     "gallery": [],
     "post_url": "posts/2025-12-knuba-masters-predefense.html"
   },
   {
     "id": "2025-10-matlab-expo-takeaways",
-    "title": "MATLAB EXPO Deutschland 2025: ключові теми та висновки",
+    "title": "MATLAB EXPO Deutschland 2025: key themes and takeaways",
     "date": "2025-10-29",
     "year": 2025,
     "type": "professional",
     "mode": "attendee",
-    "location": "Мюнхен",
+    "location": "Munich",
     "tags": [
       "MATLAB",
       "Simulink",
-      "Конференції",
+      "Conferences",
       "AI",
       "Model-Based",
       "FuSa",
@@ -112,7 +135,7 @@
       "Energy",
       "HVDC"
     ],
-    "summary": "Нотатки з MATLAB EXPO Deutschland 2025 (Мюнхен): AI на edge, модельно-орієнтована розробка, FuSa/traceability, PIL/HIL та кейси з енергетики (HVDC).",
+    "summary": "Notes from MATLAB EXPO Deutschland 2025: edge AI, model-based engineering, FuSa/traceability, PIL/HIL, and large-scale energy use cases such as HVDC.",
     "cover": "../assets/img/blog/2025-10-matlab-expo-takeaways/cover.jpg",
     "gallery": [
       "../assets/img/blog/2025-10-matlab-expo-takeaways/01.jpg",
@@ -124,21 +147,21 @@
   },
   {
     "id": "2025-07-kpi-nix-mou",
-    "title": "N-iX × КПІ: меморандум, який працює",
+    "title": "N-iX × KPI: a memorandum that actually works",
     "date": "2025-07-01",
     "year": 2025,
     "type": "partnership",
     "mode": "partnership",
-    "location": "Київ · КПІ ім. Ігоря Сікорського",
+    "location": "Kyiv · Igor Sikorsky KPI",
     "tags": [
-      "Партнерство",
-      "КПІ",
+      "Partnership",
+      "KPI",
       "N-iX",
-      "Освіта",
+      "Education",
       "R&D",
-      "Прототипи"
+      "Prototypes"
     ],
-    "summary": "Як меморандум N‑iX × КПІ перетворився на регулярну роботу: щотижнева координація, спільні R&D теми та ідея нової навчальної програми на стику бізнесу й науки.",
+    "summary": "How the N-iX × KPI memorandum turned into regular work: weekly coordination, joint R&D topics, and the idea of a new academic program at the intersection of business and science.",
     "cover": "../assets/img/blog/2025-07-kpi-nix-mou/cover.jpg",
     "gallery": [
       "../assets/img/blog/2025-07-kpi-nix-mou/01.jpg"
@@ -147,12 +170,12 @@
   },
   {
     "id": "2024-09-autoai-europe",
-    "title": "Auto.AI Europe 2024: камерна спільнота та практичні інсайти",
+    "title": "Auto.AI Europe 2024: a tight-knit community and practical takeaways",
     "date": "2024-09-15",
     "year": 2024,
     "type": "professional",
     "mode": "speaker",
-    "location": "Берлін",
+    "location": "Berlin",
     "tags": [
       "Automotive",
       "AI",
@@ -160,7 +183,7 @@
       "Community",
       "N-iX"
     ],
-    "summary": "Нотатки з Auto.AI Europe (09.2024, Берлін): чому важливо бути «своїм» у спільноті, що я модерував у секції про енергоефективність, і який практичний результат ми забрали після поїздки.",
+    "summary": "Notes from Auto.AI Europe (09.2024, Berlin): why it matters to belong to the community, what I moderated in the energy-efficiency track, and what practical outcome followed after the trip.",
     "cover": "../assets/img/blog/2024-09-autoai-europe/cover.jpg",
     "gallery": [
       "../assets/img/blog/2024-09-autoai-europe/01.jpg",
