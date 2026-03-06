@@ -1,5 +1,28 @@
 [
   {
+    "id": "2026-03-hw-vs-sw-reliability-mcu",
+    "title": "Hardware vs. Software Reliability in MCU-Based Control Systems",
+    "date": "2026-03-06",
+    "year": 2026,
+    "type": "note",
+    "mode": "",
+    "location": "Kyiv",
+    "tags": [
+      "Reliability",
+      "MCU",
+      "Functional Safety",
+      "Hardware",
+      "Software",
+      "FIT",
+      "MTTF",
+      "Dependability"
+    ],
+    "summary": "A compact engineering comparison of hardware and software reliability in MCU-based control systems, using FIT, MTTF, ISO 13849-1, SN 29500, and semiconductor vendor data.",
+    "cover": "../assets/img/blog/2026-03-hw-vs-sw-reliability-mcu/cover.png",
+    "gallery": [],
+    "post_url": "posts/2026-03-hw-vs-sw-reliability-mcu.html"
+  },
+  {
     "id": "2026-03-kpi-syllabus-embedded-sw",
     "title": "The Embedded Software Development Processes syllabus for KPI: why I created it",
     "date": "2026-03-03",

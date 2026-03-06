@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>ContiMech — Hardware vs. Software Reliability in MCU-Based Control Systems</title>
+  <meta name="description" content="A compact engineering comparison of hardware and software reliability in MCU-based control systems, using FIT, MTTF, ISO 13849-1, SN 29500, and semiconductor vendor data."/>
+  <link rel="stylesheet" href="../../assets/css/style.css"/>
+  <style>
+    .article-shell{margin-top:14px;padding:0;overflow:hidden}
+    .article-hero{height:260px;background:#0f1319;border-bottom:1px solid var(--line)}
+    .article-hero img{width:100%;height:100%;object-fit:cover;display:block}
+    .article-paper{background:#ffffff;color:#1f2937;padding:32px 32px 36px;border-radius:0 0 var(--radius) var(--radius)}
+    .article-paper a{color:#1d4ed8;text-decoration:none}
+    .article-paper a:hover{text-decoration:underline}
+    .article-paper p{margin:0 0 16px;line-height:1.65}
+    .article-paper ul,.article-paper ol{margin:0 0 16px;padding-left:22px}
+    .article-paper li{margin:7px 0}
+    .article-paper h2{margin:34px 0 14px;font-size:28px;line-height:1.25;color:#111827}
+    .article-paper h3{margin:24px 0 10px;font-size:21px;line-height:1.3;color:#111827}
+    .article-paper .lead{font-size:18px;color:#111827;background:#fafafa;border-left:4px solid #1d4ed8;padding:14px 16px;border-radius:8px;margin-bottom:24px !important}
+    .article-paper .callout{background:#eff6ff;border:1px solid #cfe0ff;border-left:4px solid #1d4ed8;padding:14px 16px;border-radius:8px;margin:20px 0}
+    .article-paper .sep{height:1px;background:#d9dee7;margin:28px 0}
+    .article-paper .data-table-wrap{margin:20px 0 24px;overflow-x:auto;border:1px solid #d9dee7;border-radius:10px;background:#fff}
+    .article-paper .data-table{width:100%;border-collapse:collapse;font-size:14px;line-height:1.45}
+    .article-paper .data-table caption{caption-side:top;text-align:left;padding:14px 16px 10px;font-weight:700;color:#111827;background:#fff}
+    .article-paper .data-table th{background:#eef2f7;color:#111827;text-align:left;padding:10px 12px;border-bottom:1px solid #bfc7d4;font-size:13px}
+    .article-paper .data-table td{padding:10px 12px;border-top:1px solid #d9dee7;vertical-align:top}
+    .article-paper .data-table tbody tr:hover{background:#fafafa}
+    .article-paper .data-table .highlight-row{background:#fff7ed;font-weight:700}
+    .article-paper .formula{background:#f3f4f6;border:1px solid #d9dee7;border-radius:8px;padding:14px 16px;margin:18px 0;overflow-x:auto;font-family:"Courier New",Courier,monospace;font-size:14px;line-height:1.6;white-space:pre-wrap;color:#111827}
+    .article-paper .formula .var{color:#1d4ed8;font-weight:700}
+    .article-paper .formula .comment{color:#6b7280}
+    .article-paper code{background:#f3f4f6;padding:2px 5px;border-radius:4px;font-family:"Courier New",Courier,monospace;font-size:.92em}
+    .article-paper .refs{margin-top:34px;padding-top:24px;border-top:1px solid #d9dee7}
+    .article-paper .refs h2{margin-top:0;font-size:24px}
+    .article-paper .refs ol{padding-left:20px;margin:0;color:#4b5563;font-size:14px}
+    @media (max-width: 700px) {
+      .article-hero{height:180px}
+      .article-paper{padding:22px 16px 26px}
+      .article-paper h2{font-size:24px}
+      .article-paper h3{font-size:19px}
+      .article-paper .data-table{font-size:13px}
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a class="brand" href="../../index.html">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <div class="brand-title">ContiMech</div>
+          <div class="brand-sub">Dmytro Humennyi, Ph.D.</div>
+        </div>
+      </a>
+      <nav class="nav">
+        <a href="../../index.html">Home</a>
+        <a href="../../cooperation.html">Cooperation</a>
+        <a href="../../experience.html">Experience</a>
+        <a href="../../projects.html">Projects</a>
+        <a href="../../publications.html">Publications</a>
+        <a href="../index.html" class="active">Blog</a>
+        <a href="../../contacts.html">Contacts</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <a class="link" href="../index.html">← Back to the blog</a>
+
+    <h1 style="margin-top:10px">Hardware vs. Software Reliability in MCU-Based Control Systems</h1>
+    <div class="muted" style="margin-top:-6px">2026-03-06 • Kyiv</div>
+
+    <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap">
+      <span class="chip chip-sm">Reliability</span>
+      <span class="chip chip-sm">MCU</span>
+      <span class="chip chip-sm">Functional Safety</span>
+      <span class="chip chip-sm">Hardware</span>
+      <span class="chip chip-sm">Software</span>
+      <span class="chip chip-sm">FIT</span>
+      <span class="chip chip-sm">MTTF</span>
+      <span class="chip chip-sm">Dependability</span>
+    </div>
+
+    <section class="panel article-shell">
+      <div class="article-hero">
+        <img src="../../assets/img/blog/2026-03-hw-vs-sw-reliability-mcu/cover.png" alt="Cover image for Hardware vs. Software Reliability in MCU-Based Control Systems">
+      </div>
+      <article class="article-paper">
+        <p class="lead">
+Dear colleagues, when asking the seemingly simple question “What is more reliable — a hardware solution or a software one, when it comes to MCU-based control systems?” — it is nearly impossible to find a straightforward answer. The reason is that the nature of failures in software and hardware systems is fundamentally different.
+</p><h2>1. Nature of Failures: Time and Degradation vs. Logic and Environment</h2><p>
+For hardware components, the key reliability metric is <strong>MTTF</strong> (Mean Time To Failure) — the average time until a non-repairable element fails. IBM defines MTTF as the average operating time of a system or component before it ceases to meet specification <a href="https://www.ibm.com/think/topics/mttf" rel="noopener noreferrer" target="_blank">[1]</a>. A high MTTF indicates stability; a low one signals fragility.
+</p><p>
+The failure behavior of hardware is described by the classic “bathtub curve”: an early phase with elevated failure rates → a stable useful-life period with a constant failure intensity λ → a wear-out phase with increasing failure intensity. For MCU-based systems this means: a hardware failure is a matter of <em>time and degradation</em>. Every electronic component (capacitor, resistor, relay, semiconductor) has a finite service life, and its failure is a stochastic process with a corresponding probability distribution.
+</p><p>
+Software is a different story. Software does not physically degrade. Its failures are caused by logic violations, incorrect handling of boundary conditions, or unexpected runtime environment effects. At the same time, a software product can be tested to cover the relevant coverage metrics (statement, branch, MC/DC). Hardware failure, on the other hand, is always a matter of probability.
+</p><div class="callout">
+<strong>Principle:</strong> it is logical to solve problems where they originate. If a failure originates at the hardware level, it should not be “propagated” to the software level. This is a fundamental tenet of software reliability engineering <a href="https://scispace.com/pdf/a-guidebook-for-software-reliability-assessment-1ig9ojigm3.pdf" rel="noopener noreferrer" target="_blank">[2]</a>.
+</div><p>
+However, this principle does not give the full picture. For example, if signal filtering is implemented with a capacitor, it — like any other electronic component — is subject to degradation. These properties are systematized in Annex C of ISO 13849-1 <a href="http://www.converter.com.tw/02_ce_client/02_liftruck/EN_13849-1/html/99_Annex_C.html" rel="noopener noreferrer" target="_blank">[3]</a>.
+</p><h2>2. What the Numbers Say: ISO 13849-1, Annex C</h2><p>
+Annex C of EN ISO 13849-1:2015 provides methods for determining MTTF<sub>D</sub> (Mean Time to Dangerous Failure) for individual components. Table C.1 contains typical B<sub>10D</sub> and MTTF<sub>D</sub> values for the main component categories:
+</p><div class="data-table-wrap">
+<table class="data-table">
+<caption>Table C.1 — EN ISO 13849-1:2015 (excerpt)</caption>
+<thead>
+<tr>
+<th>Component</th>
+<th>Metric</th>
+<th>Typical Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mechanical components</td>
+<td>MTTF<sub>D</sub></td>
+<td>150 years</td>
+</tr>
+<tr>
+<td>Hydraulic (n<sub>op</sub> ≥ 1,000,000 cyc/yr)</td>
+<td>MTTF<sub>D</sub></td>
+<td>150 years</td>
+</tr>
+<tr>
+<td>Pneumatic components</td>
+<td>B<sub>10D</sub></td>
+<td>20,000,000 cycles</td>
+</tr>
+<tr>
+<td>Relays / contactor relays (light load)</td>
+<td>B<sub>10D</sub></td>
+<td>20,000,000 cycles</td>
+</tr>
+<tr>
+<td>Relays / contactor relays (rated load)</td>
+<td>B<sub>10D</sub></td>
+<td>400,000 cycles</td>
+</tr>
+<tr>
+<td>Contactors (rated load)</td>
+<td>B<sub>10D</sub></td>
+<td>1,300,000 cycles</td>
+</tr>
+<tr>
+<td>Position switches</td>
+<td>B<sub>10D</sub></td>
+<td>20,000,000 cycles</td>
+</tr>
+<tr>
+<td>Emergency stop devices</td>
+<td>B<sub>10D</sub></td>
+<td>100,000 cycles</td>
+</tr>
+</tbody>
+</table>
+</div><p>
+Note: these are individual components. In a real system, they must be interconnected — by solder joints, PCB traces, and connectors. Each connection adds its own failure factor. The MTTF<sub>D</sub> of a subsystem is computed through the series connection of the component chain, where overall reliability is determined by the <em>weakest link</em>.
+</p><p>
+For relays under rated load: B<sub>10D</sub> = 400,000 cycles. At n<sub>op</sub> = 365,000 cycles/year (1,000 actuations/day):
+</p><div class="formula">
+<span class="var">MTTF<sub>D</sub></span> = B<sub>10D</sub> / (0.1 × n<sub>op</sub>)
+        = 400,000 / (0.1 × 365,000)
+        ≈ <span class="var">10.96 years</span> <span class="comment">// relay under rated load</span>
+</div><div class="sep"></div><h2>3. Reliability of Passive Components: Resistors, Capacitors</h2><p>
+Now let us turn to the components typically used to implement “hardware” solutions: filters, voltage dividers, RC circuits. The SN 29500 standard (Siemens) is the primary source of reference FIT values for passive components and is widely used for reliability analysis per ISO 13849 and ISO 26262 <a href="https://www.analog.com/en/resources/technical-articles/know-your-safety-part-1.html" rel="noopener noreferrer" target="_blank">[5]</a>.
+</p><p>
+Typical reference FIT values per SN 29500 for passive components (under reference conditions — 40°C, rated load):
+</p><div class="data-table-wrap">
+<table class="data-table">
+<caption>FIT of passive components (SN 29500, reference conditions)</caption>
+<thead>
+<tr>
+<th>Component</th>
+<th>λ<sub>ref</sub> (FIT)</th>
+<th>MTTF = 10<sup>9</sup>/FIT</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Metal film resistor</td>
+<td>0.2</td>
+<td>~570,000 years</td>
+<td>SN 29500-4, Table 2 <a href="https://www.faulhaber.com/en/know-how/tutorials/drive-electronics-tutorial-reliability-and-failure-rate-in-electronic-drive-components/" rel="noopener noreferrer" target="_blank">[6]</a></td>
+</tr>
+<tr>
+<td>Ceramic capacitor (MLCC)</td>
+<td>0.5–2</td>
+<td>~57,000–228,000 years</td>
+<td>SN 29500-7 / MIL-HDBK-217F <a href="https://www.preprints.org/manuscript/202410.0429/v1/download" rel="noopener noreferrer" target="_blank">[7]</a></td>
+</tr>
+<tr>
+<td>Electrolytic capacitor (Al, polymer)</td>
+<td>5–25</td>
+<td>~4,500–23,000 years</td>
+<td>SN 29500-7 / IEC TR 62380 <a href="https://www.preprints.org/manuscript/202410.0429/v1/download" rel="noopener noreferrer" target="_blank">[7]</a></td>
+</tr>
+<tr>
+<td>Power MOSFET</td>
+<td>200</td>
+<td>~570 years</td>
+<td>SN 29500-3, Table 1 <a href="https://www.mdpi.com/2079-9292/14/13/2538" rel="noopener noreferrer" target="_blank">[8]</a></td>
+</tr>
+</tbody>
+</table>
+</div><p>
+At first glance, a metal film resistor with 0.2 FIT looks more reliable than a microcontroller with ~2 FIT. But that is a single component. A hardware solution for signal filtering, stabilization, or comparison requires a <em>chain</em> of components: several resistors, capacitors, an op-amp or comparator, possibly a relay or transistor. The total FIT of the chain is the sum of all individual component FITs.
+</p><h3>Example: Analog RC Filter + Comparator vs. MCU</h3><p>
+Consider a typical analog signal comparison circuit: 4 resistors (divider + feedback) + 2 capacitors (MLCC, filter) + 1 electrolytic capacitor (supply decoupling) + 1 operational amplifier:
+</p><div class="formula">
+<span class="var">λ<sub>total</sub></span> = 4 × 0.2 + 2 × 1.0 + 1 × 10 + 1 × 12
+         = 0.8 + 2.0 + 10.0 + 12.0
+         = <span class="var">24.8 FIT</span> <span class="comment">// analog circuit, die only</span>
+<span class="comment">// + solder joints (SN 29500: ~0.5 FIT per joint × ~20 joints)</span>
+<span class="var">λ<sub>total+solder</sub></span> ≈ 24.8 + 10.0 = <span class="var">~35 FIT</span>
+<span class="var">MTTF</span> = 10<sup>9</sup> / 35 ≈ <span class="var">2.86 × 10<sup>7</sup> hrs ≈ 3,260 years</span>
+</div><p>
+Now let us compare this with an MCU.
+</p><h2>4. MCU Reliability: Texas Instruments Data</h2><p>
+Texas Instruments describes the FIT calculation methodology for semiconductors accounting for mission profiles in application report SPRABY3 <a href="https://www.ti.com/lit/an/spraby3/spraby3.pdf" rel="noopener noreferrer" target="_blank">[9]</a>. Key data for the TMS320F28335 MCU:
+</p><div class="data-table-wrap">
+<table class="data-table">
+<caption>FIT for MCU TMS320F28335 (TI, SPRABY3)</caption>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FIT @ 55°C (CL 60%, Ea = 0.7 eV)</td>
+<td>2.26 FIT</td>
+</tr>
+<tr>
+<td>FIT @ 0°C (derated)</td>
+<td>0.015 FIT</td>
+</tr>
+<tr>
+<td>FIT @ 85°C (worst case)</td>
+<td>19.88 FIT</td>
+</tr>
+<tr class="highlight-row">
+<td>FIT for typical mission profile</td>
+<td>~1.9 FIT</td>
+</tr>
+<tr class="highlight-row">
+<td>MTTF = 10<sup>9</sup> / FIT</td>
+<td><strong>~5.26 × 10<sup>8</sup> hrs ≈ 60,000 years</strong></td>
+</tr>
+</tbody>
+</table>
+</div><div class="callout">
+<strong>Note:</strong> FIT is a statistical upper confidence bound. Even with zero failures during HTOL testing, the χ<sup>2</sup> formula introduces uncertainty. This means actual reliability may be <em>even higher</em> than the computed value <a href="https://www.ti.com/lit/an/spraby3/spraby3.pdf" rel="noopener noreferrer" target="_blank">[9]</a>. With increasing HTOL sample sizes, the FIT decreases (Table 2 in SPRABY3): at 5,000 samples — 2.4 FIT; at 7,500 — 1.6 FIT.
+</div><p>
+Typical FIT for modern digital ICs ranges from 1 to 10 FIT @ 55°C, corresponding to an MTTF of 10<sup>8</sup> to 10<sup>9</sup> hours — i.e., from ~11,400 to ~114,000 years <a href="https://www.ti.com/support-quality/reliability/reliability-terminology.html" rel="noopener noreferrer" target="_blank">[10]</a>.
+</p><div class="sep"></div><h2>5. Summary Comparison: Discrete Components vs. MCU</h2><p>
+Now let us consolidate all the data into a single table. This is the key comparison of the article:
+</p><div class="data-table-wrap">
+<table class="data-table">
+<caption>FIT and MTTF comparison: Discrete components vs. MCU</caption>
+<thead>
+<tr>
+<th>Element</th>
+<th>FIT (typ.)</th>
+<th>MTTF</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Metal film resistor (1 pc.)</td>
+<td>0.2</td>
+<td>~570,000 yrs</td>
+<td>SN 29500-4</td>
+</tr>
+<tr>
+<td>Ceramic capacitor MLCC (1 pc.)</td>
+<td>0.5–2</td>
+<td>57,000–228,000 yrs</td>
+<td>SN 29500-7</td>
+</tr>
+<tr>
+<td>Electrolytic capacitor (1 pc.)</td>
+<td>5–25</td>
+<td>4,500–23,000 yrs</td>
+<td>SN 29500-7</td>
+</tr>
+<tr>
+<td>Operational amplifier (1 pc.)</td>
+<td>10–15</td>
+<td>7,600–11,400 yrs</td>
+<td>SN 29500-2</td>
+</tr>
+<tr>
+<td>Power MOSFET (1 pc.)</td>
+<td>200</td>
+<td>~570 yrs</td>
+<td>SN 29500-3</td>
+</tr>
+<tr>
+<td>Relay, rated load (1,000 cyc/day)</td>
+<td>—</td>
+<td>~11 yrs (MTTF<sub>D</sub>)</td>
+<td>ISO 13849-1, C.1</td>
+</tr>
+<tr style="border-top: 2px solid var(--accent);">
+<td><strong>Analog circuit (8 components + solder)</strong></td>
+<td><strong>~35</strong></td>
+<td><strong>~3,260 yrs</strong></td>
+<td>Calculated</td>
+</tr>
+<tr class="highlight-row">
+<td><strong>MCU (typical mission profile)</strong></td>
+<td><strong>~1.9</strong></td>
+<td><strong>~60,000 yrs</strong></td>
+<td>TI SPRABY3</td>
+</tr>
+<tr class="highlight-row">
+<td><strong>MCU (worst case, 85°C continuous)</strong></td>
+<td><strong>~19.9</strong></td>
+<td><strong>~5,700 yrs</strong></td>
+<td>TI SPRABY3</td>
+</tr>
+</tbody>
+</table>
+</div><p>
+The result is clear. <strong>An MCU at a typical mission profile (FIT ≈ 1.9) is approximately 18× more reliable than a simple analog circuit of 8 components</strong> (FIT ≈ 35). Even at worst-case 85°C, the MCU remains on par with — or even better than — the discrete component chain.
+</p><p>
+The software running inside the MCU “inherits” the chip’s reliability as its execution environment. But its own failures are not stochastic — they are deterministic: if the code is tested (statement, branch, MC/DC coverage) and contains no logic errors, it does not degrade over time. Unlike a capacitor, resistor, or relay.
+</p><p>
+One might assume that an MCU — being more complex than an individual capacitor — should be less reliable. But manufacturer documentation and standards show the opposite: the MTTF of a semiconductor is orders of magnitude higher than the typical values for discrete components. And in a real circuit with dozens of discrete components, the MCU’s advantage becomes even more dramatic.
+</p><div class="sep"></div><h2>6. Theoretical Foundation: The Laprie—Avizienis Taxonomy</h2><p>
+The theoretical foundation changes everything. The theory of dependability and fault tolerance enables a systematic, architectural approach to this problem.
+</p><p>
+In the seminal work by Avizienis, Laprie, Randell, and Landwehr <a href="https://homepages.laas.fr/arlat/documents/89257/89257.pdf" rel="noopener noreferrer" target="_blank">[11]</a>, as well as in the paper <em>“Basic Concepts and Taxonomy of Dependable and Secure Computing”</em> (IEEE TDSC, 2004) <a href="https://www.landwehr.org/2004-aviz-laprie-randell.pdf" rel="noopener noreferrer" target="_blank">[12]</a>, the following is established:
+</p><p>
+<strong>Dependability</strong> is an integrative concept that unifies the attributes of reliability, availability, safety, integrity, and maintainability. The means for achieving dependability are classified as four orthogonal strategies:
+</p><div class="data-table-wrap">
+<table class="data-table">
+<caption>Means for achieving dependability (Avizienis, Laprie et al.)</caption>
+<thead>
+<tr>
+<th>Means</th>
+<th>Objective</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fault Prevention</strong></td>
+<td>Preventing the introduction of faults (quality design, V&amp;V)</td>
+</tr>
+<tr>
+<td><strong>Fault Tolerance</strong></td>
+<td>Correct operation despite the presence of active faults (redundancy, diagnostics)</td>
+</tr>
+<tr>
+<td><strong>Fault Removal</strong></td>
+<td>Eliminating faults (testing, verification, audit)</td>
+</tr>
+<tr>
+<td><strong>Fault Forecasting</strong></td>
+<td>Predicting system behavior (FMEA, PRA, reliability modeling)</td>
+</tr>
+</tbody>
+</table>
+</div><p>
+The key conclusion from this taxonomy: <strong>neither the hardware nor the software approach alone is a silver bullet</strong>. A combination of solutions resolves everything. A reliable software-based control system implemented in an MCU can be made even more reliable by applying:
+</p><p>
+— hardware redundancy (dual-channel architecture, Category 3/4 per ISO 13849-1);<br/>
+— a monitoring subsystem (watchdog timer, voltage supervisor);<br/>
+— diagnostic coverage (DC<sub>avg</sub>);<br/>
+— measures against common cause failures (CCF per Annex F of the standard).
+</p><div class="sep"></div><h2>7. Conclusion</h2><p>
+The numbers from ISO 13849-1, SN 29500, and semiconductor manufacturer data all point in the same direction: <strong>a software solution implemented in an MCU, when properly tested, is more reliable</strong> than an equivalent purely hardware solution based on discrete components.
+</p><p>
+The reasons:
+</p><p>
+— The MTTF of a microcontroller (~60,000 years at a typical mission profile) exceeds by orders of magnitude the MTTF of even the most reliable individual passive components. And a chain of a dozen components is weaker still.<br/>
+— Discrete components must be interconnected — every solder joint, PCB trace, and connector adds to the total FIT.<br/>
+— Software does not degrade. When properly tested, it operates correctly throughout the entire service life of the MCU.<br/>
+— A software solution in an MCU can be reinforced with architectural measures (redundancy, monitoring), as formalized in functional safety standards.
+</p><div class="callout">
+<strong>Practical takeaway:</strong> instead of implementing a control function at the discrete electronics level (RC filters, comparators, relays), consider an MCU-based solution. With a proper approach to software development and testing, it will be more reliable. And if you add architectural redundancy — significantly more reliable.
+</div><div class="refs">
+<h2>References</h2>
+<ol>
+<li>IBM, <em>“What is mean time to failure (MTTF)?”</em> — <a href="https://www.ibm.com/think/topics/mttf" rel="noopener noreferrer" target="_blank">ibm.com/think/topics/mttf</a></li>
+<li>ASQC/Wiley, <em>“A Guidebook for Software Reliability Assessment”</em> — <a href="https://scispace.com/pdf/a-guidebook-for-software-reliability-assessment-1ig9ojigm3.pdf" rel="noopener noreferrer" target="_blank">scispace.com</a></li>
+<li>EN ISO 13849-1:2015, Annex C — <em>Calculating or evaluating MTTF<sub>D</sub> values for single components</em> — <a href="http://www.converter.com.tw/02_ce_client/02_liftruck/EN_13849-1/html/99_Annex_C.html" rel="noopener noreferrer" target="_blank">converter.com.tw</a></li>
+<li>EN ISO 13849-1:2015, Table 4 — MTTF<sub>D</sub> level definitions (Low / Medium / High)</li>
+<li>Analog Devices, <em>“Know Your Safety Application Notes — Part 1: Failure Rates”</em> — <a href="https://www.analog.com/en/resources/technical-articles/know-your-safety-part-1.html" rel="noopener noreferrer" target="_blank">analog.com</a></li>
+<li>FAULHABER, <em>“Determining reliability and failure rate in electronic components”</em> (referencing SN 29500-4) — <a href="https://www.faulhaber.com/en/know-how/tutorials/drive-electronics-tutorial-reliability-and-failure-rate-in-electronic-drive-components/" rel="noopener noreferrer" target="_blank">faulhaber.com</a></li>
+<li>D. Butnicu, <em>“PoL Converter’s MTBF Calculation Using MIL-HDBK-217F vs. SN 29500”</em>, IEEE SIITME, 2021 — <a href="https://www.preprints.org/manuscript/202410.0429/v1/download" rel="noopener noreferrer" target="_blank">preprints.org</a></li>
+<li>D. Butnicu, <em>“MTBF-PoL Reliability Evaluation… MIL-HDBK-217F vs. SN 29500”</em>, Electronics, 2025 — <a href="https://www.mdpi.com/2079-9292/14/13/2538" rel="noopener noreferrer" target="_blank">mdpi.com</a></li>
+<li>Texas Instruments, <em>“Calculating FIT for a Mission Profile”</em>, SPRABY3, March 2015 — <a href="https://www.ti.com/lit/an/spraby3/spraby3.pdf" rel="noopener noreferrer" target="_blank">ti.com/lit/spraby3</a></li>
+<li>Texas Instruments, <em>“Reliability Terminology”</em> — <a href="https://www.ti.com/support-quality/reliability/reliability-terminology.html" rel="noopener noreferrer" target="_blank">ti.com/reliability-terminology</a></li>
+<li>J.-C. Laprie et al., LAAS-CNRS — <a href="https://homepages.laas.fr/arlat/documents/89257/89257.pdf" rel="noopener noreferrer" target="_blank">homepages.laas.fr</a></li>
+<li>A. Avizienis, J.-C. Laprie, B. Randell, C. Landwehr, <em>“Basic Concepts and Taxonomy of Dependable and Secure Computing”</em>, IEEE TDSC, Vol. 1, No. 1, 2004 — <a href="https://www.landwehr.org/2004-aviz-laprie-randell.pdf" rel="noopener noreferrer" target="_blank">landwehr.org</a></li>
+<li>J.-C. Laprie (ed.), <em>“Dependability: Basic Concepts and Terminology”</em>, Springer-Verlag, 1992</li>
+<li>TI, <em>“Understanding Functional Safety FIT Base Failure Rate”</em>, SLOA294A — <a href="https://www.ti.com/lit/SLOA294A" rel="noopener noreferrer" target="_blank">ti.com/lit/SLOA294A</a></li>
+<li>IEC 61508, <em>“Functional safety of E/E/PE safety-related systems”</em></li>
+<li>ISO 26262, <em>“Road vehicles — Functional safety”</em></li>
+<li>SN 29500-1..12, Siemens AG, <em>“Expected values for failure rates of components”</em></li>
+</ol>
+</div>
+      </article>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>© 2026 Dmytro Humennyi</div>
+      <div class="meta">GitHub Pages-ready · Static website (HTML/CSS/JS)</div>
+    </div>
+  </footer>
+  <script src="../../assets/js/site.js"></script>
+</body>
+</html>
