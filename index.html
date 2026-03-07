@@ -4,10 +4,10 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>ContiMech — Dmytro Humennyi</title>
-  <meta name="description" content="ContiMech — engineering in robotics, automotive, and critical systems. Experience, publications, projects, and blog."/>
+  <meta name="description" content="ContiMech — a compact entry point for engineering cooperation across robotics, embedded systems, automotive, and critical systems."/>
   <link rel="stylesheet" href="assets/css/style.css"/>
 </head>
-<body>
+<body class="page-home">
   <header class="header">
     <div class="header-inner">
       <a class="brand" href="index.html">
@@ -28,84 +28,54 @@
       </nav>
     </div>
   </header>
-  <main class="container">
-    <section class="hero">
-      <h1 class="h-title">Engineering in robotics, automotive, and critical systems</h1>
-      <p class="h-lead">
-        I am Dmytro Humennyi (Ph.D.), an Engineering Manager at N-iX and an Associate Professor at KNUBA.
-        My work sits at the intersection of embedded systems, automation, systems engineering, testing, and functional safety.
-      </p>
-      <div class="badges">
-        <span class="badge">Robotics</span>
-        <span class="badge">Automotive</span>
-        <span class="badge">Model-Based Design</span>
-        <span class="badge">Safety-Critical</span>
-        <span class="badge">C/C++</span>
-      </div>
-    </section>
 
-    <section class="grid">
-      <article class="card">
-        <h2>About me</h2>
-        <p class="muted" style="margin-top:0">
-          Ph.D. in control-process automation. Engineering manager, entrepreneur, researcher, and lecturer.
-          This site is a place for open technical notes, selected public materials, and a compact overview of my work.
+  <main class="container home-container">
+    <section class="cosmic-hero">
+      <div class="cosmic-copy">
+        <div class="eyebrow">Engineering cooperation node</div>
+        <h1 class="h-title cosmic-title"><span>Engineering across</span><span>complex systems</span></h1>
+        <p class="h-lead cosmic-lead">
+          Robotics, embedded systems, automotive, research, and technical system design.
         </p>
-        <div class="kv">
-          <div><b>N-iX:</b> Engineering Manager · R&amp;D / Delivery · customer-facing engineering work.</div>
-          <div><b>KNUBA:</b> Associate Professor · software engineering and system design courses.</div>
-          <div><b>KPI:</b> research activities.</div>
-          <div><b>Focus:</b> system-level engineering: mechanics + electronics + firmware + business logic + HMI; documentation, prototyping, A/B/C samples, and certification preparation.</div>
+        <div class="cosmic-meta">Dmytro Humennyi, Ph.D. · Engineering Manager · Researcher · Lecturer</div>
+      </div>
+
+      <section class="orbital-panel" aria-labelledby="orbital-domains-title">
+        <div class="orbital-grid" aria-hidden="true"></div>
+        <h2 id="orbital-domains-title" class="sr-only">Engineering domains</h2>
+
+        <div class="orbital-stage">
+          <svg class="orbital-svg" viewBox="0 0 100 100" aria-hidden="true">
+            <circle class="orbital-circle orbital-circle-a" cx="50" cy="50" r="40"></circle>
+            <circle class="orbital-circle orbital-circle-b" cx="50" cy="50" r="29"></circle>
+            <circle class="orbital-circle orbital-circle-c" cx="50" cy="50" r="18"></circle>
+            <line class="orbital-line" x1="50" y1="50" x2="50" y2="14"></line>
+            <line class="orbital-line" x1="50" y1="50" x2="86" y2="50"></line>
+            <line class="orbital-line" x1="50" y1="50" x2="50" y2="86"></line>
+            <line class="orbital-line" x1="50" y1="50" x2="14" y2="50"></line>
+          </svg>
+
+          <div class="orbital-core">
+            <div class="orbital-core-kicker">ContiMech</div>
+          </div>
+
+          <div class="orbital-node node-robotics">
+            <span class="node-title">Robotics</span>
+          </div>
+          <div class="orbital-node node-embedded">
+            <span class="node-title">Embedded</span>
+          </div>
+          <div class="orbital-node node-automotive">
+            <span class="node-title">Automotive</span>
+          </div>
+          <div class="orbital-node node-research">
+            <span class="node-title">Research</span>
+          </div>
         </div>
-      </article>
-
-      <article class="card">
-        <h2>Main themes</h2>
-        <ul class="list">
-          <li>Development and test automation (HIL, CI/CD, traceability)</li>
-          <li>Robotics and control (models, identification, trajectories)</li>
-          <li>Automotive: ECU / interfaces / networks / requirements and validation</li>
-          <li>R&amp;D and prototyping: from schematics to firmware and engineering methods</li>
-          <li>Consulting: architecture, standards, processes, and risk analysis</li>
-        </ul>
-        <div style="margin-top:12px" class="pills">
-          <span class="pill">ISO 26262</span>
-          <span class="pill">ASPICE</span>
-          <span class="pill">AUTOSAR</span>
-          <span class="pill">ROS2</span>
-          <span class="pill">MATLAB/Simulink</span>
-        </div>
-      </article>
-
-      <article class="card small">
-        <h2>Cooperation</h2>
-        <p>Open to cooperation in the areas described on this site: publications, R&amp;D, projects, and consulting.</p>
-        <div style="margin-top:12px"><a class="btn primary" href="cooperation.html">Open →</a></div>
-      </article>
-
-      <article class="card small">
-        <h2>Experience</h2>
-        <p>Two categories: practical work (NDA-safe) and academic work. More detail is available on the experience page.</p>
-        <div style="margin-top:12px"><a class="btn" href="experience.html">Open →</a></div>
-      </article>
-
-      <article class="card small">
-        <h2>Projects</h2>
-        <p>Most projects are under NDA, so I publish only selected scientific and personal engineering work.</p>
-        <div style="margin-top:12px"><a class="btn" href="projects.html">Open →</a></div>
-      </article>
-
-      <article class="card wide">
-        <h2>Latest from the blog</h2>
-        <p><strong>Hardware vs. Software Reliability in MCU-Based Control Systems</strong> <span class="muted">(2026-03-06)</span></p>
-        <p>A compact engineering comparison of hardware and software reliability in MCU-based control systems, using FIT, MTTF, ISO 13849-1, SN 29500, and semiconductor vendor data.</p>
-        <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap">
-          <a class="btn" href="blog/posts/2026-03-hw-vs-sw-reliability-mcu.html">Read →</a>
-          <a class="btn" href="blog/index.html">All posts →</a>
-        </div>
-      </article>
+      </section>
     </section>
   </main>
+
   <footer class="footer">
     <div class="footer-inner">
       <div>© 2026 Dmytro Humennyi</div>
