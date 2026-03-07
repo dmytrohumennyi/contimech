@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>ContiMech — Dmytro Humennyi</title>
-  <meta name="description" content="ContiMech — a compact entry point for engineering cooperation across robotics, embedded systems, automotive, and critical systems."/>
+  <meta name="description" content="ContiMech — engineering cooperation across robotics, embedded systems, automotive, research, and critical systems."/>
   <link rel="stylesheet" href="assets/css/style.css"/>
 </head>
 <body class="page-home">
@@ -29,50 +29,38 @@
     </div>
   </header>
 
-  <main class="container home-container">
-    <section class="cosmic-hero">
-      <div class="cosmic-copy">
+  <main class="container home-shell">
+    <section class="home-hero" aria-labelledby="home-title">
+      <div class="home-copy">
         <div class="eyebrow">Engineering cooperation node</div>
-        <h1 class="h-title cosmic-title"><span>Engineering across</span><span>complex systems</span></h1>
-        <p class="h-lead cosmic-lead">
-          Robotics, embedded systems, automotive, research, and technical system design.
-        </p>
-        <div class="cosmic-meta">Dmytro Humennyi, Ph.D. · Engineering Manager · Researcher · Lecturer</div>
+        <h1 id="home-title" class="home-title">
+          <span>Engineering across</span>
+          <span>complex systems</span>
+        </h1>
+        <p class="home-lead">Robotics, embedded systems, automotive, research, and technical system design.</p>
+        <div class="home-meta">Dmytro Humennyi, Ph.D. · Engineering Manager · Researcher · Lecturer</div>
       </div>
 
-      <section class="orbital-panel" aria-labelledby="orbital-domains-title">
-        <div class="orbital-grid" aria-hidden="true"></div>
-        <h2 id="orbital-domains-title" class="sr-only">Engineering domains</h2>
+      <div class="system-map" aria-label="Engineering domains model">
+        <svg class="system-map-svg" viewBox="0 0 100 100" aria-hidden="true">
+          <circle class="system-orbit system-orbit-a" cx="50" cy="50" r="40"></circle>
+          <circle class="system-orbit system-orbit-b" cx="50" cy="50" r="29"></circle>
+          <circle class="system-orbit system-orbit-c" cx="50" cy="50" r="18"></circle>
+          <line class="system-line" x1="50" y1="50" x2="50" y2="14"></line>
+          <line class="system-line" x1="50" y1="50" x2="86" y2="50"></line>
+          <line class="system-line" x1="50" y1="50" x2="50" y2="86"></line>
+          <line class="system-line" x1="50" y1="50" x2="14" y2="50"></line>
+        </svg>
 
-        <div class="orbital-stage">
-          <svg class="orbital-svg" viewBox="0 0 100 100" aria-hidden="true">
-            <circle class="orbital-circle orbital-circle-a" cx="50" cy="50" r="40"></circle>
-            <circle class="orbital-circle orbital-circle-b" cx="50" cy="50" r="29"></circle>
-            <circle class="orbital-circle orbital-circle-c" cx="50" cy="50" r="18"></circle>
-            <line class="orbital-line" x1="50" y1="50" x2="50" y2="14"></line>
-            <line class="orbital-line" x1="50" y1="50" x2="86" y2="50"></line>
-            <line class="orbital-line" x1="50" y1="50" x2="50" y2="86"></line>
-            <line class="orbital-line" x1="50" y1="50" x2="14" y2="50"></line>
-          </svg>
-
-          <div class="orbital-core">
-            <div class="orbital-core-kicker">ContiMech</div>
-          </div>
-
-          <div class="orbital-node node-robotics">
-            <span class="node-title">Robotics</span>
-          </div>
-          <div class="orbital-node node-embedded">
-            <span class="node-title">Embedded</span>
-          </div>
-          <div class="orbital-node node-automotive">
-            <span class="node-title">Automotive</span>
-          </div>
-          <div class="orbital-node node-research">
-            <span class="node-title">Research</span>
-          </div>
+        <div class="system-core">
+          <span class="system-core-label">ContiMech</span>
         </div>
-      </section>
+
+        <div class="system-node node-top"><span>Robotics</span></div>
+        <div class="system-node node-right"><span>Embedded</span></div>
+        <div class="system-node node-bottom"><span>Automotive</span></div>
+        <div class="system-node node-left"><span>Research</span></div>
+      </div>
     </section>
   </main>
 
