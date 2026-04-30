@@ -1,0 +1,53 @@
+[
+  {
+    "id": "robotic-assembly-diagnostics",
+    "title": "Robotic Assembly and Diagnostics",
+    "domain": "Robotics / automation",
+    "summary": "Project slide with system context, robotic workflow, diagnostics concept, verification approach, and delivery artifacts.",
+    "tags": [
+      "Robotics",
+      "Automation",
+      "Diagnostics",
+      "Verification"
+    ],
+    "slide": {
+      "storage": "s3",
+      "key": "slides/robotic-assembly-diagnostics.pdf",
+      "contentType": "application/pdf"
+    }
+  },
+  {
+    "id": "industrial-control-fixture",
+    "title": "Industrial Control Fixture",
+    "domain": "Embedded / mechanics",
+    "summary": "Project slide covering enclosure logic, PCB integration, firmware control, test procedure, and handover documentation.",
+    "tags": [
+      "PCB",
+      "Firmware",
+      "Fixture",
+      "QA"
+    ],
+    "slide": {
+      "storage": "s3",
+      "key": "slides/industrial-control-fixture.pdf",
+      "contentType": "application/pdf"
+    }
+  },
+  {
+    "id": "process-simulation-automation",
+    "title": "Process Simulation and Automation",
+    "domain": "Model-based engineering",
+    "summary": "Project slide with process model, control assumptions, simulation scope, input/output structure, and validation notes.",
+    "tags": [
+      "Model-Based Design",
+      "Simulation",
+      "Automation",
+      "Documentation"
+    ],
+    "slide": {
+      "storage": "s3",
+      "key": "slides/process-simulation-automation.pdf",
+      "contentType": "application/pdf"
+    }
+  }
+]

@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>ContiMech — Projects</title>
-  <meta name="description" content="Selected projects by Dmytro Humennyi: scientific work, pet projects, and NDA-safe commercial engineering cases."/>
+  <title>ContiMech — Project Materials</title>
+  <meta name="description" content="Access to ContiMech project materials is provided through a protected project area for clients and partners."/>
+  <meta name="robots" content="noindex,nofollow"/>
   <link rel="stylesheet" href="assets/css/style.css"/>
 </head>
 <body>
@@ -14,333 +15,58 @@
         <div class="logo" aria-hidden="true"></div>
         <div>
           <div class="brand-title">ContiMech</div>
-          <div class="brand-sub">Dmytro Humennyi, Ph.D.</div>
+          <div class="brand-sub">Robotics &amp; Automation Engineering</div>
         </div>
       </a>
       <nav class="nav">
         <a href="index.html">Home</a>
+        <a href="contacts.html">About</a>
         <a href="cooperation.html">Cooperation</a>
-        <a href="experience.html">Experience</a>
         <a href="projects.html" class="active">Projects</a>
         <a href="publications.html">Publications</a>
         <a href="blog/index.html">Blog</a>
-        <a href="contacts.html">Contacts</a>
       </nav>
     </div>
   </header>
+
   <main class="container">
-    <h1 class="section-title">Projects</h1>
-    <p class="meta">
-      This page lists projects that were active in <b>2025+</b> or have key outputs that continue to be used in this period.
-      The list is split into <b>official scientific projects</b>, <b>pet projects</b>, and <b>commercial NDA-safe work</b>.
-    </p>
+    <section class="page-head">
+      <div class="section-kicker">Projects</div>
+      <h1>Protected project materials</h1>
+      <p class="lead">Project slides, demo media, technical photos, notes, and selected engineering artifacts are provided through a separate protected area.</p>
+    </section>
 
-    <div class="grid pub-app" id="projects-app">
-      <div class="card pub-filters">
-        <div class="pub-filters-row" style="grid-template-columns:2fr 1fr 1fr 1fr">
-          <div class="field">
-            <div class="field-label">Search</div>
-            <input id="proj-q" type="text" placeholder="Title, tags, role, description…" />
-          </div>
-          <div class="field">
-            <div class="field-label">Year</div>
-            <select id="proj-year">
-              <option value="">All</option>
-            </select>
-          </div>
-          <div class="field">
-            <div class="field-label">Category</div>
-            <select id="proj-cat">
-              <option value="">All</option>
-              <option value="scientific">Official scientific</option>
-              <option value="pet">Pet projects</option>
-              <option value="commercial">Commercial (NDA-safe)</option>
-            </select>
-          </div>
-          <div class="field">
-            <div class="field-label">Visibility</div>
-            <select id="proj-vis">
-              <option value="">All</option>
-              <option value="public">Public</option>
-              <option value="nda">NDA-safe</option>
-            </select>
-          </div>
+    <section class="grid two">
+      <article class="card">
+        <div class="section-kicker">Protected area</div>
+        <h2>Open project portal</h2>
+        <p class="meta">Access is provided to clients and partners for a defined cooperation context. The available project materials depend on the granted access scope.</p>
+        <div class="portal-actions">
+          <a class="btn primary" href="https://projects.contimech.org/" rel="noopener">Open protected project area</a>
+          <a class="btn" href="mailto:solution@contimech.org?subject=Project%20access%20request">Request access</a>
         </div>
-        <div class="pub-filters-footer">
-          <a class="btn" href="#" id="proj-reset">Reset</a>
-        </div>
-      </div>
+      </article>
 
-      <div class="card wide" id="projects-status" style="display:none"></div>
-      <div class="proj-tiles" id="proj-list" aria-live="polite"></div>
-      <div class="card wide" id="projects-msg" style="display:none"></div>
-
-      <div class="card small">
-        <h2>Case-study format</h2>
-        <p class="meta">
-          Each project here is presented as a short description plus a case artifact (project page, PDF, presentation, extract, or one-pager). <b>Clicking a tile</b> opens the main case asset.
-          This keeps the page stable while the supporting materials can be updated independently.
-        </p>
+      <article class="card">
+        <div class="section-kicker">Content</div>
+        <h2>What may be available</h2>
         <ul class="list">
-          <li><b>Case assets:</b> usually in <code>assets/cases/</code> or a dedicated project page</li>
-          <li><b>Naming:</b> <code>case_&lt;project_id&gt;.pdf</code> is used for downloadable PDF artifacts when needed</li>
-          <li><b>Auto-linking:</b> if <code>projects.json</code> contains links, the buttons appear automatically.</li>
+          <li>short project slides and technical summaries;</li>
+          <li>demo videos and selected photos;</li>
+          <li>architecture notes, diagrams, and interface descriptions;</li>
+          <li>prototype, testing, and handover materials.</li>
         </ul>
-      </div>
-
-      <div class="card small">
-        <h2>NDA note</h2>
-        <p class="meta">
-          Commercial cases are intentionally generalized to avoid exposing customers to risk and to stay within NDA boundaries.
-          If more detail is possible in your context, contact me and I will share what can be disclosed.
-        </p>
-        <div style="margin-top:12px"><a class="btn" href="contacts.html">Contacts →</a></div>
-      </div>
-
-      <div class="card wide">
-        <div class="meta" id="proj-count"></div>
-      </div>
-    </div>
-
-    <script id="projects-data" type="application/json">
-    [
-      {
-            "id": "sci_project_oriented_education_2026",
-            "title": "Project-Oriented Education Synchronized with Industry",
-            "category": "scientific",
-            "visibility": "public",
-            "status": "Pilot",
-            "start_year": 2026,
-            "end_year": null,
-            "customer": "Igor Sikorsky KPI / academic–industry initiative",
-            "one_liner": "A sprint-based university engineering model built around a real hardware project, daily standups, public artifacts, and grant-ready outputs.",
-            "case_url": "projects/project-oriented-education.html",
-            "active_years": [
-                  2026
-            ],
-            "period": "2026 — …",
-            "role": "Program architect / academic lead",
-            "summary": "A case study of integrating an industrial delivery model into university teaching: PM → Leads → Executors hierarchy, three-week sprints, real hardware work, grant-oriented artifacts, and partner-facing visibility from the start.",
-            "tags": [
-                  "Education",
-                  "Project-based learning",
-                  "Robotics",
-                  "Grants",
-                  "Industry collaboration"
-            ],
-            "links": [
-                  {
-                        "label": "Case page",
-                        "url": "projects/project-oriented-education.html"
-                  },
-                  {
-                        "label": "PDF artifact",
-                        "url": "assets/cases/case_edu_project_oriented_2026.pdf"
-                  }
-            ],
-            "note": "Built as a reusable case for department development, grant preparation, and partner communication."
-      },
-      {
-            "id": "sci_0123U103640",
-            "title": "Methods and models for ensuring safety and diagnosing critical parameters in complex systems using IoT",
-            "category": "scientific",
-            "visibility": "public",
-            "status": "Active",
-            "start_year": 2023,
-            "end_year": 2025,
-            "customer": "Initiative R&D project (KNUBA)",
-            "one_liner": "Methods and models for safety and diagnostics of critical parameters in IoT-oriented complex systems.",
-            "case_url": "assets/cases/case_sci_0123U103640.pdf",
-            "active_years": [
-                  2025
-            ],
-            "period": "09.2023 — 09.2025 (active in 2025)",
-            "role": "Project lead / co-lead (KNUBA)",
-            "summary": "Fundamental research focused on reliability and safety in IoT-enabled complex systems, with emphasis on identification, monitoring, and diagnostics of critical parameters.",
-            "tags": [
-                  "IoT",
-                  "Safety",
-                  "Diagnostics",
-                  "System Modeling"
-            ],
-            "links": [
-                  {
-                        "label": "Official extract (PDF)",
-                        "url": "assets/cases/case_sci_0123U103640.pdf"
-                  }
-            ],
-            "note": "In 2025 I assumed project leadership after Yu. Khlaponin stopped participating."
-      },
-      {
-            "id": "sci_0123U103047",
-            "title": "Identification of transition to a post-critical operating mode of a robotic system",
-            "category": "scientific",
-            "visibility": "public",
-            "status": "In use",
-            "start_year": 2023,
-            "end_year": 2025,
-            "customer": "Initiative R&D project (KNUBA)",
-            "one_liner": "Identification of a robotic system entering a post-critical mode for subsequent control and recovery.",
-            "case_url": "assets/cases/case_sci_0123U103047.pdf",
-            "active_years": [
-                  2025
-            ],
-            "period": "07.2023 — 12.2024 (results used in 2025+)",
-            "role": "Project lead (KNUBA)",
-            "summary": "Applied research into base methods and identifiers for detecting a robotic system's transition to a post-critical mode, aimed at restoring operability under high-criticality system requirements.",
-            "tags": [
-                  "Robotics",
-                  "Post-critical modes",
-                  "Identification",
-                  "Control"
-            ],
-            "links": [
-                  {
-                        "label": "Official extract (PDF)",
-                        "url": "assets/cases/case_sci_0123U103047.pdf"
-                  }
-            ],
-            "note": "I currently maintain and evolve this project on behalf of KNUBA."
-      },
-      {
-            "id": "pet_spherical_robot_extremum_2025",
-            "title": "Distributed control of a spherical robot on a profiled surface (ROS2/DDS)",
-            "category": "pet",
-            "visibility": "public",
-            "status": "Prototype",
-            "start_year": 2025,
-            "end_year": null,
-            "customer": "Institute of Precision Mechanics, NAS of Ukraine",
-            "one_liner": "ROS2/DDS-based distributed control for a gyrostabilized spherical robot: local-maximum search and stabilization on selected peaks.",
-            "case_url": "assets/cases/case_pet_spherical_robot_extremum_2025.pdf",
-            "active_years": [
-                  2025
-            ],
-            "period": "2025 — …",
-            "role": "Author",
-            "summary": "Educational test bench: two PCs with ROS2 plus an MCU control a gyrostabilized sphere moving over a profiled surface. The focus is extremum-seeking and stabilization with real-time metrics.",
-            "tags": [
-                  "ROS2",
-                  "DDS",
-                  "Robotics",
-                  "Control",
-                  "Real-time"
-            ],
-            "links": [
-                  {
-                        "label": "One-pager (PDF)",
-                        "url": "assets/cases/case_pet_spherical_robot_extremum_2025.pdf"
-                  }
-            ]
-      },
-      {
-            "id": "pet_poc_navigation_lyapunov_2025",
-            "title": "PoC: navigation for a high-inertia object in a Lyapunov-like state space",
-            "category": "pet",
-            "visibility": "public",
-            "status": "PoC",
-            "start_year": 2025,
-            "end_year": null,
-            "customer": "",
-            "one_liner": "Proof of concept for a navigation system for a high-inertia object, focused on positioning near unstable equilibrium in a Lyapunov-like state space.",
-            "case_url": "assets/cases/case_pet_poc_navigation_lyapunov_2025.pdf",
-            "active_years": [
-                  2025
-            ],
-            "period": "2025 — …",
-            "role": "Author / R&D",
-            "summary": "Proof of concept for navigation and positioning of a high-inertia controlled object in a Lyapunov-like state space, with emphasis on holding near unstable equilibrium under timing constraints. Implemented as an engineering test stand; parts were later adapted into NDA-covered systems.",
-            "tags": [
-                  "Navigation",
-                  "Control",
-                  "Lyapunov",
-                  "Real-time",
-                  "PoC"
-            ],
-            "links": [
-                  {
-                        "label": "One-pager (PDF)",
-                        "url": "assets/cases/case_pet_poc_navigation_lyapunov_2025.pdf"
-                  }
-            ]
-      },
-      {
-            "id": "pet_robotics_tooling_2025",
-            "title": "Pet projects (robotics and engineering tooling)",
-            "category": "pet",
-            "visibility": "public",
-            "status": "Ongoing",
-            "start_year": 2025,
-            "end_year": null,
-            "one_liner": "A collection of pet projects for robotics and embedded prototyping; public artifacts are published as they become ready.",
-            "case_url": "assets/cases/case_pet_robotics_tooling_2025.pdf",
-            "active_years": [
-                  2025
-            ],
-            "period": "2025 — …",
-            "role": "Author",
-            "summary": "A curated set of small robotics and embedded prototypes used as scaffolding for experiments, tooling, and repeatable test stands. Public artifacts are released progressively.",
-            "tags": [
-                  "Robotics",
-                  "Embedded",
-                  "Prototyping"
-            ],
-            "links": [
-                  {
-                        "label": "GitHub",
-                        "url": "https://github.com/dmytrohumennyi"
-                  },
-                  {
-                        "label": "One-pager (PDF)",
-                        "url": "assets/cases/case_pet_robotics_tooling_2025.pdf"
-                  }
-            ]
-      },
-      {
-            "id": "com_automotive_test_systems_2025",
-            "title": "Automotive test systems (NDA-safe)",
-            "category": "commercial",
-            "visibility": "nda",
-            "status": "Ongoing",
-            "start_year": 2025,
-            "end_year": null,
-            "customer": "Automotive Tier-1 (generalized)",
-            "one_liner": "NDA-safe description: ECU test systems, signal switching, power/load control, and validation automation.",
-            "case_url": "assets/cases/case_com_automotive_test_systems_2025.pdf",
-            "active_years": [
-                  2025
-            ],
-            "period": "2025 — …",
-            "role": "Engineering management / delivery",
-            "summary": "NDA-safe overview of automotive test systems: signal switching and routing for multiple ECUs, power and load control, automated validation workflows, and traceability of test artifacts. Details are restricted by customer agreements.",
-            "tags": [
-                  "Automotive",
-                  "ECU",
-                  "Signal switching",
-                  "HIL",
-                  "Traceability"
-            ],
-            "links": [
-                  {
-                        "label": "NDA-safe one-pager (PDF)",
-                        "url": "assets/cases/case_com_automotive_test_systems_2025.pdf"
-                  },
-                  {
-                        "label": "Ask for details / demo",
-                        "url": "contacts.html"
-                  }
-            ]
-      }
-]
-    </script>
+      </article>
+    </section>
   </main>
+
   <footer class="footer">
     <div class="footer-inner">
-      <div>© 2026 Dmytro Humennyi</div>
-      <div class="meta">GitHub Pages-ready · Static website (HTML/CSS/JS)</div>
+      <div>© 2026 ContiMech</div>
+      <div class="meta">Kyiv · Robotics · Automation · Embedded engineering</div>
     </div>
   </footer>
+
   <script src="assets/js/site.js"></script>
-  <script src="assets/js/projects.js"></script>
 </body>
 </html>

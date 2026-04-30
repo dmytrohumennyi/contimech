@@ -1,0 +1,22 @@
+{
+  "name": "contimech-project-portal-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Protected backend for ContiMech project material access.",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "NODE_ENV=development node server.js",
+    "hash-password": "node scripts/hash-password.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.800.0",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.4.0",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2"
+  }
+}
