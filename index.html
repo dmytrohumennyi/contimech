@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>ContiMech — Robotics & Automation Engineering</title>
   <meta name="description" content="ContiMech is a Kyiv-based engineering team working in robotics, automation, embedded systems, mechanics, PCB, firmware, software, QA, and technical documentation."/>
-  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link rel="stylesheet" href="assets/css/style.css?v=9"/>
 </head>
 <body class="page-home">
   <header class="header">
@@ -36,8 +36,8 @@
           <span>Engineering for</span>
           <span>technical systems</span>
         </h1>
-        <p class="home-lead">ContiMech supports engineering work where mechanics, electronics, firmware, software, testing, and documentation must be treated as one system.</p>
-        <div class="home-meta">Kyiv-based team · service cooperation · project work</div>
+        <p class="home-lead">ContiMech supports engineering work where mechanics, electronics, firmware, software, testing, and documentation are handled as one system.</p>
+        <div class="home-meta">Kyiv-based team · Service cooperation · Project work</div>
       </div>
 
       <div class="system-map" aria-label="Engineering domains model">
@@ -58,27 +58,28 @@
       </div>
     </section>
 
-    <section class="home-section" aria-labelledby="canvas-title">
+    <section class="home-section" aria-labelledby="scope-title">
       <div class="section-kicker">Scope</div>
-      <h2 id="canvas-title" class="section-title">Where we work</h2>
-      <p class="meta home-section-lead">The work is mostly applied: prototypes, test benches, automation units, robotic subsystems, control software, and engineering documentation.</p>
-      <div class="tech-canvas-grid">
-        <article class="tech-card">
+      <h2 id="scope-title" class="section-title">Where we work</h2>
+      <p class="meta home-section-lead">Applied engineering work for prototypes, test benches, automation units, robotic subsystems, control software, and technical documentation.</p>
+
+      <div class="home-card-grid">
+        <article class="home-card">
           <div class="team-role">Robotics and automation</div>
           <h3>Systems and prototypes</h3>
           <p>Robotic devices, automation of technical processes, test benches, fixtures, sensors, actuators, and control-oriented integration.</p>
         </article>
-        <article class="tech-card">
+        <article class="home-card">
           <div class="team-role">Mechanical layer</div>
           <h3>Parts, housings, fixtures</h3>
           <p>Mechanical concepts, enclosures, brackets, cable routing, mounting options, assembly constraints, and manufacturability checks.</p>
         </article>
-        <article class="tech-card">
+        <article class="home-card">
           <div class="team-role">Electronics layer</div>
           <h3>PCB and hardware</h3>
           <p>Board development support, connector selection, power domains, signal interfaces, bring-up, measurement, and manufacturing coordination.</p>
         </article>
-        <article class="tech-card">
+        <article class="home-card">
           <div class="team-role">Software layer</div>
           <h3>Firmware and desktop tools</h3>
           <p>MCU firmware, drivers, protocols, diagnostics, configuration utilities, desktop tools, and integration software.</p>
@@ -89,25 +90,39 @@
     <section class="home-section" aria-labelledby="methods-title">
       <div class="section-kicker">Methods</div>
       <h2 id="methods-title" class="section-title">How we build</h2>
-      <div class="method-strip">
-        <div class="method-item"><b>Model-based approach</b><span>Models, simulations, control logic, process behavior, and early validation.</span></div>
-        <div class="method-item"><b>AI-assisted generation</b><span>Draft code, boilerplate, test scaffolding, documentation support, and routine automation.</span></div>
-        <div class="method-item"><b>Handwritten code</b><span>Firmware, algorithms, interfaces, drivers, and integration logic that need direct engineering control.</span></div>
-        <div class="method-item"><b>Documented engineering</b><span>Requirements, interfaces, diagrams, test cases, reports, decisions, and handover materials.</span></div>
+
+      <div class="home-method-list">
+        <div class="home-method-row">
+          <strong>Model-based approach</strong>
+          <span>Models, simulations, control logic, process behavior, and early validation.</span>
+        </div>
+        <div class="home-method-row">
+          <strong>AI-assisted generation</strong>
+          <span>Draft code, boilerplate, test scaffolding, documentation support, and routine automation.</span>
+        </div>
+        <div class="home-method-row">
+          <strong>Handwritten code</strong>
+          <span>Firmware, algorithms, interfaces, drivers, and integration logic that need direct engineering control.</span>
+        </div>
+        <div class="home-method-row">
+          <strong>Documented engineering</strong>
+          <span>Requirements, interfaces, diagrams, test cases, reports, decisions, and handover materials.</span>
+        </div>
       </div>
     </section>
 
     <section class="home-section" aria-labelledby="team-title">
       <div class="section-kicker">Team</div>
       <h2 id="team-title" class="section-title">Engineering roles</h2>
-      <p class="meta home-section-lead">The team is role-based. The exact composition depends on the task and can be adjusted for consulting, prototype development, implementation, testing, or documentation-heavy work.</p>
-      <div class="team-grid team-grid-home">
-        <article class="team-card"><div class="team-role">Hardware Engineer</div><p>Schematics, PCB inputs, connectors, signal interfaces, power domains, bring-up, and measurement support.</p></article>
-        <article class="team-card"><div class="team-role">Mechanical Engineer</div><p>Enclosures, brackets, fixtures, cable routing, mounting concepts, CAD support, and assembly constraints.</p></article>
-        <article class="team-card"><div class="team-role">Firmware Engineer</div><p>MCU firmware, drivers, communication protocols, diagnostics, hardware abstraction, and test utilities.</p></article>
-        <article class="team-card"><div class="team-role">ROS 2 / Model-Based Engineer</div><p>ROS 2 integration, control nodes, MATLAB/Simulink models, simulation, and embedded deployment support.</p></article>
-        <article class="team-card"><div class="team-role">Manual QA Engineer</div><p>Test cases, acceptance checks, issue reproduction, test evidence, and structured reports.</p></article>
-        <article class="team-card"><div class="team-role">Process Support</div><p>Task tracking, document flow, procurement follow-up, meeting notes, and delivery coordination.</p></article>
+      <p class="meta home-section-lead">The team is composed by role. The exact setup depends on the task: consulting, prototype development, implementation, testing, or documentation-heavy delivery.</p>
+
+      <div class="home-role-grid">
+        <article class="home-card"><div class="team-role">Hardware Engineer</div><p>Schematics, PCB inputs, connectors, signal interfaces, power domains, bring-up, and measurement support.</p></article>
+        <article class="home-card"><div class="team-role">Mechanical Engineer</div><p>Enclosures, brackets, fixtures, cable routing, mounting concepts, CAD support, and assembly constraints.</p></article>
+        <article class="home-card"><div class="team-role">Firmware Engineer</div><p>MCU firmware, drivers, communication protocols, diagnostics, hardware abstraction, and test utilities.</p></article>
+        <article class="home-card"><div class="team-role">ROS 2 / Model-Based Engineer</div><p>ROS 2 integration, control nodes, MATLAB/Simulink models, simulation, and embedded deployment support.</p></article>
+        <article class="home-card"><div class="team-role">Manual QA Engineer</div><p>Test cases, acceptance checks, issue reproduction, test evidence, and structured reports.</p></article>
+        <article class="home-card"><div class="team-role">Process Support</div><p>Task tracking, document flow, procurement follow-up, meeting notes, and delivery coordination.</p></article>
       </div>
     </section>
   </main>
