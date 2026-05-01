@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="kpi-embedded-syllabus.svg">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop offset="0%" stop-color="#d3c19f"/><stop offset="100%" stop-color="#8d6d49"/></linearGradient>
+    <pattern id="mosaic" width="160" height="160" patternUnits="userSpaceOnUse">
+      <rect width="160" height="160" fill="none"/>
+      <rect x="0" y="0" width="60" height="60" rx="6" fill="#efe6d4" opacity="0.95"/>
+      <rect x="70" y="0" width="90" height="40" rx="6" fill="#617a49" opacity="0.70"/>
+      <rect x="70" y="50" width="40" height="50" rx="6" fill="#2d6d8b" opacity="0.75"/>
+      <rect x="120" y="50" width="40" height="110" rx="6" fill="#efe6d4" opacity="0.80"/>
+      <rect x="0" y="70" width="50" height="90" rx="6" fill="#2d6d8b" opacity="0.50"/>
+      <rect x="60" y="110" width="50" height="50" rx="6" fill="#617a49" opacity="0.55"/>
+    </pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#000" flood-opacity="0.18"/></filter>
+  </defs>
+  <rect width="1200" height="675" fill="url(#g)"/><rect width="1200" height="675" fill="url(#mosaic)" opacity="0.9"/><rect width="1200" height="675" fill="#ffffff" opacity="0.08"/>
+  <g opacity="0.22"><rect x="815" y="80" width="280" height="280" rx="32" fill="#617a49"/><rect x="885" y="160" width="210" height="330" rx="32" fill="#2d6d8b"/><rect x="755" y="385" width="240" height="180" rx="28" fill="#efe6d4"/></g>
+  <g filter="url(#shadow)"><rect x="56" y="52" width="680" height="571" rx="34" fill="#fffaf0" opacity="0.94"/><rect x="56" y="52" width="680" height="18" rx="8" fill="#617a49" opacity="0.7"/></g>
+  <text x="88" y="118" font-size="20" font-family="Arial, Helvetica, sans-serif" font-weight="700" letter-spacing="2.2" fill="#2d6d8b">TECHNICAL</text>
+  <text x="88" y="190" font-size="50" font-family="Arial, Helvetica, sans-serif" font-weight="800" fill="#2d241d"><tspan x="88" dy="0">Embedded Software</tspan><tspan x="88" dy="54">Development Processes</tspan><tspan x="88" dy="54">for KPI</tspan></text>
+  <text x="88" y="352" font-size="26" font-family="Arial, Helvetica, sans-serif" font-weight="500" fill="#2d241d" opacity="0.74">Teaching structure, workflow logic, evaluation, and practical engineering content.</text>
+  <g><g transform="translate(800 145)"><rect x="0" y="0" width="290" height="220" rx="34" fill="#fffaf0" opacity="0.82"/><rect x="32" y="40" width="112" height="148" rx="16" fill="none" stroke="#2d241d" stroke-width="8"/><path d="M88 40 v148" stroke="#2d241d" stroke-width="6"/><path d="M48 74 h28 M48 96 h28 M100 74 h28 M100 96 h28" stroke="#2d6d8b" stroke-width="6" stroke-linecap="round"/><rect x="176" y="56" width="72" height="72" rx="14" fill="#617a49" opacity="0.9"/><path d="M212 40 v16 M212 128 v16 M160 92 h16 M248 92 h16" stroke="#2d241d" stroke-width="6" stroke-linecap="round"/><polyline points="42,250 98,250 98,224 154,224 154,198 210,198 210,172 266,172" fill="none" stroke="#8d6d49" stroke-width="12" stroke-linejoin="round"/><text x="0" y="308" font-size="24" font-family="Arial, Helvetica, sans-serif" font-weight="700" fill="#2d241d">EMBEDDED FLOW · CI/CD · TOOLCHAIN</text></g></g>
+  <text x="88" y="584" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="700" letter-spacing="1.5" fill="#2d241d" opacity="0.68">CONTIMECH BLOG TILE · KYIV MOSAIC LANGUAGE</text>
+</svg>

@@ -1263,3 +1263,18 @@ body.page-home .header{background:rgba(255,250,240,.74);border-bottom-color:rgba
   box-shadow:none !important;
   flex:0 0 40px;
 }
+
+
+/* Blog sections and Kyiv-mosaic post tiles */
+.page-head-blog .lead{max-width:920px;}
+.blog-stream-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:14px;}
+.blog-stream-head h2{margin:0;}
+.blog-stream-head .muted{margin:6px 0 0 0;max-width:760px;}
+.eyebrow{font-size:12px;letter-spacing:1.6px;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:6px;}
+.blog-section-wrap .post-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+@media (max-width:920px){.blog-section-wrap .post-grid{grid-template-columns:1fr;}}
+.post-card-mosaic{border-radius:18px;overflow:hidden;}
+.post-card-mosaic .post-card-cover{position:relative;display:block;aspect-ratio:16/9;background:#d7c4a6;}
+.post-card-mosaic .post-card-cover img{width:100%;height:100%;object-fit:cover;display:block;}
+.post-card-technical .post-card-body{background:#fffaf0;}
+.post-card-social .post-card-body{background:#fff9f2;}

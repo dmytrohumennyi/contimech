@@ -18,9 +18,11 @@
       "Dependability"
     ],
     "summary": "A compact engineering comparison of hardware and software reliability in MCU-based control systems, using FIT, MTTF, ISO 13849-1, SN 29500, and semiconductor vendor data.",
-    "cover": "../assets/img/blog/2026-03-hw-vs-sw-reliability-mcu/cover.png",
+    "cover": "../assets/img/blog/mosaic-tiles/reliability-mcu.svg",
     "gallery": [],
-    "post_url": "posts/2026-03-hw-vs-sw-reliability-mcu.html"
+    "post_url": "posts/2026-03-hw-vs-sw-reliability-mcu.html",
+    "section": "technical",
+    "section_title": "Technical"
   },
   {
     "id": "2026-03-kpi-syllabus-embedded-sw",
@@ -41,10 +43,12 @@
       "GitHub"
     ],
     "summary": "A ContiMech engineering education note on the Embedded Software Development Processes syllabus for KPI: background, hands-on structure, toolchain, and evaluation logic.",
-    "cover": "",
+    "cover": "../assets/img/blog/mosaic-tiles/kpi-embedded-syllabus.svg",
     "gallery": [],
     "post_url": "posts/2026-03-kpi-syllabus-embedded-sw.html",
-    "location_url": "https://kpi.ua/en"
+    "location_url": "https://kpi.ua/en",
+    "section": "technical",
+    "section_title": "Technical"
   },
   {
     "id": "2025-12-knuba-seminar-quality-cycle",
@@ -63,10 +67,12 @@
       "Research"
     ],
     "summary": "On 24 December 2025, the KBKI department at KNUBA held a 30+30 research seminar. The goal was a technical readiness review before the external seminar and pre-defenses, with critical corrections captured inside a managed quality cycle.",
-    "cover": "../assets/img/blog/2025-12-knuba-seminar-quality-cycle/cover.jpg",
+    "cover": "../assets/img/blog/mosaic-tiles/knuba-research-seminar.svg",
     "gallery": [],
     "post_url": "posts/2025-12-knuba-seminar-quality-cycle.html",
-    "location_url": "https://www.knuba.edu.ua/"
+    "location_url": "https://www.knuba.edu.ua/",
+    "section": "social",
+    "section_title": "Social"
   },
   {
     "id": "2025-12-knuba-masters-predefense",
@@ -83,9 +89,11 @@
       "State Examination Board"
     ],
     "summary": "From 15 to 18 December 2025, a ContiMech representative participated in the master’s pre-defense at the KBKI department of KNUBA as Deputy Chair of the State Examination Board.",
-    "cover": "../assets/img/blog/2025-12-knuba-masters-predefense/cover.jpg",
+    "cover": "../assets/img/blog/mosaic-tiles/knuba-masters-predefense.svg",
     "gallery": [],
     "post_url": "posts/2025-12-knuba-masters-predefense.html",
-    "location_url": "https://www.knuba.edu.ua/"
+    "location_url": "https://www.knuba.edu.ua/",
+    "section": "social",
+    "section_title": "Social"
   }
 ]
