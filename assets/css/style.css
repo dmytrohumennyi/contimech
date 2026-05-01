@@ -1168,3 +1168,15 @@ body.page-home .header{background:rgba(255,250,240,.74);border-bottom-color:rgba
 .card-links a:hover{border-color:rgba(15,127,122,.60);background:rgba(15,127,122,.10);}
 .gallery img{border-color:rgba(132,94,53,.18);}
 .home-section .section-title{font-size:clamp(1.6rem,2.6vw,2.5rem);}
+
+
+/* === header logo replacement v13 === */
+.logo{
+  width:38px;
+  height:38px;
+  border-radius:0;
+  background:transparent url("../img/branding/contimech-header-emblem.png") center/contain no-repeat !important;
+  box-shadow:none !important;
+  flex:0 0 38px;
+}
+.brand{gap:10px;}
