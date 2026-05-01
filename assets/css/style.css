@@ -1170,13 +1170,96 @@ body.page-home .header{background:rgba(255,250,240,.74);border-bottom-color:rgba
 .home-section .section-title{font-size:clamp(1.6rem,2.6vw,2.5rem);}
 
 
-/* === header logo replacement v13 === */
+/* === Project direction tiles v11 === */
+.project-domain-entry{
+  margin:24px 0 26px;
+  padding:28px;
+  border:1px solid rgba(132,94,53,.15);
+  border-radius:32px;
+  background:rgba(255,250,240,.72);
+  box-shadow:0 12px 32px rgba(79,51,20,.08);
+}
+.project-domain-lead{max-width:76ch;margin:0 0 20px;}
+.domain-tile-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+  margin-top:18px;
+}
+.domain-tile{
+  display:flex;
+  flex-direction:column;
+  min-height:100%;
+  overflow:hidden;
+  color:var(--text);
+  text-decoration:none;
+  border:1px solid rgba(132,94,53,.17);
+  border-radius:28px;
+  background:linear-gradient(180deg, rgba(255,255,255,.54), rgba(255,250,240,.94));
+  box-shadow:var(--shadow);
+  transition:transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+}
+.domain-tile:hover{
+  color:var(--text);
+  transform:translateY(-4px);
+  border-color:rgba(15,127,122,.34);
+  box-shadow:0 24px 58px rgba(79,51,20,.16);
+}
+.domain-tile img{
+  display:block;
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  border-bottom:1px solid rgba(132,94,53,.15);
+}
+.domain-tile-body{padding:18px 18px 20px;}
+.domain-label{
+  color:var(--accent2);
+  font-size:12px;
+  font-weight:850;
+  letter-spacing:.105em;
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
+.domain-tile h3{
+  margin:0 0 14px;
+  font-family:var(--heading);
+  font-size:1.18rem;
+  line-height:1.22;
+}
+.domain-tags{display:flex;flex-wrap:wrap;gap:7px;}
+.domain-tags span{
+  display:inline-flex;
+  align-items:center;
+  min-height:28px;
+  padding:5px 9px;
+  border-radius:999px;
+  background:rgba(15,127,122,.07);
+  border:1px solid rgba(15,127,122,.18);
+  color:#3d574f;
+  font-size:12px;
+  font-weight:700;
+}
+#project-access{scroll-margin-top:96px;}
+@media (max-width:980px){
+  .domain-tile-grid{grid-template-columns:1fr;}
+  .domain-tile{display:grid;grid-template-columns:180px minmax(0,1fr);}
+  .domain-tile img{height:100%;aspect-ratio:auto;}
+}
+@media (max-width:640px){
+  .project-domain-entry{padding:22px;border-radius:26px;}
+  .domain-tile{display:flex;}
+  .domain-tile img{height:auto;aspect-ratio:16/9;}
+}
+
+
+/* === header emblem fix v12 === */
 .logo{
-  width:38px;
-  height:38px;
+  width:40px;
+  height:40px;
   border-radius:0;
   background:transparent url("../img/branding/contimech-header-emblem.png") center/contain no-repeat !important;
+  border:none !important;
   box-shadow:none !important;
-  flex:0 0 38px;
+  flex:0 0 40px;
 }
-.brand{gap:10px;}
