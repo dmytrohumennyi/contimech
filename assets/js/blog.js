@@ -61,11 +61,14 @@
     const chips = (p.tags || []).slice(0, 5).map(t => `<span class="chip chip-sm">${esc(t)}</span>`).join('');
     const typeTxt = labels.type[p.type] || p.type || '';
     const modeTxt = modeLabel(p.mode);
+    const locationTxt = p.location_url
+      ? ` • <a href="${esc(p.location_url)}" target="_blank" rel="noopener">${esc(p.location || '')}</a>`
+      : (p.location ? ' • ' + esc(p.location) : '');
     return `
       <article class="post-card card">
         ${cover}
         <div class="post-card-body">
-          <div class="muted">${esc(p.date)}${p.location ? ' • ' + esc(p.location) : ''}</div>
+          <div class="muted">${esc(p.date)}${locationTxt}</div>
           <h2 class="post-card-title"><a href="${esc(p.post_url)}">${esc(p.title)}</a></h2>
           <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
             ${typeTxt ? `<span class="chip chip-sm">${esc(typeTxt)}</span>` : ''}
