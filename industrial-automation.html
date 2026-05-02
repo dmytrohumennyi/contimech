@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>ContiMech — Industrial &amp; Automation</title>
   <meta name="description" content="Industrial automation engineering services by ContiMech: test benches, fixtures, process control, monitoring, sensor integration, digital twins, validation, and technical documentation."/>
-  <link rel="stylesheet" href="assets/css/style.css?v=14"/>
+  <link rel="stylesheet" href="assets/css/style.css?v=18"/>
 </head>
 <body class="page-industrial">
   <header class="header">
@@ -92,16 +92,28 @@
         </ul>
       </article>
 
-      <aside class="panel industrial-note-panel">
+      <aside class="panel industrial-note-panel industrial-output-panel">
         <div class="section-kicker">Output</div>
         <h2>Result format</h2>
-        <p class="meta">Depending on the task, the output may include a working prototype, model, source code, drawings, wiring tables, test reports, or a clear engineering recommendation.</p>
-        <div class="industrial-result-list">
-          <span>prototype</span>
-          <span>simulation model</span>
-          <span>test evidence</span>
-          <span>interface package</span>
-          <span>handover notes</span>
+        <p class="meta">We define the output according to the task maturity and the client-side decision that must be supported: prototype, model, implementation package, validation evidence, or an engineering recommendation.</p>
+
+        <div class="industrial-output-grid" aria-label="Possible result formats">
+          <div class="industrial-output-item">
+            <strong>Working asset</strong>
+            <span>prototype, model, control logic, software tool, or monitoring setup</span>
+          </div>
+          <div class="industrial-output-item">
+            <strong>Engineering package</strong>
+            <span>drawings, wiring tables, interface notes, BOM inputs, and source code</span>
+          </div>
+          <div class="industrial-output-item">
+            <strong>Validation evidence</strong>
+            <span>test plan, test results, logs, measurements, and acceptance notes</span>
+          </div>
+          <div class="industrial-output-item">
+            <strong>Decision support</strong>
+            <span>risk summary, feasibility conclusion, refinement plan, or technical recommendation</span>
+          </div>
         </div>
       </aside>
     </section>
@@ -111,62 +123,71 @@
       <h2 id="workflow-title" class="section-title">How we move from request to production-ready solution</h2>
       <p class="meta industrial-section-lead">We structure industrial automation work as an engineering cycle: clarify the task, reduce technical uncertainty, build an A-sample, validate it, refine the design, and move toward a B-sample suitable for certification and production preparation.</p>
 
-      <ol class="industrial-workflow" aria-label="Industrial automation project workflow">
-        <li>
-          <span class="workflow-step">01</span>
-          <div>
-            <h3>Initial meeting</h3>
-            <p>Clarify the technical request, business context, target equipment, constraints, expected output, and available input materials.</p>
-          </div>
+      <div class="workflow-cycle-note" aria-label="Common sample activities">
+        <div class="workflow-cycle-note-copy">
+          <div class="workflow-cycle-title">Engineering sample cycle</div>
+          <p>A-sample and B-sample are not single actions. Each sample typically includes engineering development, manufacturing, testing, and documentation.</p>
+        </div>
+        <div class="workflow-cycle-tags">
+          <span>development</span>
+          <span>manufacturing</span>
+          <span>testing</span>
+          <span>documentation</span>
+        </div>
+      </div>
+
+      <ol class="industrial-workflow-stack" aria-label="Industrial automation project workflow">
+        <li class="workflow-stack-item">
+          <div class="workflow-stack-index">01</div>
+          <article class="workflow-stack-card">
+            <div class="workflow-stack-kicker">Project intake</div>
+            <h3>Initial meeting and request analysis</h3>
+            <p>We clarify the task, target equipment, constraints, existing materials, integration limits, and expected result.</p>
+          </article>
         </li>
-        <li>
-          <span class="workflow-step">02</span>
-          <div>
-            <h3>Request analysis</h3>
-            <p>Review the process, risks, interfaces, existing documentation, measurements, environment, and integration limitations.</p>
-          </div>
+        <li class="workflow-stack-item">
+          <div class="workflow-stack-index">02</div>
+          <article class="workflow-stack-card">
+            <div class="workflow-stack-kicker">Engineering definition</div>
+            <h3>Proposal and research</h3>
+            <p>We define the scope, implementation logic, deliverables, timeline, and validate the key technologies before realization.</p>
+          </article>
         </li>
-        <li>
-          <span class="workflow-step">03</span>
-          <div>
-            <h3>Proposal</h3>
-            <p>Define scope, assumptions, deliverables, project phases, responsibilities, timeline, and a practical implementation approach.</p>
-          </div>
+        <li class="workflow-stack-item workflow-stack-item-emphasis">
+          <div class="workflow-stack-index">03</div>
+          <article class="workflow-stack-card">
+            <div class="workflow-stack-kicker">Prototype cycle</div>
+            <h3>A-sample</h3>
+            <p>We create the first working implementation and use it to validate the architecture, interfaces, and the main technical risks.</p>
+            <div class="workflow-stack-tags">
+              <span>development</span>
+              <span>manufacturing</span>
+              <span>testing</span>
+              <span>documentation</span>
+            </div>
+          </article>
         </li>
-        <li>
-          <span class="workflow-step">04</span>
-          <div>
-            <h3>Research and concept</h3>
-            <p>Validate critical technologies, select architecture options, assess feasibility, and close the main engineering unknowns.</p>
-          </div>
-        </li>
-        <li>
-          <span class="workflow-step">05</span>
-          <div>
-            <h3>A-sample realization</h3>
-            <p>Build the first integrated implementation and bring all core parts to a working state: mechanics, electronics, control software, communications, models, and tooling.</p>
-          </div>
-        </li>
-        <li>
-          <span class="workflow-step">06</span>
-          <div>
-            <h3>Board and system testing</h3>
-            <p>Test PCBs, interfaces, sensors, actuators, firmware, data logging, safety-relevant behavior, and the complete system under defined scenarios.</p>
-          </div>
-        </li>
-        <li>
-          <span class="workflow-step">07</span>
-          <div>
+        <li class="workflow-stack-item workflow-stack-item-emphasis">
+          <div class="workflow-stack-index">04</div>
+          <article class="workflow-stack-card">
+            <div class="workflow-stack-kicker">Refinement cycle</div>
             <h3>Refinement and B-sample</h3>
-            <p>Apply test results, remove weak points, improve manufacturability, update documentation, and prepare a B-sample close to serial production.</p>
-          </div>
+            <p>Based on the A-sample results, we refine the design and prepare a B-sample that is closer to serial production.</p>
+            <div class="workflow-stack-tags">
+              <span>development</span>
+              <span>manufacturing</span>
+              <span>testing</span>
+              <span>documentation</span>
+            </div>
+          </article>
         </li>
-        <li>
-          <span class="workflow-step">08</span>
-          <div>
+        <li class="workflow-stack-item">
+          <div class="workflow-stack-index">05</div>
+          <article class="workflow-stack-card">
+            <div class="workflow-stack-kicker">Industrialization</div>
             <h3>Certification and mass production support</h3>
-            <p>Support certification preparation, production transfer, technical documentation, supplier communication, and issue resolution during early production.</p>
-          </div>
+            <p>We support certification, production transfer, supplier coordination, and resolution of technical issues during industrialization.</p>
+          </article>
         </li>
       </ol>
     </section>
