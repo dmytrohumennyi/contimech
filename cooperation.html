@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>ContiMech — Cooperation</title>
   <meta name="description" content="Cooperation formats with ContiMech: engineering service, prototype development, work packages, documentation, QA, and technical process support."/>
-  <link rel="stylesheet" href="assets/css/style.css?v=19"/>
+  <link rel="stylesheet" href="assets/css/style.css?v=27"/>
 </head>
 <body class="page-mosaic-tiles page-cooperation">
   <header class="header">
@@ -66,40 +66,215 @@
       </div>
     </section>
 
+    <section class="project-domain-entry cooperation-task-directions" aria-labelledby="cooperation-task-title">
+      <div class="section-kicker">Typical scope</div>
+      <h2 id="cooperation-task-title" class="section-title">Tasks we can take</h2>
+      <p class="meta project-domain-lead">The exact content depends on the engineering track. The tasks below reflect the same main directions that are described in more detail on the <a href="projects.html">Projects page</a>.</p>
+
+      <div class="domain-tile-grid cooperation-domain-grid">
+        <a class="domain-tile cooperation-domain-tile" href="industrial-automation.html" aria-label="Industrial and Automation tasks">
+          <img src="assets/img/cooperation/cooperation-industrial-mosaic.svg" alt="Industrial and automation mosaic illustration"/>
+          <div class="domain-tile-body">
+            <div class="domain-label">Industrial &amp; Automation</div>
+            <h3>Fixtures, control systems, test benches, and process-oriented engineering.</h3>
+            <div class="domain-tags"><span>test benches</span><span>fixtures</span><span>control</span><span>measurement</span></div>
+            <span class="btn primary cooperation-domain-action">Explore track</span>
+          </div>
+        </a>
+
+        <a class="domain-tile cooperation-domain-tile" href="projects.html" aria-label="Robotics and Simulation tasks">
+          <img src="assets/img/cooperation/cooperation-robotics-mosaic.svg" alt="Robotics and simulation mosaic illustration"/>
+          <div class="domain-tile-body">
+            <div class="domain-label">Robotics &amp; Simulation</div>
+            <h3>ROS 2 integration, digital twins, simulation scenes, and robotic subsystems.</h3>
+            <div class="domain-tags"><span>ROS 2</span><span>simulation</span><span>digital twin</span><span>robotics</span></div>
+            <span class="btn primary cooperation-domain-action">Explore track</span>
+          </div>
+        </a>
+
+        <a class="domain-tile cooperation-domain-tile" href="projects.html" aria-label="Automotive and Embedded tasks">
+          <img src="assets/img/cooperation/cooperation-automotive-mosaic.svg" alt="Automotive and embedded systems mosaic illustration"/>
+          <div class="domain-tile-body">
+            <div class="domain-label">Automotive &amp; Embedded</div>
+            <h3>ECU-related tooling, firmware, diagnostics, interfaces, and hardware-software integration.</h3>
+            <div class="domain-tags"><span>firmware</span><span>diagnostics</span><span>interfaces</span><span>HIL</span></div>
+            <span class="btn primary cooperation-domain-action">Explore track</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
     <section class="split" style="margin-top:16px">
       <article class="panel">
-        <div class="section-kicker">Typical scope</div>
-        <h2>Tasks we can take</h2>
+        <div class="section-kicker">Commercial model</div>
+        <h2>Service-oriented cooperation</h2>
         <ul class="list">
-          <li>Robotics and automation concepts, prototypes, and test benches.</li>
-          <li>Mechanical parts, enclosures, brackets, fixtures, and cable routing concepts.</li>
-          <li>PCB development support, board manufacturing coordination, bring-up, and hardware validation.</li>
-          <li>Firmware, drivers, protocols, diagnostics, desktop tools, and integration utilities.</li>
-          <li>ROS 2 integration, model-based design, simulations, and control-oriented models.</li>
-          <li>Engineering documentation, test plans, reports, diagrams, and handover materials.</li>
+          <li><b>Time &amp; material</b> for unclear or changing scope.</li>
+          <li><b>Fixed work package</b> when inputs and acceptance criteria are stable.</li>
+          <li><b>Part-time engineering support</b> for periodic or ongoing product work.</li>
+          <li><b>Technical review</b> for architecture, feasibility, documentation, or risk assessment.</li>
         </ul>
       </article>
 
       <aside class="panel">
-        <div class="section-kicker">Commercial model</div>
-        <h2>Service-oriented cooperation</h2>
-        <ul class="list">
-          <li><b>Time &amp; material</b> for unclear or changing tasks.</li>
-          <li><b>Fixed work package</b> when scope and acceptance criteria are stable.</li>
-          <li><b>Part-time engineering support</b> for periodic tasks and ongoing product work.</li>
-          <li><b>Technical review</b> for architecture, documentation, feasibility, or risk assessment.</li>
-        </ul>
+        <div class="section-kicker">Process note</div>
+        <h2>Track-dependent path</h2>
+        <p class="meta">The cooperation structure is usually similar, but the exact content depends on the engineering direction and the required output.</p>
+        <div class="tag-row" style="margin-top:14px">
+          <span>Industrial &amp; Automation</span>
+          <span>Robotics &amp; Simulation</span>
+          <span>Automotive &amp; Embedded</span>
+        </div>
       </aside>
     </section>
 
-    <section class="panel" style="margin-top:16px">
+    <section class="panel cooperation-workflow-section" style="margin-top:16px" aria-labelledby="cooperation-workflow-title">
       <div class="section-kicker">Process</div>
-      <h2>How the work is usually structured</h2>
-      <div class="method-strip">
-        <div class="method-item"><b>1. Context</b><span>System type, goal, constraints, available files, NDA, and expected result.</span></div>
-        <div class="method-item"><b>2. Scope</b><span>Tasks, interfaces, deliverables, risks, assumptions, and acceptance criteria.</span></div>
-        <div class="method-item"><b>3. Execution</b><span>Engineering work, documentation updates, reviews, testing, and issue tracking.</span></div>
-        <div class="method-item"><b>4. Handover</b><span>Repository, drawings, diagrams, source code, test evidence, reports, and next steps.</span></div>
+      <h2 id="cooperation-workflow-title">How the work is usually structured</h2>
+      <p class="meta cooperation-workflow-lead">The steps below show a typical cooperation sequence. The real content inside each stage depends on the engineering track and delivery type.</p>
+
+      <div class="cooperation-workflow-note" aria-label="Track-dependent cooperation">
+        <div>
+          <strong>Track-dependent process</strong>
+          <span>The detailed path varies by direction. Use the <a href="projects.html">Projects page</a> as the main overview of the engineering tracks.</span>
+        </div>
+        <div class="cooperation-workflow-tags">
+          <span>Industrial &amp; Automation</span>
+          <span>Robotics &amp; Simulation</span>
+          <span>Automotive &amp; Embedded</span>
+        </div>
+      </div>
+
+      <div class="cooperation-stage-flow" aria-label="Cooperation workflow">
+        <section class="cooperation-stage-group cooperation-stage-group-start">
+          <div class="cooperation-stage-heading">
+            <div class="cooperation-stage-kicker">Stage 1</div>
+            <h3>Start and technical understanding</h3>
+          </div>
+          <div class="cooperation-stage-steps">
+            <article class="cooperation-step-card cooperation-step-card-start">
+              <div class="cooperation-step-topline">
+                <span class="cooperation-step-index">01</span>
+                <span class="cooperation-step-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M7 8h10"></path><path d="M7 12h10"></path><path d="M7 16h6"></path>
+                    <rect x="3.5" y="4" width="17" height="16" rx="2.5"></rect>
+                  </svg>
+                </span>
+              </div>
+              <div class="cooperation-step-kicker">Start</div>
+              <h4>Intro meeting and NDA</h4>
+              <ul class="cooperation-step-bullets">
+                <li>business context</li>
+                <li>task framing</li>
+                <li>NDA / confidentiality</li>
+              </ul>
+            </article>
+            <article class="cooperation-step-card cooperation-step-card-start">
+              <div class="cooperation-step-topline">
+                <span class="cooperation-step-index">02</span>
+                <span class="cooperation-step-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="5.5"></circle><path d="m20 20-4.2-4.2"></path><path d="M11 8.3v5.4"></path><path d="M8.3 11H13.7"></path>
+                  </svg>
+                </span>
+              </div>
+              <div class="cooperation-step-kicker">Analysis</div>
+              <h4>Input review</h4>
+              <ul class="cooperation-step-bullets">
+                <li>files and materials</li>
+                <li>constraints and risks</li>
+                <li>track selection</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="cooperation-stage-group cooperation-stage-group-work cooperation-stage-group-accent">
+          <div class="cooperation-stage-heading">
+            <div class="cooperation-stage-kicker">Stage 2</div>
+            <h3>Scope and engineering work</h3>
+          </div>
+          <div class="cooperation-stage-steps">
+            <article class="cooperation-step-card cooperation-step-card-work">
+              <div class="cooperation-step-topline">
+                <span class="cooperation-step-index">03</span>
+                <span class="cooperation-step-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 5h14v14H5z"></path><path d="M8 9h8"></path><path d="M8 13h8"></path><path d="M8 17h5"></path>
+                  </svg>
+                </span>
+              </div>
+              <div class="cooperation-step-kicker">Definition</div>
+              <h4>Scope and plan</h4>
+              <ul class="cooperation-step-bullets">
+                <li>work package</li>
+                <li>timeline and checkpoints</li>
+                <li>delivery format</li>
+              </ul>
+            </article>
+            <article class="cooperation-step-card cooperation-step-card-work cooperation-step-card-strong">
+              <div class="cooperation-step-topline">
+                <span class="cooperation-step-index">04</span>
+                <span class="cooperation-step-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4.5 18.5 12 5.5l7.5 13Z"></path><path d="M12 9v5"></path><path d="M16.5 18.5v-3.2"></path><path d="M7.5 18.5v-3.2"></path>
+                  </svg>
+                </span>
+              </div>
+              <div class="cooperation-step-kicker">Execution</div>
+              <h4>Engineering work</h4>
+              <ul class="cooperation-step-bullets">
+                <li>consulting / review</li>
+                <li>prototype if needed</li>
+                <li>code / model / docs</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="cooperation-stage-group cooperation-stage-group-finish">
+          <div class="cooperation-stage-heading">
+            <div class="cooperation-stage-kicker">Stage 3</div>
+            <h3>Result check and handover</h3>
+          </div>
+          <div class="cooperation-stage-steps">
+            <article class="cooperation-step-card cooperation-step-card-finish">
+              <div class="cooperation-step-topline">
+                <span class="cooperation-step-index">05</span>
+                <span class="cooperation-step-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 6.8 9.3 17.5 4 12.2"></path><path d="M12 3.8h6.2a2 2 0 0 1 2 2V12"></path>
+                  </svg>
+                </span>
+              </div>
+              <div class="cooperation-step-kicker">Validation</div>
+              <h4>Review and evidence</h4>
+              <ul class="cooperation-step-bullets">
+                <li>demo or review</li>
+                <li>logs / measurements</li>
+                <li>decision point</li>
+              </ul>
+            </article>
+            <article class="cooperation-step-card cooperation-step-card-finish">
+              <div class="cooperation-step-topline">
+                <span class="cooperation-step-index">06</span>
+                <span class="cooperation-step-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 8h16v11H4z"></path><path d="M12 4v10"></path><path d="m8.7 11.3 3.3 3.3 3.3-3.3"></path>
+                  </svg>
+                </span>
+              </div>
+              <div class="cooperation-step-kicker">Handover</div>
+              <h4>Delivery and next step</h4>
+              <ul class="cooperation-step-bullets">
+                <li>files and results</li>
+                <li>recommendations</li>
+                <li>next phase if needed</li>
+              </ul>
+            </article>
+          </div>
+        </section>
       </div>
     </section>
 
