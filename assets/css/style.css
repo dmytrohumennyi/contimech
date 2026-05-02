@@ -2883,3 +2883,19 @@ iframe{border:0;}
   .card-links{gap:6px;}
   .card-links a,.domain-tags span,.chip,.badge,.pill{max-width:100%;}
 }
+
+
+/* === Home hero title line-break fix v32 === */
+.home-title,
+.home-title span{
+  overflow-wrap:normal;
+  word-break:normal;
+  hyphens:none;
+}
+.home-title{
+  font-size:clamp(3rem,6.2vw,5.9rem);
+  max-width:100%;
+}
+@media (max-width:720px){
+  .home-title{font-size:clamp(2.35rem,11vw,3.8rem);}
+}
