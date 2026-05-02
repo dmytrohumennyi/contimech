@@ -1462,3 +1462,83 @@ body.page-industrial{
   .industrial-map-core{width:120px;height:120px;}
   .industrial-card-grid,.industrial-case-grid,.industrial-method-strip{grid-template-columns:1fr;}
 }
+
+/* Industrial workflow */
+.industrial-workflow-section{position:relative;overflow:hidden;}
+.industrial-workflow-section::after{
+  content:"";
+  position:absolute;
+  right:-120px;
+  top:-120px;
+  width:280px;
+  height:280px;
+  border-radius:50%;
+  background:radial-gradient(circle at center, rgba(15,127,122,.13), transparent 66%);
+  pointer-events:none;
+}
+.industrial-workflow{
+  position:relative;
+  z-index:1;
+  list-style:none;
+  counter-reset:workflow;
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:16px;
+  padding:0;
+  margin:20px 0 0;
+}
+.industrial-workflow li{
+  position:relative;
+  min-height:190px;
+  padding:18px;
+  border-radius:24px;
+  border:1px solid rgba(132,94,53,.17);
+  background:linear-gradient(180deg, rgba(255,255,255,.62), rgba(255,250,240,.95));
+  box-shadow:0 12px 28px rgba(79,51,20,.08);
+}
+.industrial-workflow li::before{
+  content:"";
+  position:absolute;
+  left:20px;
+  right:20px;
+  top:52px;
+  height:1px;
+  background:linear-gradient(90deg, rgba(15,127,122,.38), rgba(184,95,61,.18), transparent);
+}
+.workflow-step{
+  position:relative;
+  z-index:1;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:42px;
+  height:42px;
+  margin-bottom:16px;
+  border-radius:50%;
+  color:#fff8ea;
+  background:linear-gradient(135deg, var(--accent), var(--accent2));
+  font-weight:850;
+  font-size:13px;
+  box-shadow:0 10px 20px rgba(15,127,122,.16);
+}
+.industrial-workflow h3{
+  margin:0 0 8px;
+  font-family:var(--heading);
+  font-size:1.12rem;
+  line-height:1.18;
+  color:#30261d;
+}
+.industrial-workflow p{
+  margin:0;
+  color:var(--muted);
+  font-size:.95rem;
+  line-height:1.5;
+}
+@media (max-width:1100px){
+  .industrial-workflow{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .industrial-workflow li{min-height:170px;}
+}
+@media (max-width:720px){
+  .industrial-workflow{grid-template-columns:1fr;}
+  .industrial-workflow li{min-height:auto;}
+}
