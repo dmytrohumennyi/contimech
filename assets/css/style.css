@@ -1278,3 +1278,187 @@ body.page-home .header{background:rgba(255,250,240,.74);border-bottom-color:rgba
 .post-card-mosaic .post-card-cover img{width:100%;height:100%;object-fit:cover;display:block;}
 .post-card-technical .post-card-body{background:#fffaf0;}
 .post-card-social .post-card-body{background:#fff9f2;}
+
+/* === Industrial & Automation landing v13 === */
+body.page-industrial{
+  background-image:
+    linear-gradient(115deg, rgba(244,239,228,.94), rgba(244,239,228,.82) 52%, rgba(244,239,228,.96)),
+    radial-gradient(circle at 18% 16%, rgba(15,127,122,.17), transparent 34%),
+    radial-gradient(circle at 84% 10%, rgba(211,154,43,.22), transparent 30%),
+    url("../img/mosaic/mosaic-machine-wall.jpg");
+  background-size:cover,820px 620px,740px 520px,cover;
+  background-position:center,top left,top right,center;
+  background-attachment:fixed,fixed,fixed,fixed;
+}
+.industrial-shell{padding-top:36px;}
+.industrial-hero{
+  display:grid;
+  grid-template-columns:minmax(0,1.02fr) minmax(320px,.98fr);
+  gap:34px;
+  align-items:stretch;
+  padding:30px;
+  border:1px solid rgba(132,94,53,.15);
+  border-radius:36px;
+  background:linear-gradient(135deg, rgba(255,250,240,.9), rgba(248,237,219,.78));
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+.industrial-copy{display:flex;flex-direction:column;justify-content:center;min-width:0;}
+.industrial-copy h1{max-width:12ch;margin-top:14px;}
+.industrial-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px;}
+.industrial-map{
+  position:relative;
+  min-height:500px;
+  border-radius:32px;
+  overflow:hidden;
+  border:1px solid rgba(132,94,53,.20);
+  background:
+    linear-gradient(180deg, rgba(45,38,31,.02), rgba(45,38,31,.18)),
+    url("../img/projects/domain-industrial.svg") center/cover no-repeat;
+  box-shadow:0 26px 58px rgba(79,51,20,.18);
+}
+.industrial-map::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(135deg, rgba(255,248,234,.28), transparent 45%),
+    repeating-linear-gradient(45deg, rgba(255,255,255,.16) 0 2px, transparent 2px 16px);
+  pointer-events:none;
+}
+.industrial-map::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:58%;
+  height:58%;
+  transform:translate(-50%,-50%);
+  border-radius:50%;
+  border:2px solid rgba(255,248,234,.72);
+  box-shadow:0 0 0 22px rgba(255,248,234,.14), 0 0 0 48px rgba(15,127,122,.08);
+}
+.industrial-map-core,
+.industrial-node{
+  position:absolute;
+  z-index:2;
+  border:1px solid rgba(132,94,53,.24);
+  background:rgba(255,248,234,.88);
+  color:#30261d;
+  box-shadow:0 14px 30px rgba(79,51,20,.18);
+}
+.industrial-map-core{
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  width:142px;
+  height:142px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  font-weight:850;
+  line-height:1.15;
+}
+.industrial-node{
+  width:190px;
+  min-height:82px;
+  padding:12px 14px;
+  border-radius:20px;
+}
+.industrial-node strong{display:block;color:#30261d;margin-bottom:3px;}
+.industrial-node span{display:block;color:var(--muted);font-size:12.5px;line-height:1.35;}
+.industrial-node.node-a{left:28px;top:34px;}
+.industrial-node.node-b{right:28px;top:34px;}
+.industrial-node.node-c{left:28px;bottom:34px;}
+.industrial-node.node-d{right:28px;bottom:34px;}
+.industrial-section{
+  margin-top:34px;
+  padding:28px;
+  border-radius:32px;
+  background:rgba(255,250,240,.68);
+  border:1px solid rgba(132,94,53,.13);
+  box-shadow:0 12px 32px rgba(79,51,20,.08);
+}
+.industrial-section-lead{max-width:82ch;margin-bottom:16px;}
+.industrial-card-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+  margin-top:18px;
+}
+.industrial-card-grid-four{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+}
+.industrial-split{margin-top:34px;}
+.industrial-note-panel{display:flex;flex-direction:column;}
+.industrial-result-list{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:auto;
+  padding-top:18px;
+}
+.industrial-result-list span{
+  display:inline-flex;
+  align-items:center;
+  min-height:30px;
+  padding:5px 10px;
+  border-radius:999px;
+  color:#3d574f;
+  background:rgba(15,127,122,.07);
+  border:1px solid rgba(15,127,122,.18);
+  font-size:12.5px;
+  font-weight:750;
+}
+.industrial-method-strip{grid-template-columns:repeat(4,minmax(0,1fr));}
+.industrial-case-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+  margin-top:18px;
+}
+.industrial-case-card{
+  padding:20px;
+  border:1px solid rgba(132,94,53,.17);
+  border-radius:24px;
+  background:linear-gradient(180deg, rgba(255,255,255,.58), rgba(255,250,240,.94));
+  box-shadow:var(--shadow);
+}
+.industrial-case-card h3{font-family:var(--heading);margin:0 0 8px;font-size:1.28rem;}
+.industrial-case-card p{margin:0 0 14px;color:var(--muted);}
+.industrial-cta{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  margin-top:34px;
+  padding:28px;
+  border-radius:32px;
+  border:1px solid rgba(15,127,122,.18);
+  background:linear-gradient(135deg, rgba(255,250,240,.92), rgba(238,221,191,.78));
+  box-shadow:var(--shadow);
+}
+.industrial-cta h2{margin:8px 0 8px;}
+.industrial-cta p{margin:0;max-width:78ch;}
+@media (max-width:980px){
+  .industrial-hero{grid-template-columns:1fr;padding:22px;}
+  .industrial-map{min-height:440px;}
+  .industrial-card-grid,.industrial-case-grid,.industrial-method-strip{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .industrial-cta{align-items:flex-start;flex-direction:column;}
+}
+@media (max-width:720px){
+  .industrial-shell{padding-top:22px;}
+  .industrial-hero,.industrial-section,.industrial-cta{border-radius:26px;padding:22px;}
+  .industrial-copy h1{max-width:100%;}
+  .industrial-map{min-height:520px;}
+  .industrial-map::after{width:68%;height:68%;}
+  .industrial-node{width:calc(100% - 48px);left:24px!important;right:auto!important;}
+  .industrial-node.node-a{top:22px;}
+  .industrial-node.node-b{top:116px;}
+  .industrial-node.node-c{bottom:116px;}
+  .industrial-node.node-d{bottom:22px;}
+  .industrial-map-core{width:120px;height:120px;}
+  .industrial-card-grid,.industrial-case-grid,.industrial-method-strip{grid-template-columns:1fr;}
+}
