@@ -2752,3 +2752,46 @@ body.page-industrial{
 @media (max-width:640px){
   .cooperation-domain-action{margin-top:12px;}
 }
+
+
+/* === Cooperation formats palette refresh v28 === */
+.cooperation-formats-section{
+  position:relative;
+  overflow:hidden;
+}
+.cooperation-formats-section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 8% 10%, rgba(67,110,214,.06), transparent 22%),
+    radial-gradient(circle at 92% 18%, rgba(95,172,197,.08), transparent 22%);
+}
+.cooperation-formats-section > *{position:relative;z-index:1;}
+.cooperation-format-card{
+  background:linear-gradient(180deg, rgba(252,253,255,.72), rgba(246,248,252,.96));
+}
+.cooperation-format-card:hover{
+  border-color:rgba(67,110,214,.28);
+}
+.cooperation-format-card .mosaic-info-cover{
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.24) 0 25%, transparent 25% 100%) 0 0/34px 34px,
+    linear-gradient(225deg, rgba(255,255,255,.20) 0 25%, transparent 25% 100%) 0 0/34px 34px,
+    linear-gradient(315deg, rgba(255,255,255,.16) 0 25%, transparent 25% 100%) 17px 17px/34px 34px,
+    linear-gradient(45deg, rgba(255,255,255,.14) 0 25%, transparent 25% 100%) 17px 17px/34px 34px,
+    conic-gradient(from 45deg, var(--tile-a) 0 15%, var(--tile-b) 15% 34%, var(--tile-c) 34% 54%, var(--tile-d) 54% 72%, var(--tile-e) 72% 86%, var(--tile-a) 86% 100%);
+}
+.cooperation-format-card .mosaic-info-cover::after{
+  background:rgba(255,255,255,.18);
+  border-color:rgba(255,255,255,.26);
+}
+.cooperation-format-card .domain-label{color:var(--tile-a);}
+.cooperation-format-card .mosaic-info-body p{color:#5c6675;}
+.cooperation-format-card--cobalt{--tile-a:#436ed6;--tile-b:#5aa5c1;--tile-c:#8a77d4;--tile-d:#58b8b0;--tile-e:#95c6da;}
+.cooperation-format-card--violet{--tile-a:#6f64c5;--tile-b:#4ba6cf;--tile-c:#8ab7e5;--tile-d:#8f8acb;--tile-e:#7fd1d0;}
+.cooperation-format-card--teal{--tile-a:#2f9bb0;--tile-b:#5477d8;--tile-c:#72c8c0;--tile-d:#8f7fd4;--tile-e:#9ad7e4;}
+.cooperation-format-card--slate{--tile-a:#5878a8;--tile-b:#6fa3cc;--tile-c:#7f87bd;--tile-d:#72c0cf;--tile-e:#a7c8e8;}
+.cooperation-format-card--aqua{--tile-a:#3298a5;--tile-b:#77bdd6;--tile-c:#5e74c8;--tile-d:#78c8bb;--tile-e:#97d5d9;}
+.cooperation-format-card--plum{--tile-a:#7f6dbd;--tile-b:#5d8cc9;--tile-c:#97a8df;--tile-d:#63b6c0;--tile-e:#b2c5ee;}
