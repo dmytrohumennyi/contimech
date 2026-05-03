@@ -1,7 +1,32 @@
 [
   {
+    "id": "2026-03-hw-vs-sw-reliability-mcu",
+    "title": "Hardware vs. Software Reliability in MCU-Based Control Systems",
+    "date": "2026-03-06",
+    "year": 2026,
+    "type": "note",
+    "mode": "",
+    "location": "Kyiv",
+    "tags": [
+      "Reliability",
+      "MCU",
+      "Functional Safety",
+      "Hardware",
+      "Software",
+      "FIT",
+      "MTTF",
+      "Dependability"
+    ],
+    "summary": "A compact engineering comparison of hardware and software reliability in MCU-based control systems, using FIT, MTTF, ISO 13849-1, SN 29500, and semiconductor vendor data.",
+    "cover": "../assets/img/blog/mosaic-tiles/reliability-mcu.svg",
+    "gallery": [],
+    "post_url": "posts/2026-03-hw-vs-sw-reliability-mcu.html",
+    "section": "technical",
+    "section_title": "Technical"
+  },
+  {
     "id": "2026-03-kpi-syllabus-embedded-sw",
-    "title": "The Embedded Software Development Processes syllabus for KPI: why I created it",
+    "title": "Embedded Software Development Processes for KPI: a ContiMech engineering education note",
     "date": "2026-03-03",
     "year": 2026,
     "type": "academic",
@@ -17,37 +42,13 @@
       "CI/CD",
       "GitHub"
     ],
-    "summary": "Why I created the Embedded Software Development Processes syllabus for KPI: expected background, hands-on structure, toolchain, and evaluation logic.",
-    "cover": "",
+    "summary": "A ContiMech engineering education note on the Embedded Software Development Processes syllabus for KPI: background, hands-on structure, toolchain, and evaluation logic.",
+    "cover": "../assets/img/blog/mosaic-tiles/kpi-embedded-syllabus.svg",
     "gallery": [],
-    "post_url": "posts/2026-03-kpi-syllabus-embedded-sw.html"
-  },
-  {
-    "id": "2026-02-ise-2026-barcelona",
-    "title": "ISE 2026, Barcelona: brief travel notes",
-    "date": "2026-02-07",
-    "year": 2026,
-    "type": "professional",
-    "mode": "attendee",
-    "location": "Barcelona · Spain",
-    "tags": [
-      "ISE",
-      "Exhibition",
-      "Barcelona",
-      "AV",
-      "Lighting",
-      "Sound",
-      "ASUS",
-      "KNX",
-      "Robotics",
-      "Logistics"
-    ],
-    "summary": "Short notes from ISE 2026: event format, Kyiv–Krakow–Barcelona travel logistics, city transport, food, weather/clothing, and a few useful contacts.",
-    "cover": "../assets/img/blog/2026-02-ise-2026-barcelona/cover.jpg",
-    "gallery": [
-      "../assets/img/blog/2026-02-ise-2026-barcelona/collage.jpg"
-    ],
-    "post_url": "posts/2026-02-ise-2026-barcelona.html"
+    "post_url": "posts/2026-03-kpi-syllabus-embedded-sw.html",
+    "location_url": "https://kpi.ua/en",
+    "section": "technical",
+    "section_title": "Technical"
   },
   {
     "id": "2025-12-knuba-seminar-quality-cycle",
@@ -66,34 +67,12 @@
       "Research"
     ],
     "summary": "On 24 December 2025, the KBKI department at KNUBA held a 30+30 research seminar. The goal was a technical readiness review before the external seminar and pre-defenses, with critical corrections captured inside a managed quality cycle.",
-    "cover": "../assets/img/blog/2025-12-knuba-seminar-quality-cycle/cover.jpg",
+    "cover": "../assets/img/blog/mosaic-tiles/knuba-research-seminar.svg",
     "gallery": [],
-    "post_url": "posts/2025-12-knuba-seminar-quality-cycle.html"
-  },
-  {
-    "id": "2025-12-exhibitions-strategy",
-    "title": "Exhibitions as a tool for winning customers and partners: Embedded World 2023 and The Battery Show 2023",
-    "date": "2025-12-21",
-    "year": 2025,
-    "type": "professional",
-    "mode": "attendee",
-    "location": "Nuremberg / Stuttgart",
-    "tags": [
-      "Exhibitions",
-      "Partnerships",
-      "B2B",
-      "Embedded",
-      "Battery",
-      "Sales",
-      "Strategy"
-    ],
-    "summary": "A short practical memo from Embedded World 2023 and The Battery Show 2023: how to prepare, who to bring, and how to convert contacts into partnerships.",
-    "cover": "../assets/img/blog/2025-12-exhibitions-strategy/cover.jpg",
-    "gallery": [
-      "../assets/img/blog/2025-12-exhibitions-strategy/01.jpg",
-      "../assets/img/blog/2025-12-exhibitions-strategy/02.jpg"
-    ],
-    "post_url": "posts/2025-12-exhibitions-strategy.html"
+    "post_url": "posts/2025-12-knuba-seminar-quality-cycle.html",
+    "location_url": "https://www.knuba.edu.ua/",
+    "section": "social",
+    "section_title": "Social"
   },
   {
     "id": "2025-12-knuba-masters-predefense",
@@ -109,87 +88,12 @@
       "Quality",
       "State Examination Board"
     ],
-    "summary": "From 15 to 18 December 2025, I participated in the master's pre-defense at the KBKI department of KNUBA as Deputy Chair of the State Examination Board. Roughly 85% of students were recommended for defense; the rest were not recommended after a collegial review.",
-    "cover": "../assets/img/blog/2025-12-knuba-masters-predefense/cover.jpg",
+    "summary": "From 15 to 18 December 2025, a ContiMech representative participated in the master’s pre-defense at the KBKI department of KNUBA as Deputy Chair of the State Examination Board.",
+    "cover": "../assets/img/blog/mosaic-tiles/knuba-masters-predefense.svg",
     "gallery": [],
-    "post_url": "posts/2025-12-knuba-masters-predefense.html"
-  },
-  {
-    "id": "2025-10-matlab-expo-takeaways",
-    "title": "MATLAB EXPO Deutschland 2025: key themes and takeaways",
-    "date": "2025-10-29",
-    "year": 2025,
-    "type": "professional",
-    "mode": "attendee",
-    "location": "Munich",
-    "tags": [
-      "MATLAB",
-      "Simulink",
-      "Conferences",
-      "AI",
-      "Model-Based",
-      "FuSa",
-      "HIL",
-      "PIL",
-      "Automotive",
-      "Energy",
-      "HVDC"
-    ],
-    "summary": "Notes from MATLAB EXPO Deutschland 2025: edge AI, model-based engineering, FuSa/traceability, PIL/HIL, and large-scale energy use cases such as HVDC.",
-    "cover": "../assets/img/blog/2025-10-matlab-expo-takeaways/cover.jpg",
-    "gallery": [
-      "../assets/img/blog/2025-10-matlab-expo-takeaways/01.jpg",
-      "../assets/img/blog/2025-10-matlab-expo-takeaways/02.jpg",
-      "../assets/img/blog/2025-10-matlab-expo-takeaways/03.jpg",
-      "../assets/img/blog/2025-10-matlab-expo-takeaways/04.jpg"
-    ],
-    "post_url": "posts/2025-10-matlab-expo-takeaways.html"
-  },
-  {
-    "id": "2025-07-kpi-nix-mou",
-    "title": "N-iX × KPI: a memorandum that actually works",
-    "date": "2025-07-01",
-    "year": 2025,
-    "type": "partnership",
-    "mode": "partnership",
-    "location": "Kyiv · Igor Sikorsky KPI",
-    "tags": [
-      "Partnership",
-      "KPI",
-      "N-iX",
-      "Education",
-      "R&D",
-      "Prototypes"
-    ],
-    "summary": "How the N-iX × KPI memorandum turned into regular work: weekly coordination, joint R&D topics, and the idea of a new academic program at the intersection of business and science.",
-    "cover": "../assets/img/blog/2025-07-kpi-nix-mou/cover.jpg",
-    "gallery": [
-      "../assets/img/blog/2025-07-kpi-nix-mou/01.jpg"
-    ],
-    "post_url": "posts/2025-07-kpi-nix-mou.html"
-  },
-  {
-    "id": "2024-09-autoai-europe",
-    "title": "Auto.AI Europe 2024: a tight-knit community and practical takeaways",
-    "date": "2024-09-15",
-    "year": 2024,
-    "type": "professional",
-    "mode": "speaker",
-    "location": "Berlin",
-    "tags": [
-      "Automotive",
-      "AI",
-      "Networking",
-      "Community",
-      "N-iX"
-    ],
-    "summary": "Notes from Auto.AI Europe (09.2024, Berlin): why it matters to belong to the community, what I moderated in the energy-efficiency track, and what practical outcome followed after the trip.",
-    "cover": "../assets/img/blog/2024-09-autoai-europe/cover.jpg",
-    "gallery": [
-      "../assets/img/blog/2024-09-autoai-europe/01.jpg",
-      "../assets/img/blog/2024-09-autoai-europe/02.jpg",
-      "../assets/img/blog/2024-09-autoai-europe/03.jpg"
-    ],
-    "post_url": "posts/2024-09-autoai-europe.html"
+    "post_url": "posts/2025-12-knuba-masters-predefense.html",
+    "location_url": "https://www.knuba.edu.ua/",
+    "section": "social",
+    "section_title": "Social"
   }
 ]

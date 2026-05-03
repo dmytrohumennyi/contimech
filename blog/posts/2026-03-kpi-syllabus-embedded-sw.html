@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>ContiMech — The Embedded Software Development Processes syllabus for KPI: why I created it</title>
+  <meta name="viewport" content="width=1280"/>
+  <title>ContiMech — Embedded Software Development Processes for KPI: a ContiMech engineering education note</title>
   <meta name="description" content="Why the Embedded Software Development Processes syllabus was created for KPI."/>
-  <link rel="stylesheet" href="../../assets/css/style.css"/>
+  <link rel="stylesheet" href="../../assets/css/style.css?v=32"/>
 </head>
 <body>
   <header class="header">
@@ -14,28 +14,27 @@
         <div class="logo" aria-hidden="true"></div>
         <div>
           <div class="brand-title">ContiMech</div>
-          <div class="brand-sub">Dmytro Humennyi, Ph.D.</div>
+          <div class="brand-sub">Robotics &amp; Automation Engineering</div>
         </div>
       </a>
-      <nav class="nav">
+            <nav class="nav">
         <a href="../../index.html">Home</a>
+        <a href="../../contacts.html">About</a>
         <a href="../../cooperation.html">Cooperation</a>
-        <a href="../../experience.html">Experience</a>
         <a href="../../projects.html">Projects</a>
         <a href="../../publications.html">Publications</a>
-        <a href="../index.html" class="active">Blog</a>
-        <a href="../../contacts.html">Contacts</a>
+        <a href="../../blog/index.html" class="active">Blog</a>
       </nav>
     </div>
   </header>
   <main class="container">
     <a class="link" href="../index.html">← Back to the blog</a>
 
-    <h1 style="margin-top:10px">The Embedded Software Development Processes syllabus for KPI: why I created it</h1>
-    <div class="muted" style="margin-top:-6px">2026-03-03 • Kyiv · Igor Sikorsky KPI</div>
+    <h1 style="margin-top:10px">Embedded Software Development Processes for KPI: a ContiMech engineering education note</h1>
+    <div class="muted" style="margin-top:-6px">2026-03-03 • Kyiv · <a href="https://kpi.ua/en" target="_blank" rel="noopener">Igor Sikorsky KPI</a></div>
 
     <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap">
-      <span class="chip chip-sm">KPI</span>
+      <a class="chip chip-sm" href="https://kpi.ua/en" target="_blank" rel="noopener">KPI</a>
       <span class="chip chip-sm">Syllabus</span>
       <span class="chip chip-sm">Embedded</span>
       <span class="chip chip-sm">Education</span>
@@ -49,15 +48,15 @@
     <section class="panel" style="margin-top:14px">
       <div class="prose" style="margin-top:14px">
         <h2>Context</h2>
-        <p>In July 2025, we signed the <a href="2025-07-kpi-nix-mou.html">N-iX × KPI memorandum</a>. One of the first practical outcomes was the idea of a new course for the Department of Software Engineering in Power Engineering (IPZE): <strong>Embedded Software Development Processes</strong> — 4 ECTS credits, third year, autumn semester.</p>
+        <p>In 2025, cooperation with <a href="https://kpi.ua/en" target="_blank" rel="noopener">Igor Sikorsky Kyiv Polytechnic Institute (KPI)</a> created a practical starting point for a new course at the Department of Software Engineering in Power Engineering (IPZE): <strong>Embedded Software Development Processes</strong> — 4 ECTS credits, third year, autumn semester.</p>
 
-        <p>The course addresses a gap I have seen for years in both industry and academia: students learn languages, algorithms, and databases, but almost never see the <strong>full embedded development loop</strong> as one coherent process. From requirements to architecture, from build system to CI, from host tests to on-target checks, from the first commit to a release package with a CHANGELOG and checksums.</p>
+        <p>The course addresses a gap repeatedly observed in both industry and academia: students learn languages, algorithms, and databases, but almost never see the <strong>full embedded development loop</strong> as one coherent process. From requirements to architecture, from build system to CI, from host tests to on-target checks, from the first commit to a release package with a CHANGELOG and checksums.</p>
 
-        <h2>Why I felt it was necessary</h2>
-        <p>My motivation came from several directions at once:</p>
+        <h2>Why this course was necessary</h2>
+        <p>The motivation came from several directions at once:</p>
         <ul>
-          <li><strong>The gap between industry and education.</strong> After more than 14 years in embedded work, I keep seeing the same pattern: junior engineers know C, but do not understand the process. They do not know traceability. They have never looked at a map file. They do not understand why warning-as-error matters. This is a systemic problem and it needs a systemic solution through education.</li>
-          <li><strong>My own academic background.</strong> I am an Associate Professor at KNUBA and I already have experience with modeling and cyber-physical systems courses. Writing syllabi is not new to me, but the KPI format turned out to be much stricter: template, formal details, mapping to the educational program, and a precise grading structure.</li>
+          <li><strong>The gap between industry and education.</strong> Based on more than 14 years of embedded work, the same pattern appears repeatedly: junior engineers know C, but do not understand the process. They do not know traceability. They have never looked at a map file. They do not understand why warning-as-error matters. This is a systemic problem and it needs a systemic solution through education.</li>
+          <li><strong>Academic background.</strong> The course design relied on experience with modeling and cyber-physical systems courses. Writing syllabi was not the hard part; the KPI format was stricter: template, formal details, mapping to the educational program, and a precise grading structure.</li>
           <li><strong>A wish to transfer real experience.</strong> Not a theoretical “course about embedded,” but a discipline after which a student can enter a real firmware project and not get lost: create an issue, write a requirement with acceptance criteria, build the project, run tests, prepare a PR, go through code review, and assemble a release package.</li>
         </ul>
 
@@ -71,9 +70,9 @@
         <h2>What was difficult</h2>
         <ul>
           <li><strong>The KPI template format.</strong> A syllabus is not a free-form document. It requires a rigid structure: metadata, goals, learning outcomes linked to the official program, lecture topics, practical assignments, self-study hours, grading arithmetic, evaluation criteria, policies, and properly formatted references.</li>
-          <li><strong>Mapping to the educational program.</strong> I had to select concrete general competences, professional competences, and learning outcomes from the program and show how the course forms them. This is not decorative; those matrices matter during accreditation.</li>
+          <li><strong>Mapping to the educational program.</strong> The course design had to select concrete general competences, professional competences, and learning outcomes from the program and show how the course forms them. This is not decorative; those matrices matter during accreditation.</li>
           <li><strong>Theory–practice balance.</strong> Eighteen lectures are too many for pure theory and too few for a deep specialization. The solution was to make every lecture a concrete engineering topic and every practical class hands-on with real tools such as Git, CMake, cppcheck, GitHub Actions, and Jira.</li>
-          <li><strong>SW/HW/Mech cooperation.</strong> This topic is rare in academic programs, even though it is one of the main sources of system errors in real embedded projects. I reserved a dedicated lecture for interface contracts, PCB revisions, and joint reviews.</li>
+          <li><strong>SW/HW/Mech cooperation.</strong> This topic is rare in academic programs, even though it is one of the main sources of system errors in real embedded projects. A dedicated lecture was reserved for interface contracts, PCB revisions, and joint reviews.</li>
           <li><strong>Project management.</strong> Two lectures on GitHub Projects and Jira were a deliberate choice. Embedded engineers too often try to work “in their heads” or in Excel. Students should get used to backlogs, boards, sprints, and automation from their first project experience.</li>
         </ul>
 
@@ -86,14 +85,13 @@
         </ul>
 
         <h2>Conclusion</h2>
-        <p>A syllabus is a contract between lecturer and student: here is what you will learn, here is how I will assess it, and here are the tools we will use. For me, it is also a way to systematize many years of experience and transfer it in a reproducible form.</p>
+        <p>A syllabus is a contract between lecturer and student: here is what will be learned, how it will be assessed, and which tools will be used. For ContiMech, it is also a way to systematize engineering experience and transfer it in a reproducible form.</p>
       </div>
     </section>
 
     <section class="post-section">
       <h2>Links</h2>
       <ul>
-        <li><a href="2025-07-kpi-nix-mou.html">N-iX × KPI: a memorandum that actually works</a> — partnership background</li>
         <li><a href="https://osvita.kpi.ua/F2_OPPB_IPZIKFSE" target="_blank" rel="noopener">Educational program: Software Engineering of Intelligent Cyber-Physical Systems in Power Engineering</a></li>
       </ul>
     </section>
@@ -101,9 +99,9 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div>© ContiMech</div>
-      <div class="muted">GitHub Pages-ready</div>
+      <div class="muted">Kyiv · Robotics · Automation · Embedded engineering</div>
     </div>
   </footer>
-  <script src="../../assets/js/site.js"></script>
+  <script src="../../assets/js/site.js?v=2"></script>
 </body>
 </html>

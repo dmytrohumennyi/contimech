@@ -2,273 +2,129 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="viewport" content="width=1280"/>
   <title>ContiMech — Blog</title>
-  <meta name="description" content="Blog: conferences, talks, academic events, and engineering notes."/>
-  <link rel="stylesheet" href="../assets/css/style.css"/>
+  <meta name="description" content="ContiMech blog: engineering notes, social updates, robotics, automation, embedded systems, and reliability."/>
+  <link rel="stylesheet" href="../assets/css/style.css?v=32"/>
 </head>
 <body>
   <header class="header">
     <div class="header-inner">
       <a class="brand" href="../index.html">
         <div class="logo" aria-hidden="true"></div>
-        <div>
-          <div class="brand-title">ContiMech</div>
-          <div class="brand-sub">Dmytro Humennyi, Ph.D.</div>
-        </div>
+        <div><div class="brand-title">ContiMech</div><div class="brand-sub">Robotics &amp; Automation Engineering</div></div>
       </a>
-      <nav class="nav">
-        <a href="../index.html">Home</a>
-        <a href="../cooperation.html">Cooperation</a>
-        <a href="../experience.html">Experience</a>
-        <a href="../projects.html">Projects</a>
-        <a href="../publications.html">Publications</a>
-        <a href="index.html" class="active">Blog</a>
-        <a href="../contacts.html">Contacts</a>
-      </nav>
+      <nav class="nav"><a href="../index.html">Home</a><a href="../contacts.html">About</a><a href="../cooperation.html">Cooperation</a><a href="../projects.html">Projects</a><a href="../publications.html">Publications</a><a href="../blog/index.html" class="active">Blog</a></nav>
     </div>
   </header>
   <main class="container">
-    <section class="page-head">
-      <h1>Blog</h1>
-      <p class="lead">Notes from conferences, talks, academic events, and professional practice. Filter by year, type, or tags to find older entries quickly.</p>
-    </section>
-
-    <section class="panel">
-      <div class="filters-grid">
-        <div class="field">
-          <label for="blog-q">Search</label>
-          <input id="blog-q" type="text" placeholder="Title, tags, city, type…">
-        </div>
-        <div class="field">
-          <label for="blog-year">Year</label>
-          <select id="blog-year"></select>
-        </div>
-        <div class="field">
-          <label for="blog-type">Type</label>
-          <select id="blog-type"></select>
-        </div>
-        <div class="field">
-          <label for="blog-tag">Tag</label>
-          <select id="blog-tag"></select>
-        </div>
-        <div class="field" style="align-self:end">
-          <button id="blog-reset" class="btn" type="button">Reset</button>
-        </div>
-      </div>
-      <div id="blog-msg" class="note" style="display:none;margin-top:12px">Nothing found.</div>
-    </section>
-
-    <section id="blog-list" class="post-grid" style="margin-top:16px"></section>
-    <div style="margin-top:18px;display:flex;justify-content:center">
-      <button id="blog-more" class="btn btn-primary" type="button" style="display:none">Show more</button>
-    </div>
-
+    <section class="page-head page-head-blog"><h1>Blog</h1><p class="lead">A curated archive of ContiMech blog posts with two streams: <strong>technical</strong> and <strong>social</strong>. Each post tile uses a unique Kyiv-mosaic-inspired visual treatment aligned with the post topic.</p></section>
+    <section class="panel"><div class="filters-grid"><div class="field"><label for="blog-q">Search</label><input id="blog-q" type="text" placeholder="Title, tags, city, type…"></div><div class="field"><label for="blog-year">Year</label><select id="blog-year"></select></div><div class="field"><label for="blog-type">Type</label><select id="blog-type"></select></div><div class="field"><label for="blog-tag">Tag</label><select id="blog-tag"></select></div><div class="field" style="align-self:end"><button id="blog-reset" class="btn" type="button">Reset</button></div></div><div id="blog-msg" class="note" style="display:none;margin-top:12px">Nothing found.</div></section>
+    <section class="blog-section-wrap" style="margin-top:18px"><div class="blog-stream-head"><div><div class="eyebrow">Section 1</div><h2>Technical posts</h2><p class="muted">Engineering notes, embedded systems, reliability, methods, toolchains, and technical education.</p></div></div><section id="blog-list-technical" class="post-grid"></section></section>
+    <section class="blog-section-wrap" style="margin-top:28px"><div class="blog-stream-head"><div><div class="eyebrow">Section 2</div><h2>Social posts</h2><p class="muted">Academic activity, community-facing notes, participation in reviews, and social-professional context.</p></div></div><section id="blog-list-social" class="post-grid"></section></section>
     <script id="blog-data" type="application/json">
-    [
-      {
-        "id": "2026-03-kpi-syllabus-embedded-sw",
-        "title": "The Embedded Software Development Processes syllabus for KPI: why I created it",
-        "date": "2026-03-03",
-        "year": 2026,
-        "type": "academic",
-        "mode": "",
-        "location": "Kyiv · Igor Sikorsky KPI",
-        "tags": [
-          "KPI",
-          "Syllabus",
-          "Embedded",
-          "Education",
-          "Firmware",
-          "AUTOSAR",
-          "CI/CD",
-          "GitHub"
-        ],
-        "summary": "Why I created the Embedded Software Development Processes syllabus for KPI: expected background, hands-on structure, toolchain, and evaluation logic.",
-        "cover": "",
-        "gallery": [],
-        "post_url": "posts/2026-03-kpi-syllabus-embedded-sw.html"
-      },
-      {
-        "id": "2026-02-ise-2026-barcelona",
-        "title": "ISE 2026, Barcelona: brief travel notes",
-        "date": "2026-02-07",
-        "year": 2026,
-        "type": "professional",
-        "mode": "attendee",
-        "location": "Barcelona · Spain",
-        "tags": [
-          "ISE",
-          "Exhibition",
-          "Barcelona",
-          "AV",
-          "Lighting",
-          "Sound",
-          "ASUS",
-          "KNX",
-          "Robotics",
-          "Logistics"
-        ],
-        "summary": "Short notes from ISE 2026: event format, Kyiv–Krakow–Barcelona travel logistics, city transport, food, weather/clothing, and a few useful contacts.",
-        "cover": "../assets/img/blog/2026-02-ise-2026-barcelona/cover.jpg",
-        "gallery": [
-          "../assets/img/blog/2026-02-ise-2026-barcelona/collage.jpg"
-        ],
-        "post_url": "posts/2026-02-ise-2026-barcelona.html"
-      },
-      {
-        "id": "2025-12-knuba-seminar-quality-cycle",
-        "title": "KNUBA KBKI research seminar: interim PhD review and transition plan toward the external seminar and pre-defenses",
-        "date": "2025-12-24",
-        "year": 2025,
-        "type": "academic",
-        "mode": "",
-        "location": "Kyiv · KNUBA",
-        "tags": [
-          "KNUBA",
-          "KBKI",
-          "PhD",
-          "Seminar",
-          "Quality",
-          "Research"
-        ],
-        "summary": "On 24 December 2025, the KBKI department at KNUBA held a 30+30 research seminar. The goal was a technical readiness review before the external seminar and pre-defenses, with critical corrections captured inside a managed quality cycle.",
-        "cover": "../assets/img/blog/2025-12-knuba-seminar-quality-cycle/cover.jpg",
-        "gallery": [],
-        "post_url": "posts/2025-12-knuba-seminar-quality-cycle.html"
-      },
-      {
-        "id": "2025-12-exhibitions-strategy",
-        "title": "Exhibitions as a tool for winning customers and partners: Embedded World 2023 and The Battery Show 2023",
-        "date": "2025-12-21",
-        "year": 2025,
-        "type": "professional",
-        "mode": "attendee",
-        "location": "Nuremberg / Stuttgart",
-        "tags": [
-          "Exhibitions",
-          "Partnerships",
-          "B2B",
-          "Embedded",
-          "Battery",
-          "Sales",
-          "Strategy"
-        ],
-        "summary": "A short practical memo from Embedded World 2023 and The Battery Show 2023: how to prepare, who to bring, and how to convert contacts into partnerships.",
-        "cover": "../assets/img/blog/2025-12-exhibitions-strategy/cover.jpg",
-        "gallery": [
-          "../assets/img/blog/2025-12-exhibitions-strategy/01.jpg",
-          "../assets/img/blog/2025-12-exhibitions-strategy/02.jpg"
-        ],
-        "post_url": "posts/2025-12-exhibitions-strategy.html"
-      },
-      {
-        "id": "2025-12-knuba-masters-predefense",
-        "title": "KNUBA master's pre-defense (KBKI), December 2025: outcomes and observations",
-        "date": "2025-12-18",
-        "year": 2025,
-        "type": "academic",
-        "mode": "committee",
-        "location": "Kyiv",
-        "tags": [
-          "KNUBA",
-          "Education",
-          "Quality",
-          "State Examination Board"
-        ],
-        "summary": "From 15 to 18 December 2025, I participated in the master's pre-defense at the KBKI department of KNUBA as Deputy Chair of the State Examination Board. Roughly 85% of students were recommended for defense; the rest were not recommended after a collegial review.",
-        "cover": "../assets/img/blog/2025-12-knuba-masters-predefense/cover.jpg",
-        "gallery": [],
-        "post_url": "posts/2025-12-knuba-masters-predefense.html"
-      },
-      {
-        "id": "2025-10-matlab-expo-takeaways",
-        "title": "MATLAB EXPO Deutschland 2025: key themes and takeaways",
-        "date": "2025-10-29",
-        "year": 2025,
-        "type": "professional",
-        "mode": "attendee",
-        "location": "Munich",
-        "tags": [
-          "MATLAB",
-          "Simulink",
-          "Conferences",
-          "AI",
-          "Model-Based",
-          "FuSa",
-          "HIL",
-          "PIL",
-          "Automotive",
-          "Energy",
-          "HVDC"
-        ],
-        "summary": "Notes from MATLAB EXPO Deutschland 2025: edge AI, model-based engineering, FuSa/traceability, PIL/HIL, and large-scale energy use cases such as HVDC.",
-        "cover": "../assets/img/blog/2025-10-matlab-expo-takeaways/cover.jpg",
-        "gallery": [
-          "../assets/img/blog/2025-10-matlab-expo-takeaways/01.jpg",
-          "../assets/img/blog/2025-10-matlab-expo-takeaways/02.jpg",
-          "../assets/img/blog/2025-10-matlab-expo-takeaways/03.jpg",
-          "../assets/img/blog/2025-10-matlab-expo-takeaways/04.jpg"
-        ],
-        "post_url": "posts/2025-10-matlab-expo-takeaways.html"
-      },
-      {
-        "id": "2025-07-kpi-nix-mou",
-        "title": "N-iX × KPI: a memorandum that actually works",
-        "date": "2025-07-01",
-        "year": 2025,
-        "type": "partnership",
-        "mode": "partnership",
-        "location": "Kyiv · Igor Sikorsky KPI",
-        "tags": [
-          "Partnership",
-          "KPI",
-          "N-iX",
-          "Education",
-          "R&D",
-          "Prototypes"
-        ],
-        "summary": "How the N-iX × KPI memorandum turned into regular work: weekly coordination, joint R&D topics, and the idea of a new academic program at the intersection of business and science.",
-        "cover": "../assets/img/blog/2025-07-kpi-nix-mou/cover.jpg",
-        "gallery": [
-          "../assets/img/blog/2025-07-kpi-nix-mou/01.jpg"
-        ],
-        "post_url": "posts/2025-07-kpi-nix-mou.html"
-      },
-      {
-        "id": "2024-09-autoai-europe",
-        "title": "Auto.AI Europe 2024: a tight-knit community and practical takeaways",
-        "date": "2024-09-15",
-        "year": 2024,
-        "type": "professional",
-        "mode": "speaker",
-        "location": "Berlin",
-        "tags": [
-          "Automotive",
-          "AI",
-          "Networking",
-          "Community",
-          "N-iX"
-        ],
-        "summary": "Notes from Auto.AI Europe (09.2024, Berlin): why it matters to belong to the community, what I moderated in the energy-efficiency track, and what practical outcome followed after the trip.",
-        "cover": "../assets/img/blog/2024-09-autoai-europe/cover.jpg",
-        "gallery": [
-          "../assets/img/blog/2024-09-autoai-europe/01.jpg",
-          "../assets/img/blog/2024-09-autoai-europe/02.jpg",
-          "../assets/img/blog/2024-09-autoai-europe/03.jpg"
-        ],
-        "post_url": "posts/2024-09-autoai-europe.html"
-      }
-    ]
+[
+  {
+    "id": "2026-03-hw-vs-sw-reliability-mcu",
+    "title": "Hardware vs. Software Reliability in MCU-Based Control Systems",
+    "date": "2026-03-06",
+    "year": 2026,
+    "type": "note",
+    "mode": "",
+    "location": "Kyiv",
+    "tags": [
+      "Reliability",
+      "MCU",
+      "Functional Safety",
+      "Hardware",
+      "Software",
+      "FIT",
+      "MTTF",
+      "Dependability"
+    ],
+    "summary": "A compact engineering comparison of hardware and software reliability in MCU-based control systems, using FIT, MTTF, ISO 13849-1, SN 29500, and semiconductor vendor data.",
+    "cover": "../assets/img/blog/mosaic-tiles/reliability-mcu.svg",
+    "gallery": [],
+    "post_url": "posts/2026-03-hw-vs-sw-reliability-mcu.html",
+    "section": "technical",
+    "section_title": "Technical"
+  },
+  {
+    "id": "2026-03-kpi-syllabus-embedded-sw",
+    "title": "Embedded Software Development Processes for KPI: a ContiMech engineering education note",
+    "date": "2026-03-03",
+    "year": 2026,
+    "type": "academic",
+    "mode": "",
+    "location": "Kyiv · Igor Sikorsky KPI",
+    "tags": [
+      "KPI",
+      "Syllabus",
+      "Embedded",
+      "Education",
+      "Firmware",
+      "AUTOSAR",
+      "CI/CD",
+      "GitHub"
+    ],
+    "summary": "A ContiMech engineering education note on the Embedded Software Development Processes syllabus for KPI: background, hands-on structure, toolchain, and evaluation logic.",
+    "cover": "../assets/img/blog/mosaic-tiles/kpi-embedded-syllabus.svg",
+    "gallery": [],
+    "post_url": "posts/2026-03-kpi-syllabus-embedded-sw.html",
+    "location_url": "https://kpi.ua/en",
+    "section": "technical",
+    "section_title": "Technical"
+  },
+  {
+    "id": "2025-12-knuba-seminar-quality-cycle",
+    "title": "KNUBA KBKI research seminar: interim PhD review and transition plan toward the external seminar and pre-defenses",
+    "date": "2025-12-24",
+    "year": 2025,
+    "type": "academic",
+    "mode": "",
+    "location": "Kyiv · KNUBA",
+    "tags": [
+      "KNUBA",
+      "KBKI",
+      "PhD",
+      "Seminar",
+      "Quality",
+      "Research"
+    ],
+    "summary": "On 24 December 2025, the KBKI department at KNUBA held a 30+30 research seminar. The goal was a technical readiness review before the external seminar and pre-defenses, with critical corrections captured inside a managed quality cycle.",
+    "cover": "../assets/img/blog/mosaic-tiles/knuba-research-seminar.svg",
+    "gallery": [],
+    "post_url": "posts/2025-12-knuba-seminar-quality-cycle.html",
+    "location_url": "https://www.knuba.edu.ua/",
+    "section": "social",
+    "section_title": "Social"
+  },
+  {
+    "id": "2025-12-knuba-masters-predefense",
+    "title": "KNUBA master's pre-defense (KBKI), December 2025: outcomes and observations",
+    "date": "2025-12-18",
+    "year": 2025,
+    "type": "academic",
+    "mode": "committee",
+    "location": "Kyiv",
+    "tags": [
+      "KNUBA",
+      "Education",
+      "Quality",
+      "State Examination Board"
+    ],
+    "summary": "From 15 to 18 December 2025, a ContiMech representative participated in the master’s pre-defense at the KBKI department of KNUBA as Deputy Chair of the State Examination Board.",
+    "cover": "../assets/img/blog/mosaic-tiles/knuba-masters-predefense.svg",
+    "gallery": [],
+    "post_url": "posts/2025-12-knuba-masters-predefense.html",
+    "location_url": "https://www.knuba.edu.ua/",
+    "section": "social",
+    "section_title": "Social"
+  }
+]
     </script>
   </main>
-  <footer class="footer">
-    <div class="footer-inner">
-      <div>© 2026 Dmytro Humennyi</div>
-      <div class="meta">GitHub Pages-ready · Static website (HTML/CSS/JS)</div>
-    </div>
-  </footer>
-  <script src="../assets/js/site.js"></script>
-  <script src="../assets/js/blog.js"></script>
+  <footer class="footer"><div class="footer-inner"><div>© 2026 ContiMech</div><div class="meta">Kyiv · Robotics · Automation · Embedded engineering</div></div></footer>
+  <script src="../assets/js/site.js?v=2"></script><script src="../assets/js/blog.js"></script>
 </body>
 </html>

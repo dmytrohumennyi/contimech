@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="reliability-mcu.svg">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop offset="0%" stop-color="#d8c3a3"/><stop offset="100%" stop-color="#b17f59"/></linearGradient>
+    <pattern id="mosaic" width="160" height="160" patternUnits="userSpaceOnUse">
+      <rect width="160" height="160" fill="none"/>
+      <rect x="0" y="0" width="60" height="60" rx="6" fill="#efe5d0" opacity="0.95"/>
+      <rect x="70" y="0" width="90" height="40" rx="6" fill="#4d7c8a" opacity="0.70"/>
+      <rect x="70" y="50" width="40" height="50" rx="6" fill="#8d4a2f" opacity="0.75"/>
+      <rect x="120" y="50" width="40" height="110" rx="6" fill="#efe5d0" opacity="0.80"/>
+      <rect x="0" y="70" width="50" height="90" rx="6" fill="#8d4a2f" opacity="0.50"/>
+      <rect x="60" y="110" width="50" height="50" rx="6" fill="#4d7c8a" opacity="0.55"/>
+    </pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#000" flood-opacity="0.18"/></filter>
+  </defs>
+  <rect width="1200" height="675" fill="url(#g)"/><rect width="1200" height="675" fill="url(#mosaic)" opacity="0.9"/><rect width="1200" height="675" fill="#ffffff" opacity="0.08"/>
+  <g opacity="0.22"><rect x="815" y="80" width="280" height="280" rx="32" fill="#4d7c8a"/><rect x="885" y="160" width="210" height="330" rx="32" fill="#8d4a2f"/><rect x="755" y="385" width="240" height="180" rx="28" fill="#efe5d0"/></g>
+  <g filter="url(#shadow)"><rect x="56" y="52" width="680" height="571" rx="34" fill="#fffaf0" opacity="0.94"/><rect x="56" y="52" width="680" height="18" rx="8" fill="#4d7c8a" opacity="0.7"/></g>
+  <text x="88" y="118" font-size="20" font-family="Arial, Helvetica, sans-serif" font-weight="700" letter-spacing="2.2" fill="#8d4a2f">TECHNICAL</text>
+  <text x="88" y="190" font-size="50" font-family="Arial, Helvetica, sans-serif" font-weight="800" fill="#2f241c"><tspan x="88" dy="0">Hardware vs. Software</tspan><tspan x="88" dy="54">Reliability in MCU</tspan><tspan x="88" dy="54">Control Systems</tspan></text>
+  <text x="88" y="352" font-size="26" font-family="Arial, Helvetica, sans-serif" font-weight="500" fill="#2f241c" opacity="0.74">Engineering note on FIT, MTTF, failure rates, and implementation trade-offs.</text>
+  <g><g transform="translate(800 150)"><rect x="0" y="0" width="270" height="190" rx="30" fill="#fffaf0" opacity="0.82"/><rect x="56" y="38" width="158" height="114" rx="18" fill="none" stroke="#2f241c" stroke-width="8"/><rect x="90" y="72" width="92" height="46" rx="10" fill="#4d7c8a" opacity="0.84"/><g stroke="#2f241c" stroke-width="6"><line x1="42" y1="58" x2="56" y2="58"/><line x1="42" y1="94" x2="56" y2="94"/><line x1="42" y1="130" x2="56" y2="130"/><line x1="214" y1="58" x2="228" y2="58"/><line x1="214" y1="94" x2="228" y2="94"/><line x1="214" y1="130" x2="228" y2="130"/><line x1="86" y1="24" x2="86" y2="38"/><line x1="126" y1="24" x2="126" y2="38"/><line x1="166" y1="24" x2="166" y2="38"/><line x1="86" y1="152" x2="86" y2="166"/><line x1="126" y1="152" x2="126" y2="166"/><line x1="166" y1="152" x2="166" y2="166"/></g><polyline points="28,235 86,186 134,204 194,146 242,162" fill="none" stroke="#8d4a2f" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><circle cx="86" cy="186" r="10" fill="#8d4a2f"/><circle cx="194" cy="146" r="10" fill="#8d4a2f"/><text x="0" y="290" font-size="24" font-family="Arial, Helvetica, sans-serif" font-weight="700" fill="#2f241c">FIT · MTTF · DEPENDABILITY</text></g></g>
+  <text x="88" y="584" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="700" letter-spacing="1.5" fill="#2f241c" opacity="0.68">CONTIMECH BLOG TILE · KYIV MOSAIC LANGUAGE</text>
+</svg>
